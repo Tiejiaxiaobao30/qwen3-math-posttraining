@@ -1,0 +1,25 @@
+{
+  "dataset": "GSM8K",
+  "source": "ModelScope",
+  "dataset_id": "modelscope/gsm8k",
+  "config": "main",
+  "version": "1.1.0",
+  "license": "MIT",
+  "features": {
+    "question": "string",
+    "answer": "string"
+  },
+  "splits": {
+    "train": {
+      "num_examples": 7473,
+      "sha256": "6146bca074f4c6c5e07de7e96cc968adab3833dbdafeda21830f27558eea3d9b"
+    },
+    "test": {
+      "num_examples": 1319,
+      "sha256": "45965b000311d1550e5619b60b5bf31cf76edebfd8b8eddc62a876fbf8c9be95"
+    }
+  },
+  "smoke_split": "train",
+  "smoke_ids_file": "smoke_ids.json",
+  "notes": "Day 02 smoke baseline uses 20 fixed samples from the train split. This smoke set is not the final test evaluation."
+}

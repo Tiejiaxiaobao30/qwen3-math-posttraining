@@ -1,0 +1,38 @@
+Qwen3-1.7B-Base GSM8K Smoke Baseline
+=====================================
+
+Dataset: GSM8K main / train
+Smoke samples: 20
+Model: Qwen/Qwen3-1.7B-Base
+Prompt final format: Final answer: <number>
+Max new tokens: 384
+
+Strict evaluation:
+correct: 10 / 20
+wrong: 2 / 20
+format_fail: 8 / 20
+strict smoke accuracy: 50.0%
+
+Correct IDs:
+244, 260, 712, 767, 912, 1143, 3456, 5543, 6033, 7308
+
+Wrong IDs:
+1828, 2006
+
+Format-fail IDs:
+204, 839, 2253, 4467, 4837, 5238, 6067, 6074
+
+Generation-length diagnostics:
+128 tokens -> 17 / 20 hit the generation limit
+256 tokens -> 3 / 20 hit the generation limit
+384 tokens -> 7 / 20 hit the generation limit
+384-token run -> 19 / 20 contained "Final answer:"
+
+Observation:
+Some Base-model outputs produced the correct numerical answer but continued generating
+additional Question/Answer text instead of stopping. Therefore hitting max_new_tokens
+does not necessarily mean the mathematical reasoning was unfinished.
+
+Important:
+This is a 20-sample smoke baseline from the GSM8K training split.
+It is NOT the final test-set accuracy.

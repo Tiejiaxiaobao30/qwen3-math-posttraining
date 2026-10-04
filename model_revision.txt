@@ -1,0 +1,3 @@
+model_id=Qwen/Qwen3-1.7B-Base
+source=ModelScope
+revision=43ab5b53bd7f37e7e8b2214adcc9178ee11fb0b3

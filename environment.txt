@@ -1,0 +1,6 @@
+Python 3.11.11
+PyTorch: 2.6.0+cu124
+CUDA available: True
+GPU: NVIDIA A10
+PyTorch CUDA build: 12.4
+NVIDIA A10, 550.163.01, 23028 MiB

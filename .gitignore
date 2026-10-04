@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets / local environment
+.env
+.env.*
+*.key
+
+# Model weights
+*.safetensors
+*.pth
+*.pt
+*.bin
+models/
+checkpoints/
+
+# Training / experiment cache
+wandb/
+logs/
+cache/
+datasets_cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+*~

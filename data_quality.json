@@ -1,0 +1,99 @@
+{
+  "dataset": "GSM8K",
+  "source_split": "train",
+  "total_train_samples": 7473,
+  "raw_quality": {
+    "empty_question": 0,
+    "empty_answer": 0,
+    "missing_final_marker": 0,
+    "bad_final_answer": 0
+  },
+  "split_sizes": {
+    "dev": 500,
+    "sft": 2000,
+    "rl": 1000,
+    "reserve": 3973
+  },
+  "leakage_checks": {
+    "dev_sft_exact_overlap": 0,
+    "dev_rl_exact_overlap": 0,
+    "sft_rl_exact_overlap": 0,
+    "dev_sft_template_overlap": 0,
+    "dev_rl_template_overlap": 0,
+    "sft_rl_template_overlap": 0,
+    "train_test_exact_overlap": 0,
+    "train_test_template_overlap": 0
+  },
+  "sft_answer_token_length": {
+    "samples": 2000,
+    "min": 29,
+    "median": 111,
+    "p90": 196,
+    "p95": 229,
+    "p99": 278,
+    "max": 382
+  },
+  "sft_question_answer_token_length": {
+    "samples": 2000,
+    "min": 70,
+    "median": 170,
+    "p90": 277,
+    "p95": 311,
+    "p99": 376,
+    "max": 516
+  },
+  "sft_question_answer_over_limit": {
+    "256": {
+      "count": 275,
+      "percent": 13.75
+    },
+    "384": {
+      "count": 18,
+      "percent": 0.9
+    },
+    "512": {
+      "count": 1,
+      "percent": 0.05
+    },
+    "640": {
+      "count": 0,
+      "percent": 0.0
+    }
+  },
+  "processed_checks": {
+    "manifest_id_match": true,
+    "cross_split_id_overlap": 0,
+    "sft_answer_format_pass": true,
+    "rl_dev_non_empty_pass": true
+  },
+  "final_sft_sequence_token_length": {
+    "format": "instruction + question + clean_answer + eos",
+    "samples": 2000,
+    "min": 75,
+    "median": 163,
+    "p90": 251,
+    "p95": 279,
+    "p99": 327,
+    "max": 465,
+    "over_limit": {
+      "384": {
+        "count": 3,
+        "percent": 0.15
+      },
+      "512": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "640": {
+        "count": 0,
+        "percent": 0.0
+      },
+      "768": {
+        "count": 0,
+        "percent": 0.0
+      }
+    },
+    "candidate_max_length": 512,
+    "note": "Revalidate after the final SFT tokenization/chat-template format is frozen."
+  }
+}

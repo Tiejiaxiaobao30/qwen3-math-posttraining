@@ -1,0 +1,23 @@
+{
+  "model_path": "/mnt/workspace/models/Qwen3-1.7B-Base",
+  "train_file": "data/processed/sft.jsonl",
+  "prompt_file": "configs/sft_prompt.txt",
+  "max_length": 512,
+  "completion_only_loss": true,
+  "add_eos_token": true,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "bias": "none",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  }
+}

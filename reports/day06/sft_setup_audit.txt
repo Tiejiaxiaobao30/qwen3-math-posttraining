@@ -1,0 +1,60 @@
+[2026-10-05 17:34:13,271] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+===== MASK AUDIT =====
+sample_id = 3855
+max_length = 512
+prompt_tokens = 81
+answer_tokens = 103
+eos_tokens = 1
+total_tokens = 185
+masked_prompt_tokens = 81
+supervised_tokens = 104
+eos_token_id = 151643
+pad_token_id = 151643
+eos_is_supervised = True
+
+boundary:
+pos=78 token=' her' label=-100
+pos=79 token=' diapers' label=-100
+pos=80 token='?\n' label=-100
+pos=81 token='When' label=4498
+pos=82 token=' she' label=1340
+pos=83 token=' orders' label=10163
+pos=84 token=' ' label=220
+pos=85 token='3' label=18
+
+MASK AUDIT PASSED
+
+===== TRAINABLE PARAMETER AUDIT =====
+total_params = 1738007552
+trainable_params = 17432576
+trainable_percent = 1.0030%
+all_trainable_are_lora = True
+
+target_modules =
+  q_proj
+  k_proj
+  v_proj
+  o_proj
+  gate_proj
+  up_proj
+  down_proj
+
+Base W shape = (2048, 2048) requires_grad = False
+LoRA A shape = (16, 2048) requires_grad = True
+LoRA B shape = (2048, 16) requires_grad = True
+
+TRAINABLE PARAMETER AUDIT PASSED
+
+===== FORWARD / BACKWARD AUDIT =====
+loss = 0.6155961155891418
+Base W grad is None = True
+LoRA A grad is None = False
+LoRA B grad is None = False
+LoRA A grad norm = 0.0
+LoRA B grad norm = 0.1297495812177658
+
+FORWARD / BACKWARD AUDIT PASSED
+
+==============================
+ALL SFT SETUP AUDITS PASSED
+==============================

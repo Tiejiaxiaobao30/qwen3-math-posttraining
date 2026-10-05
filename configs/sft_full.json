@@ -21,13 +21,13 @@
     ]
   },
   "training": {
-    "output_dir": "outputs/sft_smoke",
+    "output_dir": "outputs/sft_full",
     "per_device_train_batch_size": 2,
     "gradient_accumulation_steps": 1,
     "learning_rate": 0.0002,
-    "max_steps": 20,
-    "logging_steps": 1,
-    "save_steps": 10,
+    "max_steps": 1000,
+    "logging_steps": 10,
+    "save_steps": 250,
     "seed": 42
   }
 }

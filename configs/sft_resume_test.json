@@ -21,7 +21,7 @@
     ]
   },
   "training": {
-    "output_dir": "outputs/sft_smoke",
+    "output_dir": "outputs/sft_resume_test",
     "per_device_train_batch_size": 2,
     "gradient_accumulation_steps": 1,
     "learning_rate": 0.0002,

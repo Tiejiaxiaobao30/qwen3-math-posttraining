@@ -4,6 +4,7 @@ from pathlib import Path
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import PeftModel
 
 from scripts.evaluator import build_result
 
@@ -29,6 +30,12 @@ def load_jsonl(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=20)
+    parser.add_argument(
+        "--adapter",
+        type=str,
+        default=None,
+        help="Optional LoRA adapter path"
+    )
     args = parser.parse_args()
 
     dev = load_jsonl(DEV_PATH)[:args.limit]
@@ -47,11 +54,26 @@ def main():
         local_files_only=True
     ).to("cuda")
 
+    if args.adapter is not None:
+        print("loading_adapter =", args.adapter)
+
+        model = PeftModel.from_pretrained(
+            model,
+            args.adapter,
+            is_trainable=False,
+        )
+
+        run_name = "sft"
+
+    else:
+        print("loading_adapter = None")
+        run_name = "base"
+
     model.eval()
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    output_path = RESULTS_DIR / f"base_dev_{args.limit}.jsonl"
+    output_path = RESULTS_DIR / f"{run_name}_dev_{args.limit}.jsonl"
 
     counts = {
         "correct": 0,

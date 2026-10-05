@@ -29,3 +29,6 @@ datasets_cache/
 .DS_Store
 .vscode/
 *~
+
+# Generated processed datasets
+data/processed/

@@ -1,0 +1,59 @@
+{
+  "base_dev_500": {
+    "total": 500,
+    "correct": 267,
+    "wrong": 64,
+    "format_fail": 169,
+    "truncated": 1,
+    "strict_accuracy": 0.534,
+    "format_success_rate": 0.662,
+    "truncation_rate": 0.002
+  },
+  "sft_dev_500": {
+    "total": 500,
+    "correct": 390,
+    "wrong": 108,
+    "format_fail": 2,
+    "truncated": 0,
+    "strict_accuracy": 0.78,
+    "format_success_rate": 0.996,
+    "truncation_rate": 0.0
+  },
+  "strict_accuracy_delta_pp": 24.6,
+  "smoke_training": {
+    "train_runtime": 5.4279,
+    "train_samples_per_second": 7.369,
+    "train_steps_per_second": 3.685,
+    "total_flos": 71330716459008.0,
+    "train_loss": 0.4952624686062336,
+    "global_step": 20,
+    "config": "configs/sft_smoke.json",
+    "resume_from_checkpoint": null,
+    "peak_gpu_allocated_gb": 6.5046210289001465,
+    "peak_gpu_reserved_gb": 9.955078125
+  },
+  "resume_test": {
+    "train_runtime": 2.8666,
+    "train_samples_per_second": 13.954,
+    "train_steps_per_second": 6.977,
+    "total_flos": 71330716459008.0,
+    "train_loss": 0.261207714676857,
+    "global_step": 20,
+    "config": "configs/sft_resume_test.json",
+    "resume_from_checkpoint": "outputs/sft_smoke/checkpoint-10",
+    "peak_gpu_allocated_gb": 6.462888240814209,
+    "peak_gpu_reserved_gb": 7.357421875
+  },
+  "full_sft_training": {
+    "train_runtime": 207.8813,
+    "train_samples_per_second": 9.621,
+    "train_steps_per_second": 4.81,
+    "total_flos": 3512275851644928.0,
+    "train_loss": 0.4587279015779495,
+    "global_step": 1000,
+    "config": "configs/sft_full.json",
+    "resume_from_checkpoint": null,
+    "peak_gpu_allocated_gb": 8.490301609039307,
+    "peak_gpu_reserved_gb": 20.111328125
+  }
+}

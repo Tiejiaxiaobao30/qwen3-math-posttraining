@@ -36,3 +36,6 @@ data/processed/
 # Day 05 temporary evaluation artifacts
 results/base_dev_20.jsonl
 results/base_dev_metrics_recomputed.json
+
+# Local training artifacts
+outputs/

@@ -1,0 +1,33 @@
+{
+  "model_path": "/mnt/workspace/models/Qwen3-1.7B-Base",
+  "train_file": "data/processed/sft.jsonl",
+  "prompt_file": "configs/sft_prompt.txt",
+  "max_length": 512,
+  "completion_only_loss": true,
+  "add_eos_token": true,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "bias": "none",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "output_dir": "outputs/sft_smoke",
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.0002,
+    "max_steps": 20,
+    "logging_steps": 1,
+    "save_steps": 10,
+    "seed": 42
+  }
+}

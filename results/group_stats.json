@@ -1,0 +1,1328 @@
+{
+  "config": {
+    "num_prompts": 50,
+    "num_generations": 4,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_new_tokens": 256,
+    "seed": 42
+  },
+  "groups": {
+    "total": 50,
+    "mixed": 20,
+    "all_correct": 26,
+    "all_wrong": 4,
+    "mixed_ratio": 0.4,
+    "all_same_ratio": 0.6
+  },
+  "rollouts": {
+    "total": 200,
+    "mean_generated_tokens": 90,
+    "min_generated_tokens": 25,
+    "max_generated_tokens": 256,
+    "truncated": 2,
+    "truncation_rate": 0.01
+  },
+  "group_details": [
+    {
+      "sample_id": 2513,
+      "gold": "23",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        63,
+        66,
+        57,
+        58
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 1610,
+      "gold": "6",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        46,
+        55,
+        55,
+        52
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 6208,
+      "gold": "44",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        72,
+        93,
+        68,
+        71
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5510,
+      "gold": "105",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        92,
+        59,
+        99,
+        68
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 6782,
+      "gold": "250",
+      "rewards": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.25,
+      "reward_variance": 0.1875,
+      "lengths": [
+        30,
+        53,
+        98,
+        54
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 1012,
+      "gold": "15,620",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        93,
+        173,
+        168,
+        80
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 3524,
+      "gold": "32",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        73,
+        78,
+        68,
+        86
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 1299,
+      "gold": "120",
+      "rewards": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        47,
+        86,
+        82,
+        72
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 4362,
+      "gold": "79",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        52,
+        100,
+        60,
+        58
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2836,
+      "gold": "120",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        36,
+        59,
+        73,
+        59
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 3417,
+      "gold": "35",
+      "rewards": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        93,
+        64,
+        89,
+        95
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 6913,
+      "gold": "42",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        99,
+        168,
+        121,
+        165
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 6063,
+      "gold": "30",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        76,
+        83,
+        80,
+        67
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5109,
+      "gold": "48000",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        121,
+        113,
+        121,
+        125
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 4201,
+      "gold": "30",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_wrong",
+      "reward_mean": 0.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        99,
+        107,
+        223,
+        94
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2039,
+      "gold": "25",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        87,
+        105,
+        146,
+        115
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5118,
+      "gold": "89",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        53,
+        95,
+        55,
+        105
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5087,
+      "gold": "38",
+      "rewards": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        105,
+        131,
+        136,
+        101
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 3201,
+      "gold": "16000",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        83,
+        86,
+        80,
+        56
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2512,
+      "gold": "10",
+      "rewards": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.25,
+      "reward_variance": 0.1875,
+      "lengths": [
+        256,
+        114,
+        190,
+        246
+      ],
+      "truncated_count": 1
+    },
+    {
+      "sample_id": 1050,
+      "gold": "38",
+      "rewards": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.5,
+      "reward_variance": 0.25,
+      "lengths": [
+        42,
+        58,
+        40,
+        54
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 885,
+      "gold": "730",
+      "rewards": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        96,
+        62,
+        52,
+        118
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2249,
+      "gold": "1800",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        137,
+        138,
+        130,
+        143
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 1441,
+      "gold": "1890",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        62,
+        62,
+        61,
+        62
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5722,
+      "gold": "60",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        87,
+        65,
+        65,
+        106
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2774,
+      "gold": "5",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.25,
+      "reward_variance": 0.1875,
+      "lengths": [
+        85,
+        78,
+        93,
+        96
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2889,
+      "gold": "16",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        136,
+        77,
+        78,
+        77
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5849,
+      "gold": "2",
+      "rewards": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.25,
+      "reward_variance": 0.1875,
+      "lengths": [
+        128,
+        88,
+        63,
+        106
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 3875,
+      "gold": "2",
+      "rewards": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        94,
+        141,
+        194,
+        129
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 3138,
+      "gold": "15",
+      "rewards": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.5,
+      "reward_variance": 0.25,
+      "lengths": [
+        81,
+        67,
+        56,
+        42
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 7074,
+      "gold": "80",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        86,
+        44,
+        25,
+        88
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5679,
+      "gold": "2",
+      "rewards": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.5,
+      "reward_variance": 0.25,
+      "lengths": [
+        169,
+        126,
+        138,
+        92
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2871,
+      "gold": "350",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.25,
+      "reward_variance": 0.1875,
+      "lengths": [
+        192,
+        180,
+        153,
+        204
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 6486,
+      "gold": "8",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        125,
+        86,
+        86,
+        62
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 878,
+      "gold": "80",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        78,
+        58,
+        77,
+        58
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5520,
+      "gold": "2100",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_wrong",
+      "reward_mean": 0.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        93,
+        84,
+        63,
+        78
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 4391,
+      "gold": "20",
+      "rewards": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        85,
+        72,
+        64,
+        95
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 4042,
+      "gold": "900",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        98,
+        87,
+        82,
+        99
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2756,
+      "gold": "30",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        64,
+        141,
+        118,
+        56
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 4379,
+      "gold": "815",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_wrong",
+      "reward_mean": 0.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        171,
+        174,
+        205,
+        152
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5003,
+      "gold": "336",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        67,
+        66,
+        50,
+        63
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 404,
+      "gold": "12834",
+      "rewards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "format_rewards": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_wrong",
+      "reward_mean": 0.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        256,
+        194,
+        247,
+        202
+      ],
+      "truncated_count": 1
+    },
+    {
+      "sample_id": 1291,
+      "gold": "4",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        55,
+        57,
+        28,
+        62
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 5235,
+      "gold": "500",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        90,
+        78,
+        95,
+        76
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 1490,
+      "gold": "3",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        47,
+        47,
+        48,
+        50
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2035,
+      "gold": "78",
+      "rewards": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "mixed",
+      "reward_mean": 0.75,
+      "reward_variance": 0.1875,
+      "lengths": [
+        43,
+        32,
+        43,
+        25
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 6164,
+      "gold": "11",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        35,
+        28,
+        38,
+        37
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 3017,
+      "gold": "4",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        50,
+        60,
+        58,
+        58
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 635,
+      "gold": "18",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        47,
+        58,
+        46,
+        50
+      ],
+      "truncated_count": 0
+    },
+    {
+      "sample_id": 2447,
+      "gold": "21",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "format_rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "group_type": "all_correct",
+      "reward_mean": 1.0,
+      "reward_variance": 0.0,
+      "lengths": [
+        44,
+        46,
+        49,
+        58
+      ],
+      "truncated_count": 0
+    }
+  ]
+}

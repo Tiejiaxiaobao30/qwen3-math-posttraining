@@ -1,0 +1,140 @@
+{
+  "reward": {
+    "total_cases": 14,
+    "passed_cases": 14,
+    "all_passed": true,
+    "cases": [
+      {
+        "name": "correct_integer",
+        "actual_correctness": 1.0,
+        "actual_format": 1.0,
+        "expected_correctness": 1.0,
+        "expected_format": 1.0,
+        "passed": true
+      },
+      {
+        "name": "wrong_but_valid_format",
+        "actual_correctness": 0.0,
+        "actual_format": 1.0,
+        "expected_correctness": 0.0,
+        "expected_format": 1.0,
+        "passed": true
+      },
+      {
+        "name": "correct_number_wrong_format",
+        "actual_correctness": 0.0,
+        "actual_format": 0.0,
+        "expected_correctness": 0.0,
+        "expected_format": 0.0,
+        "passed": true
+      },
+      {
+        "name": "duplicate_final_answer",
+        "actual_correctness": 0.0,
+        "actual_format": 0.0,
+        "expected_correctness": 0.0,
+        "expected_format": 0.0,
+        "passed": true
+      },
+      {
+        "name": "comma_number",
+        "actual_correctness": 1.0,
+        "actual_format": 1.0,
+        "expected_correctness": 1.0,
+        "expected_format": 1.0,
+        "passed": true
+      },
+      {
+        "name": "negative_number",
+        "actual_correctness": 1.0,
+        "actual_format": 1.0,
+        "expected_correctness": 1.0,
+        "expected_format": 1.0,
+        "passed": true
+      },
+      {
+        "name": "decimal_equivalence",
+        "actual_correctness": 1.0,
+        "actual_format": 1.0,
+        "expected_correctness": 1.0,
+        "expected_format": 1.0,
+        "passed": true
+      },
+      {
+        "name": "empty_response",
+        "actual_correctness": 0.0,
+        "actual_format": 0.0,
+        "expected_correctness": 0.0,
+        "expected_format": 0.0,
+        "passed": true
+      },
+      {
+        "name": "copied_gold_but_final_wrong",
+        "actual_correctness": 0.0,
+        "actual_format": 1.0,
+        "expected_correctness": 0.0,
+        "expected_format": 1.0,
+        "passed": true
+      },
+      {
+        "name": "dollar_sign",
+        "actual_correctness": 1.0,
+        "actual_format": 1.0,
+        "expected_correctness": 1.0,
+        "expected_format": 1.0,
+        "passed": true
+      },
+      {
+        "name": "unit_after_number",
+        "actual_correctness": 0.0,
+        "actual_format": 0.0,
+        "expected_correctness": 0.0,
+        "expected_format": 0.0,
+        "passed": true
+      },
+      {
+        "name": "two_different_answers",
+        "actual_correctness": 0.0,
+        "actual_format": 0.0,
+        "expected_correctness": 0.0,
+        "expected_format": 0.0,
+        "passed": true
+      },
+      {
+        "name": "trailing_text",
+        "actual_correctness": 0.0,
+        "actual_format": 0.0,
+        "expected_correctness": 0.0,
+        "expected_format": 0.0,
+        "passed": true
+      },
+      {
+        "name": "zero_equivalence",
+        "actual_correctness": 1.0,
+        "actual_format": 1.0,
+        "expected_correctness": 1.0,
+        "expected_format": 1.0,
+        "passed": true
+      }
+    ]
+  },
+  "rl_manifest": {
+    "total_rows": 1000,
+    "audited_rows": 50,
+    "seed": 42,
+    "prompt_failures": [],
+    "gold_mismatches": [],
+    "incidental_gold_text_overlap_count": 8,
+    "incidental_gold_text_overlap_ids": [
+      2774,
+      5849,
+      3875,
+      5679,
+      1291,
+      5235,
+      1490,
+      3017
+    ],
+    "audit_passed": true
+  }
+}

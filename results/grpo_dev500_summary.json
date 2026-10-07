@@ -1,0 +1,13 @@
+{
+  "model": "Qwen3-1.7B-Base + merged SFT + GRPO LoRA",
+  "total": 500,
+  "correct": 392,
+  "wrong": 104,
+  "format_fail": 4,
+  "truncated": 1,
+  "strict_accuracy": 78.4,
+  "format_success_rate": 99.2,
+  "truncation_rate": 0.2,
+  "max_new_tokens": 512,
+  "do_sample": false
+}

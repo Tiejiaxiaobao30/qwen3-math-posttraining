@@ -1,0 +1,44 @@
+{
+  "model_path": "/mnt/workspace/models/Qwen3-1.7B-Base",
+  "sft_adapter_path": "outputs/sft_full/final_adapter",
+  "train_file": "data/processed/rl_manifest.jsonl",
+  "output_dir": "outputs/grpo_lr5e7",
+  "grpo_lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "bias": "none",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "training": {
+    "max_steps": 1000,
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 5e-07,
+    "logging_steps": 10,
+    "save_steps": 250,
+    "save_total_limit": 4,
+    "seed": 42
+  },
+  "generation": {
+    "num_generations": 4,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_completion_length": 256
+  },
+  "grpo": {
+    "beta": 0.04,
+    "num_iterations": 1,
+    "loss_type": "bnpo",
+    "mask_truncated_completions": true,
+    "scale_rewards": true
+  }
+}

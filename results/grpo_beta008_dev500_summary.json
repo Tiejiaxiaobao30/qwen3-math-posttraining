@@ -1,0 +1,12 @@
+{
+  "run_name": "grpo_beta008",
+  "grpo_adapter": "outputs/grpo_beta008/final_adapter",
+  "total": 500,
+  "correct": 381,
+  "wrong": 116,
+  "format_fail": 3,
+  "truncated": 0,
+  "strict_accuracy": 76.2,
+  "format_success_rate": 99.4,
+  "truncation_rate": 0.0
+}

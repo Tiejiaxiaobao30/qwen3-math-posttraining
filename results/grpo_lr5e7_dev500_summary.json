@@ -1,0 +1,12 @@
+{
+  "run_name": "grpo_lr5e7",
+  "grpo_adapter": "outputs/grpo_lr5e7/final_adapter",
+  "total": 500,
+  "correct": 377,
+  "wrong": 120,
+  "format_fail": 3,
+  "truncated": 0,
+  "strict_accuracy": 75.4,
+  "format_success_rate": 99.4,
+  "truncation_rate": 0.0
+}

@@ -1,0 +1,12 @@
+{
+  "run_name": "grpo_lr2e6",
+  "grpo_adapter": "outputs/grpo_lr2e6/final_adapter",
+  "total": 500,
+  "correct": 387,
+  "wrong": 112,
+  "format_fail": 1,
+  "truncated": 0,
+  "strict_accuracy": 77.4,
+  "format_success_rate": 99.8,
+  "truncation_rate": 0.0
+}

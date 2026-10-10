@@ -1,0 +1,22 @@
+{
+  "train_runtime": 106.1704,
+  "train_samples_per_second": 9.419,
+  "train_steps_per_second": 4.709,
+  "total_flos": 1750033893076992.0,
+  "train_loss": 0.44149322268366814,
+  "global_step": 500,
+  "wall_time_seconds": 106.40863966941833,
+  "source_sft_adapter": "outputs/sft_full/final_adapter",
+  "source_sft_sha256": "63420f32629bbf452b30b4e5d27060c924f01b37dea013a073bb2956cea2437f",
+  "train_samples": 1000,
+  "changed_tensors": 392,
+  "changed_values": 17432575,
+  "max_abs_change": 0.016102544963359833,
+  "budget": {
+    "definition": "one_pass_over_same_rl_1000_prompts",
+    "unique_prompts": 1000,
+    "note": "Extra-SFT and GRPO share the same RL question pool, but optimizer steps and compute cost are not treated as equivalent."
+  },
+  "peak_gpu_allocated_gb": 7.930083751678467,
+  "peak_gpu_reserved_gb": 14.130859375
+}

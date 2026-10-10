@@ -1,0 +1,55 @@
+{
+  "model_path": "/mnt/workspace/models/Qwen3-1.7B-Base",
+
+  "sft_adapter_path": "outputs/sft_full/final_adapter",
+
+  "train_file": "data/processed/extra_sft_rl1000.jsonl",
+
+  "prompt_file": "configs/sft_prompt.txt",
+
+  "max_length": 512,
+
+  "completion_only_loss": true,
+
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "bias": "none",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+
+  "training": {
+    "output_dir": "outputs/extra_sft_rl1000",
+
+    "per_device_train_batch_size": 2,
+
+    "gradient_accumulation_steps": 1,
+
+    "learning_rate": 0.0002,
+
+    "max_steps": 500,
+
+    "logging_steps": 10,
+
+    "save_steps": 250,
+
+    "seed": 42
+  },
+
+  "budget": {
+    "definition": "one_pass_over_same_rl_1000_prompts",
+
+    "unique_prompts": 1000,
+
+    "note": "Extra-SFT and GRPO share the same RL question pool, but optimizer steps and compute cost are not treated as equivalent."
+  }
+}

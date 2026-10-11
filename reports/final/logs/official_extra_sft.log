@@ -1,0 +1,101 @@
+======================================================================
+OFFICIAL TEST EVALUATOR
+======================================================================
+mode = grpo
+run_name = extra_sft
+device = cuda:1
+base_model = /kaggle/working/models/Qwen3-1.7B-Base
+sft_adapter = /kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_full/final_adapter
+grpo_adapter = /kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/extra_sft_rl1000/final_adapter
+
+test examples = 1319
+test sha256 = d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e
+prompt sha256 = 4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828
+do_sample = False
+max_new_tokens = 512
+
+=== LOAD TOKENIZER ===
+
+=== LOAD BASE ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  73%|███████▎  | 227/310 [00:00<00:00, 2259.66it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2791.45it/s]
+
+=== LOAD SFT ADAPTER ===
+/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_full/final_adapter
+
+=== MERGE SFT ===
+
+=== LOAD GRPO ADAPTER ===
+/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/extra_sft_rl1000/final_adapter
+GRPO LoRA tensors = 392
+
+======================================================================
+START OFFICIAL TEST
+======================================================================
+[1/1319] correct=1 wrong=0 format_fail=0 acc=100.00%
+[25/1319] correct=16 wrong=9 format_fail=0 acc=64.00%
+[50/1319] correct=34 wrong=16 format_fail=0 acc=68.00%
+[75/1319] correct=50 wrong=24 format_fail=1 acc=66.67%
+[100/1319] correct=65 wrong=34 format_fail=1 acc=65.00%
+[125/1319] correct=79 wrong=45 format_fail=1 acc=63.20%
+[150/1319] correct=97 wrong=52 format_fail=1 acc=64.67%
+[175/1319] correct=114 wrong=60 format_fail=1 acc=65.14%
+[200/1319] correct=133 wrong=66 format_fail=1 acc=66.50%
+[225/1319] correct=151 wrong=73 format_fail=1 acc=67.11%
+[250/1319] correct=169 wrong=78 format_fail=3 acc=67.60%
+[275/1319] correct=188 wrong=84 format_fail=3 acc=68.36%
+[300/1319] correct=206 wrong=91 format_fail=3 acc=68.67%
+[325/1319] correct=228 wrong=94 format_fail=3 acc=70.15%
+[350/1319] correct=244 wrong=103 format_fail=3 acc=69.71%
+[375/1319] correct=259 wrong=113 format_fail=3 acc=69.07%
+[400/1319] correct=276 wrong=121 format_fail=3 acc=69.00%
+[425/1319] correct=288 wrong=134 format_fail=3 acc=67.76%
+[450/1319] correct=304 wrong=143 format_fail=3 acc=67.56%
+[475/1319] correct=322 wrong=150 format_fail=3 acc=67.79%
+[500/1319] correct=337 wrong=159 format_fail=4 acc=67.40%
+[525/1319] correct=357 wrong=164 format_fail=4 acc=68.00%
+[550/1319] correct=371 wrong=175 format_fail=4 acc=67.45%
+[575/1319] correct=389 wrong=182 format_fail=4 acc=67.65%
+[600/1319] correct=408 wrong=187 format_fail=5 acc=68.00%
+[625/1319] correct=424 wrong=196 format_fail=5 acc=67.84%
+[650/1319] correct=441 wrong=204 format_fail=5 acc=67.85%
+[675/1319] correct=461 wrong=209 format_fail=5 acc=68.30%
+[700/1319] correct=477 wrong=218 format_fail=5 acc=68.14%
+[725/1319] correct=494 wrong=226 format_fail=5 acc=68.14%
+[750/1319] correct=512 wrong=233 format_fail=5 acc=68.27%
+[775/1319] correct=527 wrong=243 format_fail=5 acc=68.00%
+[800/1319] correct=539 wrong=256 format_fail=5 acc=67.38%
+[825/1319] correct=554 wrong=266 format_fail=5 acc=67.15%
+[850/1319] correct=575 wrong=270 format_fail=5 acc=67.65%
+[875/1319] correct=593 wrong=277 format_fail=5 acc=67.77%
+[900/1319] correct=613 wrong=282 format_fail=5 acc=68.11%
+[925/1319] correct=632 wrong=288 format_fail=5 acc=68.32%
+[950/1319] correct=650 wrong=295 format_fail=5 acc=68.42%
+[975/1319] correct=664 wrong=305 format_fail=6 acc=68.10%
+[1000/1319] correct=678 wrong=316 format_fail=6 acc=67.80%
+[1025/1319] correct=695 wrong=324 format_fail=6 acc=67.80%
+[1050/1319] correct=711 wrong=333 format_fail=6 acc=67.71%
+[1075/1319] correct=730 wrong=339 format_fail=6 acc=67.91%
+[1100/1319] correct=744 wrong=350 format_fail=6 acc=67.64%
+[1125/1319] correct=765 wrong=354 format_fail=6 acc=68.00%
+[1150/1319] correct=779 wrong=365 format_fail=6 acc=67.74%
+[1175/1319] correct=793 wrong=376 format_fail=6 acc=67.49%
+[1200/1319] correct=809 wrong=385 format_fail=6 acc=67.42%
+[1225/1319] correct=827 wrong=391 format_fail=7 acc=67.51%
+[1250/1319] correct=845 wrong=398 format_fail=7 acc=67.60%
+[1275/1319] correct=865 wrong=402 format_fail=8 acc=67.84%
+[1300/1319] correct=885 wrong=407 format_fail=8 acc=68.08%
+[1319/1319] correct=898 wrong=413 format_fail=8 acc=68.08%
+
+======================================================================
+extra_sft OFFICIAL TEST RESULT
+======================================================================
+correct = 898
+wrong = 413
+format_fail = 8
+truncated = 6
+strict_accuracy = 68.08%
+format_success_rate = 99.39%
+truncation_rate = 0.45%
+saved: results/official_test/extra_sft_test1319.jsonl
+saved: results/official_test/extra_sft_test1319_summary.json

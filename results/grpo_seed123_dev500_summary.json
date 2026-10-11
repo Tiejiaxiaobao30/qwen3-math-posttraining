@@ -1,0 +1,12 @@
+{
+  "run_name": "grpo_seed123",
+  "grpo_adapter": "/kaggle/working/outputs/grpo_seed123/final_adapter",
+  "total": 500,
+  "correct": 382,
+  "wrong": 116,
+  "format_fail": 2,
+  "truncated": 2,
+  "strict_accuracy": 76.4,
+  "format_success_rate": 99.6,
+  "truncation_rate": 0.4
+}

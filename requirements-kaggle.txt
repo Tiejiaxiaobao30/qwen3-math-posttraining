@@ -1,0 +1,9 @@
+# Direct imports for BF16 evaluation only; NOT a lock of the historical Kaggle run.
+# Keep Kaggle's CUDA-matched torch; do not replace it blindly.
+# Exact final-run versions were not captured in the imported backup.
+# See docs/kaggle_environment.md for the reported torchao 0.10.0 issue.
+transformers
+peft
+accelerate
+# torchao is optional and is deliberately not requested for this non-quantized path.
+# Training scripts additionally use datasets and trl; training is frozen.

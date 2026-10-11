@@ -1,0 +1,22 @@
+{
+  "run_name": "sft_seed42_smoke",
+  "mode": "sft",
+  "total": 1,
+  "correct": 1,
+  "wrong": 0,
+  "format_fail": 0,
+  "truncated": 0,
+  "strict_accuracy": 1.0,
+  "strict_accuracy_percent": 100.0,
+  "format_success_rate": 1.0,
+  "format_success_percent": 100.0,
+  "truncation_rate": 0.0,
+  "truncation_percent": 0.0,
+  "do_sample": false,
+  "max_new_tokens": 512,
+  "test_sha256": "d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e",
+  "prompt_sha256": "4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828",
+  "base_model": "/kaggle/working/models/Qwen3-1.7B-Base",
+  "sft_adapter": "/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_full/final_adapter",
+  "grpo_adapter": null
+}

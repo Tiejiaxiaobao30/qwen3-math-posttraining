@@ -1,0 +1,92 @@
+======================================================================
+OFFICIAL TEST EVALUATOR
+======================================================================
+mode = base
+run_name = base
+device = cuda:0
+base_model = /kaggle/working/models/Qwen3-1.7B-Base
+sft_adapter = None
+grpo_adapter = None
+
+test examples = 1319
+test sha256 = d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e
+prompt sha256 = 4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828
+do_sample = False
+max_new_tokens = 512
+
+=== LOAD TOKENIZER ===
+
+=== LOAD BASE ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  73%|███████▎  | 226/310 [00:00<00:00, 2258.35it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2491.45it/s]
+
+======================================================================
+START OFFICIAL TEST
+======================================================================
+[1/1319] correct=0 wrong=0 format_fail=1 acc=0.00%
+[25/1319] correct=11 wrong=5 format_fail=9 acc=44.00%
+[50/1319] correct=27 wrong=8 format_fail=15 acc=54.00%
+[75/1319] correct=32 wrong=13 format_fail=30 acc=42.67%
+[100/1319] correct=43 wrong=17 format_fail=40 acc=43.00%
+[125/1319] correct=58 wrong=24 format_fail=43 acc=46.40%
+[150/1319] correct=75 wrong=26 format_fail=49 acc=50.00%
+[175/1319] correct=90 wrong=27 format_fail=58 acc=51.43%
+[200/1319] correct=101 wrong=29 format_fail=70 acc=50.50%
+[225/1319] correct=113 wrong=34 format_fail=78 acc=50.22%
+[250/1319] correct=130 wrong=38 format_fail=82 acc=52.00%
+[275/1319] correct=139 wrong=46 format_fail=90 acc=50.55%
+[300/1319] correct=155 wrong=49 format_fail=96 acc=51.67%
+[325/1319] correct=171 wrong=54 format_fail=100 acc=52.62%
+[350/1319] correct=182 wrong=58 format_fail=110 acc=52.00%
+[375/1319] correct=194 wrong=67 format_fail=114 acc=51.73%
+[400/1319] correct=205 wrong=74 format_fail=121 acc=51.25%
+[425/1319] correct=218 wrong=81 format_fail=126 acc=51.29%
+[450/1319] correct=235 wrong=86 format_fail=129 acc=52.22%
+[475/1319] correct=248 wrong=92 format_fail=135 acc=52.21%
+[500/1319] correct=261 wrong=100 format_fail=139 acc=52.20%
+[525/1319] correct=273 wrong=102 format_fail=150 acc=52.00%
+[550/1319] correct=284 wrong=108 format_fail=158 acc=51.64%
+[575/1319] correct=297 wrong=113 format_fail=165 acc=51.65%
+[600/1319] correct=313 wrong=115 format_fail=172 acc=52.17%
+[625/1319] correct=329 wrong=118 format_fail=178 acc=52.64%
+[650/1319] correct=344 wrong=122 format_fail=184 acc=52.92%
+[675/1319] correct=361 wrong=127 format_fail=187 acc=53.48%
+[700/1319] correct=372 wrong=134 format_fail=194 acc=53.14%
+[725/1319] correct=385 wrong=140 format_fail=200 acc=53.10%
+[750/1319] correct=397 wrong=145 format_fail=208 acc=52.93%
+[775/1319] correct=408 wrong=149 format_fail=218 acc=52.65%
+[800/1319] correct=416 wrong=158 format_fail=226 acc=52.00%
+[825/1319] correct=426 wrong=163 format_fail=236 acc=51.64%
+[850/1319] correct=435 wrong=167 format_fail=248 acc=51.18%
+[875/1319] correct=450 wrong=171 format_fail=254 acc=51.43%
+[900/1319] correct=461 wrong=173 format_fail=266 acc=51.22%
+[925/1319] correct=475 wrong=179 format_fail=271 acc=51.35%
+[950/1319] correct=484 wrong=186 format_fail=280 acc=50.95%
+[975/1319] correct=492 wrong=195 format_fail=288 acc=50.46%
+[1000/1319] correct=505 wrong=203 format_fail=292 acc=50.50%
+[1025/1319] correct=516 wrong=208 format_fail=301 acc=50.34%
+[1050/1319] correct=522 wrong=214 format_fail=314 acc=49.71%
+[1075/1319] correct=533 wrong=222 format_fail=320 acc=49.58%
+[1100/1319] correct=544 wrong=226 format_fail=330 acc=49.45%
+[1125/1319] correct=557 wrong=228 format_fail=340 acc=49.51%
+[1150/1319] correct=570 wrong=234 format_fail=346 acc=49.57%
+[1175/1319] correct=584 wrong=239 format_fail=352 acc=49.70%
+[1200/1319] correct=594 wrong=250 format_fail=356 acc=49.50%
+[1225/1319] correct=607 wrong=254 format_fail=364 acc=49.55%
+[1250/1319] correct=623 wrong=255 format_fail=372 acc=49.84%
+[1275/1319] correct=638 wrong=258 format_fail=379 acc=50.04%
+[1300/1319] correct=653 wrong=262 format_fail=385 acc=50.23%
+[1319/1319] correct=665 wrong=264 format_fail=390 acc=50.42%
+
+======================================================================
+base OFFICIAL TEST RESULT
+======================================================================
+correct = 665
+wrong = 264
+format_fail = 390
+truncated = 9
+strict_accuracy = 50.42%
+format_success_rate = 70.43%
+truncation_rate = 0.68%
+saved: results/official_test/base_test1319.jsonl
+saved: results/official_test/base_test1319_summary.json

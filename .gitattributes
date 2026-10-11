@@ -1,0 +1,8 @@
+# Frozen evidence hashes refer to exact archived bytes, including line endings.
+results/** -text whitespace=cr-at-eol
+data/official/** -text whitespace=cr-at-eol
+reports/final/** -text whitespace=cr-at-eol
+scripts/eval_official_test.py -text whitespace=cr-at-eol
+# Keep the pre-test parser and prompt hashes portable on Windows checkouts.
+scripts/evaluator.py text eol=lf
+configs/sft_prompt.txt text eol=lf

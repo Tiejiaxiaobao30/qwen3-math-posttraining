@@ -1,0 +1,219 @@
+{
+  "archives": [
+    {
+      "name": "seed123_final_backup.zip",
+      "bytes": 68534875,
+      "sha256": "736e66009f81dfc3829fa014463b6b8a7b7077e8d105c05d4333a57111d0c8f7"
+    },
+    {
+      "name": "qwen3_math_official_test_final.zip",
+      "bytes": 1124404,
+      "sha256": "56be83362a85dbe2e1717737aefd865345481ad1c33e076a194abf9f98a04089"
+    }
+  ],
+  "imported_files": [
+    {
+      "path": "scripts/eval_official_test.py",
+      "sha256": "3fe5cd8f050c3118c1012926871266eedd46dc1a1cb95a724a5e498f1ccc9433",
+      "bytes": 13098,
+      "source": "qwen3_math_official_test_final.zip:eval_official_test.py"
+    },
+    {
+      "path": "results/frozen_eval_manifest.json",
+      "sha256": "6e9c9d2697fa8575649b552741291dac0d8f0501bdc8e31aa75e9c739a10c59d",
+      "bytes": 2637,
+      "source": "qwen3_math_official_test_final.zip:frozen_eval_manifest.json"
+    },
+    {
+      "path": "data/official/gsm8k_test_1319.jsonl",
+      "sha256": "d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e",
+      "bytes": 811300,
+      "source": "qwen3_math_official_test_final.zip:gsm8k_test_1319.jsonl"
+    },
+    {
+      "path": "reports/final/logs/official_base.log",
+      "sha256": "61eb7141d9739675733ae888fc81fd363dc0a52506a87a0ccb7097a912c9ae87",
+      "bytes": 4636,
+      "source": "qwen3_math_official_test_final.zip:logs/official_base.log"
+    },
+    {
+      "path": "reports/final/logs/official_extra_sft.log",
+      "sha256": "ae3581491c4c2862041df596853960b8569f8422aceb62d1b6be0f1c26a9b590",
+      "bytes": 5073,
+      "source": "qwen3_math_official_test_final.zip:logs/official_extra_sft.log"
+    },
+    {
+      "path": "reports/final/logs/official_grpo_seed123.log",
+      "sha256": "fa61edc2228cf9067a7f83b21a060d6def10f1c9640d4747425f6984278fe96a",
+      "bytes": 4992,
+      "source": "qwen3_math_official_test_final.zip:logs/official_grpo_seed123.log"
+    },
+    {
+      "path": "reports/final/logs/official_grpo_seed42.log",
+      "sha256": "40aa4330bae3fe7f64dee520585623b01b1283143688b2d0e933897e9cfb3592",
+      "bytes": 5095,
+      "source": "qwen3_math_official_test_final.zip:logs/official_grpo_seed42.log"
+    },
+    {
+      "path": "reports/final/logs/official_sft_seed123.log",
+      "sha256": "1c22b0aa9ffdc6099c7b30754d8f31a9d2c69b4dadda9494b31d3bfad4c9e051",
+      "bytes": 4817,
+      "source": "qwen3_math_official_test_final.zip:logs/official_sft_seed123.log"
+    },
+    {
+      "path": "reports/final/logs/official_sft_seed42.log",
+      "sha256": "e4f08fbafdf54d9c73dc44b4dd0cbe9a7d5619db0561af316e3676ea41293301",
+      "bytes": 4798,
+      "source": "qwen3_math_official_test_final.zip:logs/official_sft_seed42.log"
+    },
+    {
+      "path": "results/official_test/base_smoke_test1319.jsonl",
+      "sha256": "9ec3c58e0c3e85966d61bfd41d9360f65c6a7f1f233f81ee6923bfa056216054",
+      "bytes": 1302,
+      "source": "qwen3_math_official_test_final.zip:official_test/base_smoke_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/base_smoke_test1319_summary.json",
+      "sha256": "5a1381d3ea019ef3e07ee547f30c8b53dd91b036174c8590857708d7e5b6a7ba",
+      "bytes": 632,
+      "source": "qwen3_math_official_test_final.zip:official_test/base_smoke_test1319_summary.json"
+    },
+    {
+      "path": "results/official_test/base_test1319.jsonl",
+      "sha256": "18aae328816e8e8cc632f53c899e2722f399b44e077db52c3d7618a144c244b7",
+      "bytes": 1103968,
+      "source": "qwen3_math_official_test_final.zip:official_test/base_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/base_test1319_summary.json",
+      "sha256": "e58b95b354517a1a5ee84166bf7d44a4282cb8a6d9ae56203a1e557062fa50fd",
+      "bytes": 725,
+      "source": "qwen3_math_official_test_final.zip:official_test/base_test1319_summary.json"
+    },
+    {
+      "path": "results/official_test/extra_sft_test1319.jsonl",
+      "sha256": "6cd24b43bc83ceac9e459dd1784c30697005209ad6d77d20f3a334f13767f54c",
+      "bytes": 526099,
+      "source": "qwen3_math_official_test_final.zip:official_test/extra_sft_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/extra_sft_test1319_summary.json",
+      "sha256": "9194c19708e4fa76c0b962651f91fc9ef3fbc8de2d0d8a5946c524fb54c67f7b",
+      "bytes": 931,
+      "source": "qwen3_math_official_test_final.zip:official_test/extra_sft_test1319_summary.json"
+    },
+    {
+      "path": "results/official_test/grpo_seed123_test1319.jsonl",
+      "sha256": "214f1c3b9bd29afd91ef54bf862aa3e83240efc245bda5e3c6641572a5b2a122",
+      "bytes": 531980,
+      "source": "qwen3_math_official_test_final.zip:official_test/grpo_seed123_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/grpo_seed123_test1319_summary.json",
+      "sha256": "a987c53ef726eb8bf5304a998a9d5bc31702ae3591c8333adaac8294788320b4",
+      "bytes": 878,
+      "source": "qwen3_math_official_test_final.zip:official_test/grpo_seed123_test1319_summary.json"
+    },
+    {
+      "path": "results/official_test/grpo_seed42_test1319.jsonl",
+      "sha256": "824ff914cebaf12014e1e5080dc0df0edc15117f2ed45831384a1631e36d0243",
+      "bytes": 520758,
+      "source": "qwen3_math_official_test_final.zip:official_test/grpo_seed42_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/grpo_seed42_test1319_summary.json",
+      "sha256": "c8d353f9e7a19c1da02d65385b44255394f1ad5310d8c792db44d0e26b188de6",
+      "bytes": 927,
+      "source": "qwen3_math_official_test_final.zip:official_test/grpo_seed42_test1319_summary.json"
+    },
+    {
+      "path": "results/official_test/sft_seed123_test1319.jsonl",
+      "sha256": "e9d4ffc3a9a55b33141ffdd799a071aa7f8e61491c6fa37e0c7e64a317462e5d",
+      "bytes": 528764,
+      "source": "qwen3_math_official_test_final.zip:official_test/sft_seed123_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/sft_seed123_test1319_summary.json",
+      "sha256": "305568e2cae4182acd31651d338d163259290589c165fce66c0257e2b2ab5d0d",
+      "bytes": 831,
+      "source": "qwen3_math_official_test_final.zip:official_test/sft_seed123_test1319_summary.json"
+    },
+    {
+      "path": "results/official_test/sft_seed42_smoke_test1319.jsonl",
+      "sha256": "1b2222781a2f09af6dff81d692ad8cf250396a99d2a7a2a9e46b129a410253dc",
+      "bytes": 399,
+      "source": "qwen3_math_official_test_final.zip:official_test/sft_seed42_smoke_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/sft_seed42_smoke_test1319_summary.json",
+      "sha256": "c63a7eca5c7b6c3d6c311dd633c34464df542e180adddc3bef659b897188735c",
+      "bytes": 738,
+      "source": "qwen3_math_official_test_final.zip:official_test/sft_seed42_smoke_test1319_summary.json"
+    },
+    {
+      "path": "results/official_test/sft_seed42_test1319.jsonl",
+      "sha256": "5523cf7cb615121fc9ce640f9fcfbf7c3f1d4ea154bd53e44e294fb04f812446",
+      "bytes": 515498,
+      "source": "qwen3_math_official_test_final.zip:official_test/sft_seed42_test1319.jsonl"
+    },
+    {
+      "path": "results/official_test/sft_seed42_test1319_summary.json",
+      "sha256": "318c57180499e64887f19756e20e6151aa9f7fa3ab994ef9dba55aff31554dd2",
+      "bytes": 825,
+      "source": "qwen3_math_official_test_final.zip:official_test/sft_seed42_test1319_summary.json"
+    },
+    {
+      "path": "results/grpo_seed123_dev500.jsonl",
+      "sha256": "58ba90c8670bba89e34d94d74056f01b67ec7a28a852b7d53f74307eb1cdc759",
+      "bytes": 186023,
+      "source": "seed123_final_backup.zip:grpo_seed123_dev500.jsonl"
+    },
+    {
+      "path": "results/grpo_seed123_dev500_summary.json",
+      "sha256": "fc069d70778b8aa5d45430674aa0a8d3896c8443457635448699962a89f94d59",
+      "bytes": 276,
+      "source": "seed123_final_backup.zip:grpo_seed123_dev500_summary.json"
+    },
+    {
+      "path": "reports/final/kaggle_sources/eval_grpo_pair_dev.py",
+      "sha256": "e78a0d3a68ce0ba835c9bbb3feec431032bf15b63078f0d7c9428da1f604d34c",
+      "bytes": 8625,
+      "source": "seed123_final_backup.zip:eval_grpo_pair_dev.py"
+    },
+    {
+      "path": "reports/final/kaggle_sources/eval_sft_adapter_dev.py",
+      "sha256": "b31513d84301cee89a98bd6d344d11c1f8d65058c7d0d28042f8889331b448e4",
+      "bytes": 7184,
+      "source": "local second-seed working tree before portability edits"
+    },
+    {
+      "path": "results/sft_seed123_dev500.jsonl",
+      "sha256": "ac71bb0452fb87f38a0529718a3a570f0bfc0f654e3752272123d66b366688f5",
+      "bytes": 187164,
+      "source": "local second-seed working tree"
+    },
+    {
+      "path": "results/sft_seed123_dev500_summary.json",
+      "sha256": "55f021c4af7751e05389be1e64001e2a57073f08d8818c9c5e5ad15474525c4d",
+      "bytes": 401,
+      "source": "local second-seed working tree"
+    }
+  ],
+  "excluded": [
+    "grpo_seed123_final_adapter/ (weights and tokenizer assets remain in local ZIP)",
+    "all checkpoint/model/backup archives"
+  ],
+  "notes": [
+    "Original manifest, official evaluator, summaries, predictions, logs and test copy preserved byte-for-byte.",
+    "Smoke files retained for provenance; excluded from full-test analysis.",
+    "Seed123 configs use a relative model path; dev scripts expose model/data/device paths. Original dev script snapshots are retained under reports/final/kaggle_sources.",
+    "Local environment-backup.txt is pre-Kaggle and is not a Kaggle environment lock."
+  ],
+  "verified_weight_in_archive": {
+    "archive": "seed123_final_backup.zip",
+    "member": "grpo_seed123_final_adapter/adapter_model.safetensors",
+    "sha256": "09aa080f1e82d412a0f3cd3eac3d8eeb0cf921230daad193ef9407db581e8436",
+    "matches_freeze": true,
+    "extracted": false
+  }
+}

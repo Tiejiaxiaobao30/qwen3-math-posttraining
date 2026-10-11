@@ -1,0 +1,101 @@
+======================================================================
+OFFICIAL TEST EVALUATOR
+======================================================================
+mode = grpo
+run_name = grpo_seed42
+device = cuda:0
+base_model = /kaggle/working/models/Qwen3-1.7B-Base
+sft_adapter = /kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_full/final_adapter
+grpo_adapter = /kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/grpo_full/final_adapter
+
+test examples = 1319
+test sha256 = d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e
+prompt sha256 = 4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828
+do_sample = False
+max_new_tokens = 512
+
+=== LOAD TOKENIZER ===
+
+=== LOAD BASE ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  79%|███████▉  | 245/310 [00:00<00:00, 2449.73it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2706.81it/s]
+
+=== LOAD SFT ADAPTER ===
+/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_full/final_adapter
+
+=== MERGE SFT ===
+
+=== LOAD GRPO ADAPTER ===
+/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/grpo_full/final_adapter
+GRPO LoRA tensors = 392
+
+======================================================================
+START OFFICIAL TEST
+======================================================================
+[1/1319] correct=1 wrong=0 format_fail=0 acc=100.00%
+[25/1319] correct=15 wrong=10 format_fail=0 acc=60.00%
+[50/1319] correct=33 wrong=17 format_fail=0 acc=66.00%
+[75/1319] correct=52 wrong=23 format_fail=0 acc=69.33%
+[100/1319] correct=68 wrong=32 format_fail=0 acc=68.00%
+[125/1319] correct=81 wrong=44 format_fail=0 acc=64.80%
+[150/1319] correct=98 wrong=51 format_fail=1 acc=65.33%
+[175/1319] correct=113 wrong=60 format_fail=2 acc=64.57%
+[200/1319] correct=132 wrong=65 format_fail=3 acc=66.00%
+[225/1319] correct=148 wrong=74 format_fail=3 acc=65.78%
+[250/1319] correct=166 wrong=80 format_fail=4 acc=66.40%
+[275/1319] correct=184 wrong=87 format_fail=4 acc=66.91%
+[300/1319] correct=203 wrong=93 format_fail=4 acc=67.67%
+[325/1319] correct=222 wrong=99 format_fail=4 acc=68.31%
+[350/1319] correct=240 wrong=106 format_fail=4 acc=68.57%
+[375/1319] correct=256 wrong=114 format_fail=5 acc=68.27%
+[400/1319] correct=273 wrong=122 format_fail=5 acc=68.25%
+[425/1319] correct=288 wrong=132 format_fail=5 acc=67.76%
+[450/1319] correct=305 wrong=140 format_fail=5 acc=67.78%
+[475/1319] correct=320 wrong=150 format_fail=5 acc=67.37%
+[500/1319] correct=337 wrong=157 format_fail=6 acc=67.40%
+[525/1319] correct=356 wrong=163 format_fail=6 acc=67.81%
+[550/1319] correct=371 wrong=173 format_fail=6 acc=67.45%
+[575/1319] correct=385 wrong=183 format_fail=7 acc=66.96%
+[600/1319] correct=401 wrong=191 format_fail=8 acc=66.83%
+[625/1319] correct=418 wrong=199 format_fail=8 acc=66.88%
+[650/1319] correct=435 wrong=207 format_fail=8 acc=66.92%
+[675/1319] correct=454 wrong=212 format_fail=9 acc=67.26%
+[700/1319] correct=469 wrong=222 format_fail=9 acc=67.00%
+[725/1319] correct=482 wrong=233 format_fail=10 acc=66.48%
+[750/1319] correct=499 wrong=240 format_fail=11 acc=66.53%
+[775/1319] correct=517 wrong=247 format_fail=11 acc=66.71%
+[800/1319] correct=533 wrong=256 format_fail=11 acc=66.62%
+[825/1319] correct=551 wrong=263 format_fail=11 acc=66.79%
+[850/1319] correct=573 wrong=266 format_fail=11 acc=67.41%
+[875/1319] correct=593 wrong=271 format_fail=11 acc=67.77%
+[900/1319] correct=615 wrong=274 format_fail=11 acc=68.33%
+[925/1319] correct=631 wrong=283 format_fail=11 acc=68.22%
+[950/1319] correct=649 wrong=290 format_fail=11 acc=68.32%
+[975/1319] correct=662 wrong=302 format_fail=11 acc=67.90%
+[1000/1319] correct=681 wrong=307 format_fail=12 acc=68.10%
+[1025/1319] correct=701 wrong=312 format_fail=12 acc=68.39%
+[1050/1319] correct=714 wrong=324 format_fail=12 acc=68.00%
+[1075/1319] correct=730 wrong=333 format_fail=12 acc=67.91%
+[1100/1319] correct=744 wrong=344 format_fail=12 acc=67.64%
+[1125/1319] correct=766 wrong=347 format_fail=12 acc=68.09%
+[1150/1319] correct=781 wrong=357 format_fail=12 acc=67.91%
+[1175/1319] correct=793 wrong=370 format_fail=12 acc=67.49%
+[1200/1319] correct=808 wrong=380 format_fail=12 acc=67.33%
+[1225/1319] correct=828 wrong=385 format_fail=12 acc=67.59%
+[1250/1319] correct=845 wrong=392 format_fail=13 acc=67.60%
+[1275/1319] correct=864 wrong=398 format_fail=13 acc=67.76%
+[1300/1319] correct=882 wrong=405 format_fail=13 acc=67.85%
+[1319/1319] correct=893 wrong=413 format_fail=13 acc=67.70%
+
+======================================================================
+grpo_seed42 OFFICIAL TEST RESULT
+======================================================================
+correct = 893
+wrong = 413
+format_fail = 13
+truncated = 11
+strict_accuracy = 67.70%
+format_success_rate = 99.01%
+truncation_rate = 0.83%
+saved: results/official_test/grpo_seed42_test1319.jsonl
+saved: results/official_test/grpo_seed42_test1319_summary.json

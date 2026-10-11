@@ -1,0 +1,22 @@
+{
+  "run_name": "base",
+  "mode": "base",
+  "total": 1319,
+  "correct": 665,
+  "wrong": 264,
+  "format_fail": 390,
+  "truncated": 9,
+  "strict_accuracy": 0.5041698256254739,
+  "strict_accuracy_percent": 50.41698256254739,
+  "format_success_rate": 0.7043214556482184,
+  "format_success_percent": 70.43214556482184,
+  "truncation_rate": 0.006823351023502654,
+  "truncation_percent": 0.6823351023502654,
+  "do_sample": false,
+  "max_new_tokens": 512,
+  "test_sha256": "d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e",
+  "prompt_sha256": "4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828",
+  "base_model": "/kaggle/working/models/Qwen3-1.7B-Base",
+  "sft_adapter": null,
+  "grpo_adapter": null
+}

@@ -1,0 +1,95 @@
+======================================================================
+OFFICIAL TEST EVALUATOR
+======================================================================
+mode = sft
+run_name = sft_seed123
+device = cuda:0
+base_model = /kaggle/working/models/Qwen3-1.7B-Base
+sft_adapter = /kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_seed123/final_adapter
+grpo_adapter = None
+
+test examples = 1319
+test sha256 = d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e
+prompt sha256 = 4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828
+do_sample = False
+max_new_tokens = 512
+
+=== LOAD TOKENIZER ===
+
+=== LOAD BASE ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 212/310 [00:00<00:00, 2115.11it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2338.99it/s]
+
+=== LOAD SFT ADAPTER ===
+/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_seed123/final_adapter
+
+======================================================================
+START OFFICIAL TEST
+======================================================================
+[1/1319] correct=1 wrong=0 format_fail=0 acc=100.00%
+[25/1319] correct=17 wrong=6 format_fail=2 acc=68.00%
+[50/1319] correct=34 wrong=13 format_fail=3 acc=68.00%
+[75/1319] correct=53 wrong=19 format_fail=3 acc=70.67%
+[100/1319] correct=70 wrong=27 format_fail=3 acc=70.00%
+[125/1319] correct=85 wrong=37 format_fail=3 acc=68.00%
+[150/1319] correct=100 wrong=47 format_fail=3 acc=66.67%
+[175/1319] correct=118 wrong=53 format_fail=4 acc=67.43%
+[200/1319] correct=135 wrong=60 format_fail=5 acc=67.50%
+[225/1319] correct=152 wrong=68 format_fail=5 acc=67.56%
+[250/1319] correct=169 wrong=75 format_fail=6 acc=67.60%
+[275/1319] correct=187 wrong=82 format_fail=6 acc=68.00%
+[300/1319] correct=204 wrong=89 format_fail=7 acc=68.00%
+[325/1319] correct=224 wrong=94 format_fail=7 acc=68.92%
+[350/1319] correct=242 wrong=101 format_fail=7 acc=69.14%
+[375/1319] correct=258 wrong=110 format_fail=7 acc=68.80%
+[400/1319] correct=273 wrong=120 format_fail=7 acc=68.25%
+[425/1319] correct=288 wrong=130 format_fail=7 acc=67.76%
+[450/1319] correct=302 wrong=141 format_fail=7 acc=67.11%
+[475/1319] correct=319 wrong=149 format_fail=7 acc=67.16%
+[500/1319] correct=337 wrong=156 format_fail=7 acc=67.40%
+[525/1319] correct=357 wrong=161 format_fail=7 acc=68.00%
+[550/1319] correct=372 wrong=171 format_fail=7 acc=67.64%
+[575/1319] correct=387 wrong=181 format_fail=7 acc=67.30%
+[600/1319] correct=401 wrong=192 format_fail=7 acc=66.83%
+[625/1319] correct=418 wrong=200 format_fail=7 acc=66.88%
+[650/1319] correct=437 wrong=206 format_fail=7 acc=67.23%
+[675/1319] correct=456 wrong=212 format_fail=7 acc=67.56%
+[700/1319] correct=470 wrong=223 format_fail=7 acc=67.14%
+[725/1319] correct=486 wrong=232 format_fail=7 acc=67.03%
+[750/1319] correct=504 wrong=239 format_fail=7 acc=67.20%
+[775/1319] correct=523 wrong=245 format_fail=7 acc=67.48%
+[800/1319] correct=535 wrong=258 format_fail=7 acc=66.88%
+[825/1319] correct=551 wrong=267 format_fail=7 acc=66.79%
+[850/1319] correct=572 wrong=271 format_fail=7 acc=67.29%
+[875/1319] correct=593 wrong=275 format_fail=7 acc=67.77%
+[900/1319] correct=614 wrong=279 format_fail=7 acc=68.22%
+[925/1319] correct=632 wrong=285 format_fail=8 acc=68.32%
+[950/1319] correct=648 wrong=294 format_fail=8 acc=68.21%
+[975/1319] correct=661 wrong=305 format_fail=9 acc=67.79%
+[1000/1319] correct=678 wrong=313 format_fail=9 acc=67.80%
+[1025/1319] correct=695 wrong=321 format_fail=9 acc=67.80%
+[1050/1319] correct=708 wrong=332 format_fail=10 acc=67.43%
+[1075/1319] correct=725 wrong=340 format_fail=10 acc=67.44%
+[1100/1319] correct=743 wrong=347 format_fail=10 acc=67.55%
+[1125/1319] correct=762 wrong=353 format_fail=10 acc=67.73%
+[1150/1319] correct=778 wrong=362 format_fail=10 acc=67.65%
+[1175/1319] correct=792 wrong=373 format_fail=10 acc=67.40%
+[1200/1319] correct=809 wrong=381 format_fail=10 acc=67.42%
+[1225/1319] correct=829 wrong=386 format_fail=10 acc=67.67%
+[1250/1319] correct=847 wrong=393 format_fail=10 acc=67.76%
+[1275/1319] correct=869 wrong=396 format_fail=10 acc=68.16%
+[1300/1319] correct=887 wrong=403 format_fail=10 acc=68.23%
+[1319/1319] correct=897 wrong=412 format_fail=10 acc=68.01%
+
+======================================================================
+sft_seed123 OFFICIAL TEST RESULT
+======================================================================
+correct = 897
+wrong = 412
+format_fail = 10
+truncated = 6
+strict_accuracy = 68.01%
+format_success_rate = 99.24%
+truncation_rate = 0.45%
+saved: results/official_test/sft_seed123_test1319.jsonl
+saved: results/official_test/sft_seed123_test1319_summary.json

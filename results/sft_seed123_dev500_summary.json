@@ -1,0 +1,17 @@
+{
+  "run_name": "sft_seed123",
+  "adapter": "outputs/sft_seed123/final_adapter",
+  "total": 500,
+  "correct": 380,
+  "wrong": 118,
+  "format_fail": 2,
+  "truncated": 2,
+  "strict_accuracy": 0.76,
+  "strict_accuracy_percent": 76.0,
+  "format_success_rate": 0.996,
+  "format_success_percent": 99.6,
+  "truncation_rate": 0.004,
+  "truncation_percent": 0.4,
+  "max_new_tokens": 512,
+  "do_sample": false
+}

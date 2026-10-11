@@ -97,3 +97,7 @@ Raw results:
 Metrics:
 
 `results/base_dev_metrics.json`
+
+## Final official test (after development freeze)
+
+The development protocol above is unchanged. The six predeclared policies have now been evaluated on the sealed 1319-example GSM8K main test after the recorded freeze. See [final report](reports/final/official_test_report.md), [original freeze manifest](results/frozen_eval_manifest.json), and [stored predictions](results/official_test/). No post-test tuning or additional training is permitted for these final results. The original manifest retains its pre-test SEALED status as a historical snapshot.

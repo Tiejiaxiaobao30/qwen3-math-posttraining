@@ -1,0 +1,76 @@
+{
+  "experiment": "Qwen3-1.7B math post-training",
+  "freeze_status": "FROZEN_BEFORE_OFFICIAL_TEST",
+  "freeze_time": "2026-10-10T23:03:54.797809",
+  "official_test": {
+    "dataset": "GSM8K main test",
+    "expected_examples": 1319,
+    "status": "SEALED",
+    "used_for_model_selection": false
+  },
+  "evaluation": {
+    "prompt_sha256": "4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828",
+    "parser_sha256": "db06aa96983e2ae183b93bea4f1841039d8ae4e6fb29712a5fd1120cb8c22198",
+    "dev500_sha256": "fa03feb90343fa52eed6c1004d68f346baa7cd96b64fada2c058eee50eca356a",
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "strict_parser": true
+  },
+  "development_results": {
+    "base": 53.4,
+    "seed42": {
+      "sft": 78.0,
+      "grpo": 78.4,
+      "delta_pp": 0.4
+    },
+    "seed123": {
+      "sft": 76.0,
+      "grpo": 76.4,
+      "delta_pp": 0.4
+    },
+    "two_seed_mean": {
+      "sft": 77.0,
+      "grpo": 77.4,
+      "delta_pp": 0.4
+    },
+    "extra_sft_control": 76.4
+  },
+  "artifacts": {
+    "sft_seed42": {
+      "path": "/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_full/final_adapter/adapter_model.safetensors",
+      "sha256": "63420f32629bbf452b30b4e5d27060c924f01b37dea013a073bb2956cea2437f"
+    },
+    "grpo_seed42": {
+      "path": "/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/grpo_full/final_adapter/adapter_model.safetensors",
+      "sha256": "24f90e2b7b27df50699194cb10463a58ba2ffab236eb4c84040bb3e41bf36572"
+    },
+    "extra_sft_control": {
+      "path": "/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/extra_sft_rl1000/final_adapter/adapter_model.safetensors",
+      "sha256": "5c007e49d5554d5a5e2503adaccccd66434a08cf103e2542af9448c4df8a7203"
+    },
+    "sft_seed123": {
+      "path": "/kaggle/input/datasets/datadiver30/qwen3-math-full-backup/qwen3-math/outputs/sft_seed123/final_adapter/adapter_model.safetensors",
+      "sha256": "5ba7e84b56fc9ec1e801ad1b99d8b71ed531c5a6834bb4f75e626c916fb1c615"
+    },
+    "grpo_seed123": {
+      "path": "/kaggle/working/outputs/grpo_seed123/final_adapter/adapter_model.safetensors",
+      "sha256": "09aa080f1e82d412a0f3cd3eac3d8eeb0cf921230daad193ef9407db581e8436"
+    }
+  },
+  "frozen_policy": {
+    "no_more_training": true,
+    "no_more_dev_tuning": true,
+    "no_more_hyperparameter_search": true,
+    "no_third_seed": true,
+    "no_post_test_tuning": true,
+    "report_both_seeds": true
+  },
+  "predeclared_test_models": [
+    "Base",
+    "SFT seed42",
+    "GRPO seed42",
+    "Extra-SFT control",
+    "SFT seed123",
+    "GRPO seed123"
+  ]
+}

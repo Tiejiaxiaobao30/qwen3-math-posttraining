@@ -39,3 +39,13 @@ results/base_dev_metrics_recomputed.json
 
 # Local training artifacts
 outputs/
+
+# Local backup archives and checkpoint variants
+*.zip
+*.tar
+*.tar.*
+*.ckpt
+checkpoint*/
+# Small frozen official logs are reviewable evidence
+!reports/final/logs/
+!reports/final/logs/*.log

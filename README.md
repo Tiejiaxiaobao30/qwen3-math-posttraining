@@ -60,8 +60,21 @@ The [official evaluator](scripts/eval_official_test.py) is preserved byte-for-by
 
 Seed123 configuration files use a relative `models/Qwen3-1.7B-Base` path; set it to your local model directory before any separate reproduction experiment. Dev evaluators expose `--base-model`, `--dev-file`, `--prompt-file`, `--device`, and `--results-dir`; their original sources are preserved in `reports/final/kaggle_sources/`. No post-test training is part of this release.
 
+## Serving Benchmark
+
+Completed: merged Base + SFT seed42 served by vLLM on **1×Tesla T4**, FP16, TP=1, `max_model_len=2048`. Each run uses 64 synthetic random requests, 256 input / 128 output tokens, 4 warmups, `ignore_eos`, and `request_rate=inf`.
+
+| Configured concurrency | Success | Requests/s | Output tokens/s | Total tokens/s | Mean / P99 TTFT (ms) | Mean / P99 TPOT (ms/token) | Mean / P99 E2E (ms) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| C1 | 64/64 | 0.391578 | 50.1220 | 150.3661 | 70.372 / 76.015 | 19.551 / 22.795 | 2553.312 / 2969.379 |
+| C8 | 64/64 | 2.14 | 273.31 | 819.93 | 322.78 / 437.44 | 26.94 / 29.12 | 3743.99 / 3809.44 |
+
+Throughput is an **aggregate server metric across all measured requests**, not per-user generation speed. Total tokens/s includes input + output; TTFT, TPOT, and E2E describe request latency. C1/C8 use the same token lengths but different random seeds (101/202), so prompts are not identical. These single-run synthetic measurements do not measure GSM8K accuracy or establish a general concurrency optimum.
+
+[Full environment, workload, metrics, commands, and limitations](reports/final/vllm_benchmark.md) · [Raw JSON, hardware, and logs](results/vllm/)
+
 ## Artifact policy and remaining work
 
 Model weights, checkpoints, tokenizer bundles, ZIP/TAR backups, and the 8GB full backup remain outside Git. The repository includes the frozen GSM8K main test JSONL copy used by these runs (source: GSM8K main via ModelScope, recorded in `data_inventory.json`) and small evaluation evidence.
 
-Still pending: **vLLM deployment benchmark** (TTFT, latency, throughput, fixed prompts/load/hardware/software and model composition) and final evidence-based resume bullets/interview notes. No serving performance is claimed yet.
+The **vLLM deployment benchmark is complete**; its small evidence files are linked above. Merged models, `vllm-env`, process PID files, and model weights remain outside Git. Final evidence-based resume bullets/interview notes remain separate follow-up work. The sealed-test conclusions and no-post-test-tuning policy are unchanged.

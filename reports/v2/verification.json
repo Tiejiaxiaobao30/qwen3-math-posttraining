@@ -1,0 +1,84 @@
+{
+  "dev500": {
+    "4": {
+      "correct": 384,
+      "wrong": 114,
+      "format_fail": 2,
+      "total": 500,
+      "truncated": 0
+    },
+    "8": {
+      "correct": 378,
+      "wrong": 120,
+      "format_fail": 2,
+      "total": 500,
+      "truncated": 0
+    }
+  },
+  "dev500_g4_to_g8": {
+    "both_correct": 366,
+    "both_incorrect": 104,
+    "lost": 18,
+    "gained": 12
+  },
+  "test1319": {
+    "4": {
+      "correct": 889,
+      "wrong": 421,
+      "format_fail": 9,
+      "total": 1319,
+      "truncated": 7
+    },
+    "8": {
+      "correct": 898,
+      "wrong": 413,
+      "format_fail": 8,
+      "total": 1319,
+      "truncated": 7
+    }
+  },
+  "test1319_g4_to_g8": {
+    "both_correct": 858,
+    "both_incorrect": 390,
+    "gained": 40,
+    "lost": 31
+  },
+  "training": {
+    "4": {
+      "global_step": 500,
+      "nonzero_gradient_steps": 500,
+      "nan_detected": false,
+      "peak_gpu_allocated_gb": 10.926190853118896,
+      "peak_gpu_reserved_gb": 13.396484375,
+      "resolved_config": {
+        "max_steps": 500,
+        "num_generations": 4,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_completion_length": 256,
+        "beta": 0.04,
+        "num_iterations": 1,
+        "loss_type": "bnpo"
+      },
+      "train_runtime": 3350.7089
+    },
+    "8": {
+      "global_step": 500,
+      "nonzero_gradient_steps": 499,
+      "nan_detected": false,
+      "peak_gpu_allocated_gb": 11.05632734298706,
+      "peak_gpu_reserved_gb": 19.80859375,
+      "resolved_config": {
+        "max_steps": 500,
+        "num_generations": 8,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_completion_length": 256,
+        "beta": 0.04,
+        "num_iterations": 1,
+        "loss_type": "bnpo"
+      },
+      "train_runtime": 2731.2307
+    }
+  }
+}

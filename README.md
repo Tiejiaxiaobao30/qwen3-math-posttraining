@@ -78,3 +78,18 @@ Throughput is an **aggregate server metric across all measured requests**, not p
 Model weights, checkpoints, tokenizer bundles, ZIP/TAR backups, and the 8GB full backup remain outside Git. The repository includes the frozen GSM8K main test JSONL copy used by these runs (source: GSM8K main via ModelScope, recorded in `data_inventory.json`) and small evaluation evidence.
 
 The **vLLM deployment benchmark is complete**; its small evidence files are linked above. Merged models, `vllm-env`, process PID files, and model weights remain outside Git. Final evidence-based resume bullets/interview notes remain separate follow-up work. The sealed-test conclusions and no-post-test-tuning policy are unchanged.
+
+## V2 exploratory follow-up (2026-10-20)
+
+The preceding freeze/no-further-training/no-post-test-tuning statements describe the **historical V1 experiment**. V2 is a separate exploratory follow-up after V1 test access; it is not a new sealed-test confirmation. All V1 files, frozen results and history remain preserved.
+
+| V2 run | Dev500 | Official test1319 | Training runtime | Optimizer steps |
+|---|---:|---:|---:|---:|
+| G4 seed42 | 384/500 (76.80%) | 889/1319 (67.40%) | 3350.7089 s | 500 |
+| G8 seed42 | 378/500 (75.60%) | 898/1319 (68.08%) | 2731.2307 s | 500 |
+
+G8 gains 40 and loses 31 official-test answers versus G4 (net +9), while losing 6 net answers on dev500. Both remain below SFT42 (902/1319, 68.39%); V1 GRPO G4 scored 893/1319 (67.70%). One run per group does not establish a stable gain. Fixed optimizer steps/batch do not fix prompt coverage when G changes; token workload and timing controls are not matched. Runtime differences are descriptive, not a demonstrated speedup.
+
+[V2 research report, confounders and commands](reports/v2/research_report.md) · [Compact outcomes and original summaries](results/v2/) · [Provenance](reports/v2/provenance.json)
+
+Run `python -m scripts.audit_v2_evidence` for CPU checks. Add `--archive PATH_TO_LOCAL_TAR_GZ` to rescore all 3638 original V2 predictions. The verified 207652808-byte backup, model adapters and full prediction text remain outside Git. Existing training/evaluation scripts match the backup; the only added script audits evidence.

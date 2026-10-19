@@ -1,0 +1,12 @@
+{
+  "run_name": "v2_g8",
+  "grpo_adapter": "outputs/v2_g8/final_adapter",
+  "total": 500,
+  "correct": 378,
+  "wrong": 120,
+  "format_fail": 2,
+  "truncated": 0,
+  "strict_accuracy": 75.6,
+  "format_success_rate": 99.6,
+  "truncation_rate": 0.0
+}

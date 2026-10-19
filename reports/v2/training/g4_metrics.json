@@ -1,0 +1,4419 @@
+{
+  "global_step": 500,
+  "train_metrics": {
+    "train_runtime": 3350.7089,
+    "train_samples_per_second": 1.194,
+    "train_steps_per_second": 0.149,
+    "total_flos": 0.0,
+    "train_loss": -0.006688862173818052
+  },
+  "weight_change": {
+    "changed_tensors": 392,
+    "changed_values": 17431901,
+    "max_abs_change": 8.449051529169083e-05
+  },
+  "gradient_audit": [
+    {
+      "optimizer_step": 1,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 196,
+      "max_abs_grad": 0.012298583984375
+    },
+    {
+      "optimizer_step": 2,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00621795654296875
+    },
+    {
+      "optimizer_step": 3,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0002294406294822693
+    },
+    {
+      "optimizer_step": 4,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012427568435668945
+    },
+    {
+      "optimizer_step": 5,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.866455078125e-05
+    },
+    {
+      "optimizer_step": 6,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0076751708984375
+    },
+    {
+      "optimizer_step": 7,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0116119384765625
+    },
+    {
+      "optimizer_step": 8,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01824641227722168
+    },
+    {
+      "optimizer_step": 9,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0105133056640625
+    },
+    {
+      "optimizer_step": 10,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010436773300170898
+    },
+    {
+      "optimizer_step": 11,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011566162109375
+    },
+    {
+      "optimizer_step": 12,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01834869384765625
+    },
+    {
+      "optimizer_step": 13,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009735107421875
+    },
+    {
+      "optimizer_step": 14,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010742668062448502
+    },
+    {
+      "optimizer_step": 15,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0103759765625
+    },
+    {
+      "optimizer_step": 16,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010498046875
+    },
+    {
+      "optimizer_step": 17,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.023868560791015625
+    },
+    {
+      "optimizer_step": 18,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0186767578125
+    },
+    {
+      "optimizer_step": 19,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.313225746154785e-05
+    },
+    {
+      "optimizer_step": 20,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007921874523162842
+    },
+    {
+      "optimizer_step": 21,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0096435546875
+    },
+    {
+      "optimizer_step": 22,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0162200927734375
+    },
+    {
+      "optimizer_step": 23,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0079498291015625
+    },
+    {
+      "optimizer_step": 24,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01769256591796875
+    },
+    {
+      "optimizer_step": 25,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008199214935302734
+    },
+    {
+      "optimizer_step": 26,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0081939697265625
+    },
+    {
+      "optimizer_step": 27,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007770538330078125
+    },
+    {
+      "optimizer_step": 28,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.027587890625
+    },
+    {
+      "optimizer_step": 29,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009884834289550781
+    },
+    {
+      "optimizer_step": 30,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.369982242584229e-05
+    },
+    {
+      "optimizer_step": 31,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.021936416625976562
+    },
+    {
+      "optimizer_step": 32,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00018334388732910156
+    },
+    {
+      "optimizer_step": 33,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011474609375
+    },
+    {
+      "optimizer_step": 34,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0073261260986328125
+    },
+    {
+      "optimizer_step": 35,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0112152099609375
+    },
+    {
+      "optimizer_step": 36,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0113525390625
+    },
+    {
+      "optimizer_step": 37,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01940155029296875
+    },
+    {
+      "optimizer_step": 38,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.025759488344192505
+    },
+    {
+      "optimizer_step": 39,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011260986328125
+    },
+    {
+      "optimizer_step": 40,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0125732421875
+    },
+    {
+      "optimizer_step": 41,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0002763420343399048
+    },
+    {
+      "optimizer_step": 42,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.650520324707031e-05
+    },
+    {
+      "optimizer_step": 43,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.26716423034668e-05
+    },
+    {
+      "optimizer_step": 44,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012683868408203125
+    },
+    {
+      "optimizer_step": 45,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.679794311523438e-05
+    },
+    {
+      "optimizer_step": 46,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011749267578125
+    },
+    {
+      "optimizer_step": 47,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009002685546875
+    },
+    {
+      "optimizer_step": 48,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.175041198730469e-05
+    },
+    {
+      "optimizer_step": 49,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0093536376953125
+    },
+    {
+      "optimizer_step": 50,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02219390869140625
+    },
+    {
+      "optimizer_step": 51,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010085105895996094
+    },
+    {
+      "optimizer_step": 52,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.044658564031124115
+    },
+    {
+      "optimizer_step": 53,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008192062377929688
+    },
+    {
+      "optimizer_step": 54,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011579513549804688
+    },
+    {
+      "optimizer_step": 55,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01116943359375
+    },
+    {
+      "optimizer_step": 56,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00782012939453125
+    },
+    {
+      "optimizer_step": 57,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02178955078125
+    },
+    {
+      "optimizer_step": 58,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.47117805480957e-05
+    },
+    {
+      "optimizer_step": 59,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0102386474609375
+    },
+    {
+      "optimizer_step": 60,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00788116455078125
+    },
+    {
+      "optimizer_step": 61,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008819580078125
+    },
+    {
+      "optimizer_step": 62,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00984954833984375
+    },
+    {
+      "optimizer_step": 63,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.341934204101562e-05
+    },
+    {
+      "optimizer_step": 64,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010101318359375
+    },
+    {
+      "optimizer_step": 65,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00011581974104046822
+    },
+    {
+      "optimizer_step": 66,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0135498046875
+    },
+    {
+      "optimizer_step": 67,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007645606994628906
+    },
+    {
+      "optimizer_step": 68,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02215576171875
+    },
+    {
+      "optimizer_step": 69,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0076904296875
+    },
+    {
+      "optimizer_step": 70,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01865386962890625
+    },
+    {
+      "optimizer_step": 71,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01633453369140625
+    },
+    {
+      "optimizer_step": 72,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00909423828125
+    },
+    {
+      "optimizer_step": 73,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012210845947265625
+    },
+    {
+      "optimizer_step": 74,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00946807861328125
+    },
+    {
+      "optimizer_step": 75,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01074981689453125
+    },
+    {
+      "optimizer_step": 76,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008087158203125
+    },
+    {
+      "optimizer_step": 77,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.005687713623046875
+    },
+    {
+      "optimizer_step": 78,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00016641616821289062
+    },
+    {
+      "optimizer_step": 79,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.45132565498352e-05
+    },
+    {
+      "optimizer_step": 80,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.121397018432617e-05
+    },
+    {
+      "optimizer_step": 81,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0080413818359375
+    },
+    {
+      "optimizer_step": 82,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 3.415346145629883e-05
+    },
+    {
+      "optimizer_step": 83,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001141577959060669
+    },
+    {
+      "optimizer_step": 84,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0109710693359375
+    },
+    {
+      "optimizer_step": 85,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0158843994140625
+    },
+    {
+      "optimizer_step": 86,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.021820068359375
+    },
+    {
+      "optimizer_step": 87,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.017669677734375
+    },
+    {
+      "optimizer_step": 88,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014678955078125
+    },
+    {
+      "optimizer_step": 89,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007157325744628906
+    },
+    {
+      "optimizer_step": 90,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.258487701416016e-05
+    },
+    {
+      "optimizer_step": 91,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013092041015625
+    },
+    {
+      "optimizer_step": 92,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015960693359375
+    },
+    {
+      "optimizer_step": 93,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 3.9458274841308594e-05
+    },
+    {
+      "optimizer_step": 94,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0159912109375
+    },
+    {
+      "optimizer_step": 95,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.016143798828125
+    },
+    {
+      "optimizer_step": 96,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0074100494384765625
+    },
+    {
+      "optimizer_step": 97,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0092620849609375
+    },
+    {
+      "optimizer_step": 98,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009063720703125
+    },
+    {
+      "optimizer_step": 99,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.021453857421875
+    },
+    {
+      "optimizer_step": 100,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007293701171875
+    },
+    {
+      "optimizer_step": 101,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.000164031982421875
+    },
+    {
+      "optimizer_step": 102,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010284423828125
+    },
+    {
+      "optimizer_step": 103,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 4.8667192459106445e-05
+    },
+    {
+      "optimizer_step": 104,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.71419906616211e-05
+    },
+    {
+      "optimizer_step": 105,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00982666015625
+    },
+    {
+      "optimizer_step": 106,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008647918701171875
+    },
+    {
+      "optimizer_step": 107,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008413314819335938
+    },
+    {
+      "optimizer_step": 108,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01357126235961914
+    },
+    {
+      "optimizer_step": 109,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.250640869140625e-05
+    },
+    {
+      "optimizer_step": 110,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0303802490234375
+    },
+    {
+      "optimizer_step": 111,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00787353515625
+    },
+    {
+      "optimizer_step": 112,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0196533203125
+    },
+    {
+      "optimizer_step": 113,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010097503662109375
+    },
+    {
+      "optimizer_step": 114,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.202957153320312e-05
+    },
+    {
+      "optimizer_step": 115,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009410858154296875
+    },
+    {
+      "optimizer_step": 116,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00013911724090576172
+    },
+    {
+      "optimizer_step": 117,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008392333984375
+    },
+    {
+      "optimizer_step": 118,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.018829345703125
+    },
+    {
+      "optimizer_step": 119,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.384138345718384e-05
+    },
+    {
+      "optimizer_step": 120,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0344696044921875
+    },
+    {
+      "optimizer_step": 121,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.027191162109375
+    },
+    {
+      "optimizer_step": 122,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.030609130859375
+    },
+    {
+      "optimizer_step": 123,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014129638671875
+    },
+    {
+      "optimizer_step": 124,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.016845703125
+    },
+    {
+      "optimizer_step": 125,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008747100830078125
+    },
+    {
+      "optimizer_step": 126,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009399890899658203
+    },
+    {
+      "optimizer_step": 127,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012728214263916016
+    },
+    {
+      "optimizer_step": 128,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0146026611328125
+    },
+    {
+      "optimizer_step": 129,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.725398659706116e-05
+    },
+    {
+      "optimizer_step": 130,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011610031127929688
+    },
+    {
+      "optimizer_step": 131,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009809494018554688
+    },
+    {
+      "optimizer_step": 132,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.024261474609375
+    },
+    {
+      "optimizer_step": 133,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010284423828125
+    },
+    {
+      "optimizer_step": 134,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.910335600376129e-05
+    },
+    {
+      "optimizer_step": 135,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0097198486328125
+    },
+    {
+      "optimizer_step": 136,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0233001708984375
+    },
+    {
+      "optimizer_step": 137,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015085220336914062
+    },
+    {
+      "optimizer_step": 138,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01486968994140625
+    },
+    {
+      "optimizer_step": 139,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008129119873046875
+    },
+    {
+      "optimizer_step": 140,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.020111083984375
+    },
+    {
+      "optimizer_step": 141,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0064544677734375
+    },
+    {
+      "optimizer_step": 142,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00015163421630859375
+    },
+    {
+      "optimizer_step": 143,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00013673678040504456
+    },
+    {
+      "optimizer_step": 144,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013132095336914062
+    },
+    {
+      "optimizer_step": 145,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0095977783203125
+    },
+    {
+      "optimizer_step": 146,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00016868114471435547
+    },
+    {
+      "optimizer_step": 147,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010162353515625
+    },
+    {
+      "optimizer_step": 148,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0068817138671875
+    },
+    {
+      "optimizer_step": 149,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010223388671875
+    },
+    {
+      "optimizer_step": 150,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 3.999471664428711e-05
+    },
+    {
+      "optimizer_step": 151,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0083160400390625
+    },
+    {
+      "optimizer_step": 152,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0085906982421875
+    },
+    {
+      "optimizer_step": 153,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011444091796875
+    },
+    {
+      "optimizer_step": 154,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012805312871932983
+    },
+    {
+      "optimizer_step": 155,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01010894775390625
+    },
+    {
+      "optimizer_step": 156,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00011396408081054688
+    },
+    {
+      "optimizer_step": 157,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014142990112304688
+    },
+    {
+      "optimizer_step": 158,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01666259765625
+    },
+    {
+      "optimizer_step": 159,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01220703125
+    },
+    {
+      "optimizer_step": 160,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007061004638671875
+    },
+    {
+      "optimizer_step": 161,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.339086055755615e-05
+    },
+    {
+      "optimizer_step": 162,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01177978515625
+    },
+    {
+      "optimizer_step": 163,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01752948760986328
+    },
+    {
+      "optimizer_step": 164,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01373291015625
+    },
+    {
+      "optimizer_step": 165,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015045166015625
+    },
+    {
+      "optimizer_step": 166,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015183448791503906
+    },
+    {
+      "optimizer_step": 167,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015671491622924805
+    },
+    {
+      "optimizer_step": 168,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01766204833984375
+    },
+    {
+      "optimizer_step": 169,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010778427124023438
+    },
+    {
+      "optimizer_step": 170,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00475311279296875
+    },
+    {
+      "optimizer_step": 171,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00652993842959404
+    },
+    {
+      "optimizer_step": 172,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02587890625
+    },
+    {
+      "optimizer_step": 173,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0102691650390625
+    },
+    {
+      "optimizer_step": 174,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.000171661376953125
+    },
+    {
+      "optimizer_step": 175,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014373779296875
+    },
+    {
+      "optimizer_step": 176,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007961273193359375
+    },
+    {
+      "optimizer_step": 177,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014371395111083984
+    },
+    {
+      "optimizer_step": 178,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0097808837890625
+    },
+    {
+      "optimizer_step": 179,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00011845305562019348
+    },
+    {
+      "optimizer_step": 180,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013397216796875
+    },
+    {
+      "optimizer_step": 181,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014404296875
+    },
+    {
+      "optimizer_step": 182,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.143880844116211e-05
+    },
+    {
+      "optimizer_step": 183,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012493133544921875
+    },
+    {
+      "optimizer_step": 184,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001499652862548828
+    },
+    {
+      "optimizer_step": 185,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0076274871826171875
+    },
+    {
+      "optimizer_step": 186,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01885986328125
+    },
+    {
+      "optimizer_step": 187,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0062885284423828125
+    },
+    {
+      "optimizer_step": 188,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01204681396484375
+    },
+    {
+      "optimizer_step": 189,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012027740478515625
+    },
+    {
+      "optimizer_step": 190,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.437301635742188e-05
+    },
+    {
+      "optimizer_step": 191,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013879776000976562
+    },
+    {
+      "optimizer_step": 192,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02480316162109375
+    },
+    {
+      "optimizer_step": 193,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0088043212890625
+    },
+    {
+      "optimizer_step": 194,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01165771484375
+    },
+    {
+      "optimizer_step": 195,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00011339783668518066
+    },
+    {
+      "optimizer_step": 196,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010311126708984375
+    },
+    {
+      "optimizer_step": 197,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.016082763671875
+    },
+    {
+      "optimizer_step": 198,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001741945743560791
+    },
+    {
+      "optimizer_step": 199,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01953125
+    },
+    {
+      "optimizer_step": 200,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01027679443359375
+    },
+    {
+      "optimizer_step": 201,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01812744140625
+    },
+    {
+      "optimizer_step": 202,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010833740234375
+    },
+    {
+      "optimizer_step": 203,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012237548828125
+    },
+    {
+      "optimizer_step": 204,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01446533203125
+    },
+    {
+      "optimizer_step": 205,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00801849365234375
+    },
+    {
+      "optimizer_step": 206,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01375579833984375
+    },
+    {
+      "optimizer_step": 207,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 4.9620866775512695e-05
+    },
+    {
+      "optimizer_step": 208,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009307861328125
+    },
+    {
+      "optimizer_step": 209,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015472412109375
+    },
+    {
+      "optimizer_step": 210,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012040138244628906
+    },
+    {
+      "optimizer_step": 211,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01705169677734375
+    },
+    {
+      "optimizer_step": 212,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.578598499298096e-05
+    },
+    {
+      "optimizer_step": 213,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01786041259765625
+    },
+    {
+      "optimizer_step": 214,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00647735595703125
+    },
+    {
+      "optimizer_step": 215,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.435943603515625e-05
+    },
+    {
+      "optimizer_step": 216,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.298045627772808e-05
+    },
+    {
+      "optimizer_step": 217,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.262158811092377e-05
+    },
+    {
+      "optimizer_step": 218,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.005619049072265625
+    },
+    {
+      "optimizer_step": 219,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.005463600158691406
+    },
+    {
+      "optimizer_step": 220,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008544921875
+    },
+    {
+      "optimizer_step": 221,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007354736328125
+    },
+    {
+      "optimizer_step": 222,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.016876220703125
+    },
+    {
+      "optimizer_step": 223,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011871337890625
+    },
+    {
+      "optimizer_step": 224,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011284828186035156
+    },
+    {
+      "optimizer_step": 225,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01122283935546875
+    },
+    {
+      "optimizer_step": 226,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.870552897453308e-05
+    },
+    {
+      "optimizer_step": 227,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0177764892578125
+    },
+    {
+      "optimizer_step": 228,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.244385778903961e-05
+    },
+    {
+      "optimizer_step": 229,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01175689697265625
+    },
+    {
+      "optimizer_step": 230,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0054473876953125
+    },
+    {
+      "optimizer_step": 231,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012421607971191406
+    },
+    {
+      "optimizer_step": 232,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01160430908203125
+    },
+    {
+      "optimizer_step": 233,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.851289749145508e-05
+    },
+    {
+      "optimizer_step": 234,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.869171142578125e-05
+    },
+    {
+      "optimizer_step": 235,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0106964111328125
+    },
+    {
+      "optimizer_step": 236,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.006695270538330078
+    },
+    {
+      "optimizer_step": 237,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.019378662109375
+    },
+    {
+      "optimizer_step": 238,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.03009033203125
+    },
+    {
+      "optimizer_step": 239,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010129153728485107
+    },
+    {
+      "optimizer_step": 240,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0185546875
+    },
+    {
+      "optimizer_step": 241,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.294649887830019e-05
+    },
+    {
+      "optimizer_step": 242,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00921630859375
+    },
+    {
+      "optimizer_step": 243,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02103424072265625
+    },
+    {
+      "optimizer_step": 244,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012350082397460938
+    },
+    {
+      "optimizer_step": 245,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010216236114501953
+    },
+    {
+      "optimizer_step": 246,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010597705841064453
+    },
+    {
+      "optimizer_step": 247,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01386260986328125
+    },
+    {
+      "optimizer_step": 248,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00018596649169921875
+    },
+    {
+      "optimizer_step": 249,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01186370849609375
+    },
+    {
+      "optimizer_step": 250,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.020538330078125
+    },
+    {
+      "optimizer_step": 251,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010833740234375
+    },
+    {
+      "optimizer_step": 252,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011383056640625
+    },
+    {
+      "optimizer_step": 253,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011260986328125
+    },
+    {
+      "optimizer_step": 254,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010561570525169373
+    },
+    {
+      "optimizer_step": 255,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00868988037109375
+    },
+    {
+      "optimizer_step": 256,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.005275726318359375
+    },
+    {
+      "optimizer_step": 257,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.845329284667969e-05
+    },
+    {
+      "optimizer_step": 258,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008396148681640625
+    },
+    {
+      "optimizer_step": 259,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.019012451171875
+    },
+    {
+      "optimizer_step": 260,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0194091796875
+    },
+    {
+      "optimizer_step": 261,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00907135009765625
+    },
+    {
+      "optimizer_step": 262,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.130073547363281e-05
+    },
+    {
+      "optimizer_step": 263,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014593124389648438
+    },
+    {
+      "optimizer_step": 264,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0140380859375
+    },
+    {
+      "optimizer_step": 265,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.534027099609375e-05
+    },
+    {
+      "optimizer_step": 266,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.712841033935547e-05
+    },
+    {
+      "optimizer_step": 267,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010257720947265625
+    },
+    {
+      "optimizer_step": 268,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009735107421875
+    },
+    {
+      "optimizer_step": 269,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01275634765625
+    },
+    {
+      "optimizer_step": 270,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0145721435546875
+    },
+    {
+      "optimizer_step": 271,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.915496826171875e-05
+    },
+    {
+      "optimizer_step": 272,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010281085968017578
+    },
+    {
+      "optimizer_step": 273,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014404296875
+    },
+    {
+      "optimizer_step": 274,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.03914642333984375
+    },
+    {
+      "optimizer_step": 275,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02071380615234375
+    },
+    {
+      "optimizer_step": 276,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0072021484375
+    },
+    {
+      "optimizer_step": 277,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01222991943359375
+    },
+    {
+      "optimizer_step": 278,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010749697685241699
+    },
+    {
+      "optimizer_step": 279,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0085296630859375
+    },
+    {
+      "optimizer_step": 280,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.03192138671875
+    },
+    {
+      "optimizer_step": 281,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.751319885253906e-05
+    },
+    {
+      "optimizer_step": 282,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0082244873046875
+    },
+    {
+      "optimizer_step": 283,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00726318359375
+    },
+    {
+      "optimizer_step": 284,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0086212158203125
+    },
+    {
+      "optimizer_step": 285,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01153564453125
+    },
+    {
+      "optimizer_step": 286,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02301788330078125
+    },
+    {
+      "optimizer_step": 287,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01287078857421875
+    },
+    {
+      "optimizer_step": 288,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.896125316619873e-05
+    },
+    {
+      "optimizer_step": 289,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0088958740234375
+    },
+    {
+      "optimizer_step": 290,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01837158203125
+    },
+    {
+      "optimizer_step": 291,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010800361633300781
+    },
+    {
+      "optimizer_step": 292,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.78768041729927e-05
+    },
+    {
+      "optimizer_step": 293,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0213775634765625
+    },
+    {
+      "optimizer_step": 294,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.102591239847243e-05
+    },
+    {
+      "optimizer_step": 295,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013885498046875
+    },
+    {
+      "optimizer_step": 296,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009624481201171875
+    },
+    {
+      "optimizer_step": 297,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014068603515625
+    },
+    {
+      "optimizer_step": 298,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0126953125
+    },
+    {
+      "optimizer_step": 299,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.881092071533203e-05
+    },
+    {
+      "optimizer_step": 300,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.562471389770508e-05
+    },
+    {
+      "optimizer_step": 301,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 4.178285598754883e-05
+    },
+    {
+      "optimizer_step": 302,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00811767578125
+    },
+    {
+      "optimizer_step": 303,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00800466537475586
+    },
+    {
+      "optimizer_step": 304,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01456451416015625
+    },
+    {
+      "optimizer_step": 305,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.006657600402832031
+    },
+    {
+      "optimizer_step": 306,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001373291015625
+    },
+    {
+      "optimizer_step": 307,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01892094686627388
+    },
+    {
+      "optimizer_step": 308,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0116424560546875
+    },
+    {
+      "optimizer_step": 309,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013610982336103916
+    },
+    {
+      "optimizer_step": 310,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0002752058207988739
+    },
+    {
+      "optimizer_step": 311,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0083465576171875
+    },
+    {
+      "optimizer_step": 312,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0064716339111328125
+    },
+    {
+      "optimizer_step": 313,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00919342041015625
+    },
+    {
+      "optimizer_step": 314,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01190185546875
+    },
+    {
+      "optimizer_step": 315,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0107421875
+    },
+    {
+      "optimizer_step": 316,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0081329345703125
+    },
+    {
+      "optimizer_step": 317,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012421607971191406
+    },
+    {
+      "optimizer_step": 318,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02108675241470337
+    },
+    {
+      "optimizer_step": 319,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0108184814453125
+    },
+    {
+      "optimizer_step": 320,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0245361328125
+    },
+    {
+      "optimizer_step": 321,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.5367431640625e-05
+    },
+    {
+      "optimizer_step": 322,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01312255859375
+    },
+    {
+      "optimizer_step": 323,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001537799835205078
+    },
+    {
+      "optimizer_step": 324,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00753801129758358
+    },
+    {
+      "optimizer_step": 325,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001010894775390625
+    },
+    {
+      "optimizer_step": 326,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00017261505126953125
+    },
+    {
+      "optimizer_step": 327,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0128936767578125
+    },
+    {
+      "optimizer_step": 328,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013641357421875
+    },
+    {
+      "optimizer_step": 329,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.936622619628906e-05
+    },
+    {
+      "optimizer_step": 330,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011827468872070312
+    },
+    {
+      "optimizer_step": 331,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 5.345046520233154e-05
+    },
+    {
+      "optimizer_step": 332,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.418582051992416e-05
+    },
+    {
+      "optimizer_step": 333,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.577108383178711e-05
+    },
+    {
+      "optimizer_step": 334,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011806488037109375
+    },
+    {
+      "optimizer_step": 335,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00946044921875
+    },
+    {
+      "optimizer_step": 336,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015411376953125
+    },
+    {
+      "optimizer_step": 337,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0097808837890625
+    },
+    {
+      "optimizer_step": 338,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00022602081298828125
+    },
+    {
+      "optimizer_step": 339,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.319450378417969e-05
+    },
+    {
+      "optimizer_step": 340,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010986328125
+    },
+    {
+      "optimizer_step": 341,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02514634281396866
+    },
+    {
+      "optimizer_step": 342,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.01206221897155e-05
+    },
+    {
+      "optimizer_step": 343,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008344650268554688
+    },
+    {
+      "optimizer_step": 344,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001430511474609375
+    },
+    {
+      "optimizer_step": 345,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013885498046875
+    },
+    {
+      "optimizer_step": 346,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00966644287109375
+    },
+    {
+      "optimizer_step": 347,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0147552490234375
+    },
+    {
+      "optimizer_step": 348,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.007080078125
+    },
+    {
+      "optimizer_step": 349,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.712841033935547e-05
+    },
+    {
+      "optimizer_step": 350,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01531982421875
+    },
+    {
+      "optimizer_step": 351,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01025390625
+    },
+    {
+      "optimizer_step": 352,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009827613830566406
+    },
+    {
+      "optimizer_step": 353,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 8.857250213623047e-05
+    },
+    {
+      "optimizer_step": 354,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0113677978515625
+    },
+    {
+      "optimizer_step": 355,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01177215576171875
+    },
+    {
+      "optimizer_step": 356,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0108642578125
+    },
+    {
+      "optimizer_step": 357,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0114593505859375
+    },
+    {
+      "optimizer_step": 358,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0110321044921875
+    },
+    {
+      "optimizer_step": 359,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0080413818359375
+    },
+    {
+      "optimizer_step": 360,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00817108154296875
+    },
+    {
+      "optimizer_step": 361,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015411376953125
+    },
+    {
+      "optimizer_step": 362,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01202392578125
+    },
+    {
+      "optimizer_step": 363,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0088348388671875
+    },
+    {
+      "optimizer_step": 364,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.019350051879882812
+    },
+    {
+      "optimizer_step": 365,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010575294494628906
+    },
+    {
+      "optimizer_step": 366,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01035308837890625
+    },
+    {
+      "optimizer_step": 367,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01092529296875
+    },
+    {
+      "optimizer_step": 368,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0082244873046875
+    },
+    {
+      "optimizer_step": 369,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0064258575439453125
+    },
+    {
+      "optimizer_step": 370,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01114654541015625
+    },
+    {
+      "optimizer_step": 371,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008930206298828125
+    },
+    {
+      "optimizer_step": 372,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0159759521484375
+    },
+    {
+      "optimizer_step": 373,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0109710693359375
+    },
+    {
+      "optimizer_step": 374,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013916015625
+    },
+    {
+      "optimizer_step": 375,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01563262939453125
+    },
+    {
+      "optimizer_step": 376,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011901181191205978
+    },
+    {
+      "optimizer_step": 377,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012359619140625
+    },
+    {
+      "optimizer_step": 378,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008813858032226562
+    },
+    {
+      "optimizer_step": 379,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01294708251953125
+    },
+    {
+      "optimizer_step": 380,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012420654296875
+    },
+    {
+      "optimizer_step": 381,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014617919921875
+    },
+    {
+      "optimizer_step": 382,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013440132141113281
+    },
+    {
+      "optimizer_step": 383,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 3.826618194580078e-05
+    },
+    {
+      "optimizer_step": 384,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 4.8041343688964844e-05
+    },
+    {
+      "optimizer_step": 385,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0200347900390625
+    },
+    {
+      "optimizer_step": 386,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010959625244140625
+    },
+    {
+      "optimizer_step": 387,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01953125
+    },
+    {
+      "optimizer_step": 388,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001983642578125
+    },
+    {
+      "optimizer_step": 389,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0128173828125
+    },
+    {
+      "optimizer_step": 390,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010586738586425781
+    },
+    {
+      "optimizer_step": 391,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0195770263671875
+    },
+    {
+      "optimizer_step": 392,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0103607177734375
+    },
+    {
+      "optimizer_step": 393,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.51087611913681e-05
+    },
+    {
+      "optimizer_step": 394,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0142822265625
+    },
+    {
+      "optimizer_step": 395,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010334014892578125
+    },
+    {
+      "optimizer_step": 396,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0118408203125
+    },
+    {
+      "optimizer_step": 397,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01361083984375
+    },
+    {
+      "optimizer_step": 398,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011993408203125
+    },
+    {
+      "optimizer_step": 399,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0123138427734375
+    },
+    {
+      "optimizer_step": 400,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0164031982421875
+    },
+    {
+      "optimizer_step": 401,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01468658447265625
+    },
+    {
+      "optimizer_step": 402,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00017213821411132812
+    },
+    {
+      "optimizer_step": 403,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0190582275390625
+    },
+    {
+      "optimizer_step": 404,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.020078182220458984
+    },
+    {
+      "optimizer_step": 405,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.009585127234458923
+    },
+    {
+      "optimizer_step": 406,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010498046875
+    },
+    {
+      "optimizer_step": 407,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00017786026000976562
+    },
+    {
+      "optimizer_step": 408,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012451171875
+    },
+    {
+      "optimizer_step": 409,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013763427734375
+    },
+    {
+      "optimizer_step": 410,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.019866943359375
+    },
+    {
+      "optimizer_step": 411,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.013214111328125
+    },
+    {
+      "optimizer_step": 412,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00777435302734375
+    },
+    {
+      "optimizer_step": 413,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.794929504394531e-05
+    },
+    {
+      "optimizer_step": 414,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02716064453125
+    },
+    {
+      "optimizer_step": 415,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010228157043457031
+    },
+    {
+      "optimizer_step": 416,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010922789573669434
+    },
+    {
+      "optimizer_step": 417,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0128936767578125
+    },
+    {
+      "optimizer_step": 418,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.328126907348633e-05
+    },
+    {
+      "optimizer_step": 419,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0056934356689453125
+    },
+    {
+      "optimizer_step": 420,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0142974853515625
+    },
+    {
+      "optimizer_step": 421,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01263427734375
+    },
+    {
+      "optimizer_step": 422,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.000202178955078125
+    },
+    {
+      "optimizer_step": 423,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.682099774479866e-05
+    },
+    {
+      "optimizer_step": 424,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.771087646484375e-05
+    },
+    {
+      "optimizer_step": 425,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0167694091796875
+    },
+    {
+      "optimizer_step": 426,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02752685546875
+    },
+    {
+      "optimizer_step": 427,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0001277625560760498
+    },
+    {
+      "optimizer_step": 428,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01059722900390625
+    },
+    {
+      "optimizer_step": 429,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012445449829101562
+    },
+    {
+      "optimizer_step": 430,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010467529296875
+    },
+    {
+      "optimizer_step": 431,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.020111083984375
+    },
+    {
+      "optimizer_step": 432,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0127716064453125
+    },
+    {
+      "optimizer_step": 433,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.015869140625
+    },
+    {
+      "optimizer_step": 434,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02640247344970703
+    },
+    {
+      "optimizer_step": 435,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01335906982421875
+    },
+    {
+      "optimizer_step": 436,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01959228515625
+    },
+    {
+      "optimizer_step": 437,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00958251953125
+    },
+    {
+      "optimizer_step": 438,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0081634521484375
+    },
+    {
+      "optimizer_step": 439,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00017023086547851562
+    },
+    {
+      "optimizer_step": 440,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00771331787109375
+    },
+    {
+      "optimizer_step": 441,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.274482727050781e-05
+    },
+    {
+      "optimizer_step": 442,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01263427734375
+    },
+    {
+      "optimizer_step": 443,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00977325439453125
+    },
+    {
+      "optimizer_step": 444,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01917266845703125
+    },
+    {
+      "optimizer_step": 445,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0221710205078125
+    },
+    {
+      "optimizer_step": 446,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014404296875
+    },
+    {
+      "optimizer_step": 447,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01059722900390625
+    },
+    {
+      "optimizer_step": 448,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 4.883110523223877e-05
+    },
+    {
+      "optimizer_step": 449,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010802268981933594
+    },
+    {
+      "optimizer_step": 450,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00933837890625
+    },
+    {
+      "optimizer_step": 451,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.019378662109375
+    },
+    {
+      "optimizer_step": 452,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.014214515686035156
+    },
+    {
+      "optimizer_step": 453,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.173418998718262e-05
+    },
+    {
+      "optimizer_step": 454,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00547027587890625
+    },
+    {
+      "optimizer_step": 455,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00946044921875
+    },
+    {
+      "optimizer_step": 456,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00014612078666687012
+    },
+    {
+      "optimizer_step": 457,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0117340087890625
+    },
+    {
+      "optimizer_step": 458,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.751319885253906e-05
+    },
+    {
+      "optimizer_step": 459,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.914138793945312e-05
+    },
+    {
+      "optimizer_step": 460,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008109807968139648
+    },
+    {
+      "optimizer_step": 461,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008083343505859375
+    },
+    {
+      "optimizer_step": 462,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011871337890625
+    },
+    {
+      "optimizer_step": 463,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00017547607421875
+    },
+    {
+      "optimizer_step": 464,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.019134521484375
+    },
+    {
+      "optimizer_step": 465,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01953798532485962
+    },
+    {
+      "optimizer_step": 466,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0068874359130859375
+    },
+    {
+      "optimizer_step": 467,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010894775390625
+    },
+    {
+      "optimizer_step": 468,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0218505859375
+    },
+    {
+      "optimizer_step": 469,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00012874603271484375
+    },
+    {
+      "optimizer_step": 470,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00872802734375
+    },
+    {
+      "optimizer_step": 471,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.010894775390625
+    },
+    {
+      "optimizer_step": 472,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01151275634765625
+    },
+    {
+      "optimizer_step": 473,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0144195556640625
+    },
+    {
+      "optimizer_step": 474,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00015020370483398438
+    },
+    {
+      "optimizer_step": 475,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00957489013671875
+    },
+    {
+      "optimizer_step": 476,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.02661895751953125
+    },
+    {
+      "optimizer_step": 477,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.011140823364257812
+    },
+    {
+      "optimizer_step": 478,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 7.838010787963867e-05
+    },
+    {
+      "optimizer_step": 479,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00011038780212402344
+    },
+    {
+      "optimizer_step": 480,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.016473770141601562
+    },
+    {
+      "optimizer_step": 481,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01247406005859375
+    },
+    {
+      "optimizer_step": 482,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 4.976987838745117e-05
+    },
+    {
+      "optimizer_step": 483,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00011754035949707031
+    },
+    {
+      "optimizer_step": 484,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.008548721671104431
+    },
+    {
+      "optimizer_step": 485,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01256561279296875
+    },
+    {
+      "optimizer_step": 486,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.01413726806640625
+    },
+    {
+      "optimizer_step": 487,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00994873046875
+    },
+    {
+      "optimizer_step": 488,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.012542724609375
+    },
+    {
+      "optimizer_step": 489,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00665283203125
+    },
+    {
+      "optimizer_step": 490,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00011706352233886719
+    },
+    {
+      "optimizer_step": 491,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.1552734375e-05
+    },
+    {
+      "optimizer_step": 492,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00010877847671508789
+    },
+    {
+      "optimizer_step": 493,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.855279207229614e-05
+    },
+    {
+      "optimizer_step": 494,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 9.85264778137207e-05
+    },
+    {
+      "optimizer_step": 495,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 6.723403930664062e-05
+    },
+    {
+      "optimizer_step": 496,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.018463134765625
+    },
+    {
+      "optimizer_step": 497,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0095062255859375
+    },
+    {
+      "optimizer_step": 498,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0142822265625
+    },
+    {
+      "optimizer_step": 499,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.0088653564453125
+    },
+    {
+      "optimizer_step": 500,
+      "grad_tensors": 392,
+      "nonzero_grad_tensors": 392,
+      "max_abs_grad": 0.00014096498489379883
+    }
+  ],
+  "nonzero_gradient_steps": 500,
+  "nan_detected": false,
+  "peak_gpu_allocated_gb": 10.926190853118896,
+  "peak_gpu_reserved_gb": 13.396484375,
+  "resolved_config": {
+    "max_steps": 500,
+    "num_generations": 4,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_completion_length": 256,
+    "beta": 0.04,
+    "num_iterations": 1,
+    "loss_type": "bnpo"
+  },
+  "log_history": [
+    {
+      "loss": 0.038,
+      "grad_norm": 0.22490082681179047,
+      "learning_rate": 1e-06,
+      "num_tokens": 1184.0,
+      "completions/mean_length": 80.5,
+      "completions/min_length": 47.0,
+      "completions/max_length": 108.0,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 80.5,
+      "completions/min_terminated_length": 47.0,
+      "completions/max_terminated_length": 108.0,
+      "rewards/strict_correctness_reward/mean": 0.625,
+      "rewards/strict_correctness_reward/std": 0.5175492167472839,
+      "reward": 0.625,
+      "reward_std": 0.25,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0,
+      "entropy": 0.28274258971214294,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.002,
+      "step": 1
+    },
+    {
+      "loss": 0.0039,
+      "grad_norm": 0.0024040616117417812,
+      "learning_rate": 9.819999999999999e-07,
+      "num_tokens": 10932.0,
+      "completions/mean_length": 68.61111111111111,
+      "completions/min_length": 45.55555555555556,
+      "completions/max_length": 107.22222222222223,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 68.61111111111111,
+      "completions/min_terminated_length": 45.55555555555556,
+      "completions/max_terminated_length": 107.22222222222223,
+      "rewards/strict_correctness_reward/mean": 0.8194444444444444,
+      "rewards/strict_correctness_reward/std": 0.29833317465252346,
+      "reward": 0.8194444444444444,
+      "reward_std": 0.14748336209191215,
+      "frac_reward_zero_std": 0.7222222222222222,
+      "kl": 0.0008679402009066609,
+      "entropy": 0.2952795210811827,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.02,
+      "step": 10
+    },
+    {
+      "loss": 0.0022,
+      "grad_norm": 0.3159351646900177,
+      "learning_rate": 9.619999999999999e-07,
+      "num_tokens": 25229.0,
+      "completions/mean_length": 96.6625,
+      "completions/min_length": 53.8,
+      "completions/max_length": 163.5,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 94.60892868041992,
+      "completions/min_terminated_length": 53.8,
+      "completions/max_terminated_length": 151.7,
+      "rewards/strict_correctness_reward/mean": 0.7125,
+      "rewards/strict_correctness_reward/std": 0.40566771328449247,
+      "reward": 0.7125,
+      "reward_std": 0.3404700517654419,
+      "frac_reward_zero_std": 0.35,
+      "kl": 0.0010957090271404013,
+      "entropy": 0.30793795064091684,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.04,
+      "step": 20
+    },
+    {
+      "loss": -0.0284,
+      "grad_norm": 0.0020074723288416862,
+      "learning_rate": 9.419999999999999e-07,
+      "num_tokens": 40782.0,
+      "completions/mean_length": 106.4625,
+      "completions/min_length": 62.3,
+      "completions/max_length": 153.2,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 105.18035736083985,
+      "completions/min_terminated_length": 62.3,
+      "completions/max_terminated_length": 147.6,
+      "rewards/strict_correctness_reward/mean": 0.65,
+      "rewards/strict_correctness_reward/std": 0.4418693661689758,
+      "reward": 0.65,
+      "reward_std": 0.37320507764816285,
+      "frac_reward_zero_std": 0.3,
+      "kl": 0.0011246568348724395,
+      "entropy": 0.31109792143106463,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.06,
+      "step": 30
+    },
+    {
+      "loss": -0.0258,
+      "grad_norm": 0.4286319613456726,
+      "learning_rate": 9.22e-07,
+      "num_tokens": 53486.0,
+      "completions/mean_length": 84.95,
+      "completions/min_length": 53.4,
+      "completions/max_length": 133.6,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 84.95,
+      "completions/min_terminated_length": 53.4,
+      "completions/max_terminated_length": 133.6,
+      "rewards/strict_correctness_reward/mean": 0.6875,
+      "rewards/strict_correctness_reward/std": 0.41830070614814757,
+      "reward": 0.6875,
+      "reward_std": 0.3038675129413605,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.001029756205389276,
+      "entropy": 0.2801368452608585,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.08,
+      "step": 40
+    },
+    {
+      "loss": -0.0124,
+      "grad_norm": 0.5149543881416321,
+      "learning_rate": 9.02e-07,
+      "num_tokens": 66949.0,
+      "completions/mean_length": 88.8375,
+      "completions/min_length": 53.2,
+      "completions/max_length": 139.7,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 87.12500076293945,
+      "completions/min_terminated_length": 53.2,
+      "completions/max_terminated_length": 132.2,
+      "rewards/strict_correctness_reward/mean": 0.7,
+      "rewards/strict_correctness_reward/std": 0.31015759110450747,
+      "reward": 0.7,
+      "reward_std": 0.1366025388240814,
+      "frac_reward_zero_std": 0.75,
+      "kl": 0.001043021494115237,
+      "entropy": 0.29565251544117926,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.1,
+      "step": 50
+    },
+    {
+      "loss": 0.0139,
+      "grad_norm": 0.28870609402656555,
+      "learning_rate": 8.82e-07,
+      "num_tokens": 80622.0,
+      "completions/mean_length": 98.2125,
+      "completions/min_length": 54.1,
+      "completions/max_length": 159.1,
+      "completions/clipped_ratio": 0.025,
+      "completions/mean_terminated_length": 95.05893020629883,
+      "completions/min_terminated_length": 54.1,
+      "completions/max_terminated_length": 147.8,
+      "rewards/strict_correctness_reward/mean": 0.7125,
+      "rewards/strict_correctness_reward/std": 0.42546194791793823,
+      "reward": 0.7125,
+      "reward_std": 0.3116025388240814,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.0009619600692531094,
+      "entropy": 0.2981397286057472,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.12,
+      "step": 60
+    },
+    {
+      "loss": 0.0245,
+      "grad_norm": 0.6118238568305969,
+      "learning_rate": 8.62e-07,
+      "num_tokens": 94505.0,
+      "completions/mean_length": 90.9875,
+      "completions/min_length": 49.5,
+      "completions/max_length": 153.8,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 90.9875,
+      "completions/min_terminated_length": 49.5,
+      "completions/max_terminated_length": 153.8,
+      "rewards/strict_correctness_reward/mean": 0.575,
+      "rewards/strict_correctness_reward/std": 0.4772168695926666,
+      "reward": 0.575,
+      "reward_std": 0.25773502588272096,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0010405762805021368,
+      "entropy": 0.3176010027527809,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.14,
+      "step": 70
+    },
+    {
+      "loss": -0.0287,
+      "grad_norm": 0.0029731299728155136,
+      "learning_rate": 8.419999999999999e-07,
+      "num_tokens": 108326.0,
+      "completions/mean_length": 96.6125,
+      "completions/min_length": 63.6,
+      "completions/max_length": 137.2,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 96.6125,
+      "completions/min_terminated_length": 63.6,
+      "completions/max_terminated_length": 137.2,
+      "rewards/strict_correctness_reward/mean": 0.6875,
+      "rewards/strict_correctness_reward/std": 0.3185574531555176,
+      "reward": 0.6875,
+      "reward_std": 0.2827350258827209,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.000982204152387567,
+      "entropy": 0.26363113671541216,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.16,
+      "step": 80
+    },
+    {
+      "loss": -0.0193,
+      "grad_norm": 0.001938906847499311,
+      "learning_rate": 8.219999999999999e-07,
+      "num_tokens": 120887.0,
+      "completions/mean_length": 85.1125,
+      "completions/min_length": 54.0,
+      "completions/max_length": 131.0,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 82.93035736083985,
+      "completions/min_terminated_length": 54.0,
+      "completions/max_terminated_length": 116.8,
+      "rewards/strict_correctness_reward/mean": 0.7875,
+      "rewards/strict_correctness_reward/std": 0.3185574531555176,
+      "reward": 0.7875,
+      "reward_std": 0.26933756470680237,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0009183759524603374,
+      "entropy": 0.29056618735194206,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.18,
+      "step": 90
+    },
+    {
+      "loss": -0.0063,
+      "grad_norm": 0.17968380451202393,
+      "learning_rate": 8.02e-07,
+      "num_tokens": 134605.0,
+      "completions/mean_length": 92.625,
+      "completions/min_length": 57.7,
+      "completions/max_length": 144.1,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 90.44642868041993,
+      "completions/min_terminated_length": 57.7,
+      "completions/max_terminated_length": 132.3,
+      "rewards/strict_correctness_reward/mean": 0.7125,
+      "rewards/strict_correctness_reward/std": 0.46082512140274046,
+      "reward": 0.7125,
+      "reward_std": 0.3116025388240814,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.0009639059964683839,
+      "entropy": 0.29652266278862954,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.2,
+      "step": 100
+    },
+    {
+      "loss": 0.0072,
+      "grad_norm": 0.6918840408325195,
+      "learning_rate": 7.82e-07,
+      "num_tokens": 150983.0,
+      "completions/mean_length": 116.975,
+      "completions/min_length": 65.2,
+      "completions/max_length": 196.1,
+      "completions/clipped_ratio": 0.025,
+      "completions/mean_terminated_length": 113.7000015258789,
+      "completions/min_terminated_length": 65.2,
+      "completions/max_terminated_length": 191.2,
+      "rewards/strict_correctness_reward/mean": 0.5875,
+      "rewards/strict_correctness_reward/std": 0.4561840146780014,
+      "reward": 0.5875,
+      "reward_std": 0.2404700517654419,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.0009637015158659778,
+      "entropy": 0.31084697097539904,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.22,
+      "step": 110
+    },
+    {
+      "loss": -0.0073,
+      "grad_norm": 0.44515228271484375,
+      "learning_rate": 7.62e-07,
+      "num_tokens": 165302.0,
+      "completions/mean_length": 94.3875,
+      "completions/min_length": 52.3,
+      "completions/max_length": 151.7,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 94.3875,
+      "completions/min_terminated_length": 52.3,
+      "completions/max_terminated_length": 151.7,
+      "rewards/strict_correctness_reward/mean": 0.7125,
+      "rewards/strict_correctness_reward/std": 0.384642693400383,
+      "reward": 0.7125,
+      "reward_std": 0.21160253882408142,
+      "frac_reward_zero_std": 0.6,
+      "kl": 0.0009787736329599285,
+      "entropy": 0.295393943041563,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.24,
+      "step": 120
+    },
+    {
+      "loss": 0.0313,
+      "grad_norm": 0.4613073468208313,
+      "learning_rate": 7.42e-07,
+      "num_tokens": 178742.0,
+      "completions/mean_length": 85.2,
+      "completions/min_length": 57.4,
+      "completions/max_length": 124.8,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 85.2,
+      "completions/min_terminated_length": 57.4,
+      "completions/max_terminated_length": 124.8,
+      "rewards/strict_correctness_reward/mean": 0.65,
+      "rewards/strict_correctness_reward/std": 0.428018119931221,
+      "reward": 0.65,
+      "reward_std": 0.3154700517654419,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.0010585546027868987,
+      "entropy": 0.32408610358834267,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.26,
+      "step": 130
+    },
+    {
+      "loss": -0.0145,
+      "grad_norm": 0.35939183831214905,
+      "learning_rate": 7.219999999999999e-07,
+      "num_tokens": 191515.0,
+      "completions/mean_length": 86.7125,
+      "completions/min_length": 57.0,
+      "completions/max_length": 128.8,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 86.7125,
+      "completions/min_terminated_length": 57.0,
+      "completions/max_terminated_length": 128.8,
+      "rewards/strict_correctness_reward/mean": 0.675,
+      "rewards/strict_correctness_reward/std": 0.3981266975402832,
+      "reward": 0.675,
+      "reward_std": 0.3443375647068024,
+      "frac_reward_zero_std": 0.35,
+      "kl": 0.0011240067207836546,
+      "entropy": 0.31325301229953767,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.28,
+      "step": 140
+    },
+    {
+      "loss": -0.0112,
+      "grad_norm": 0.001297595794312656,
+      "learning_rate": 7.019999999999999e-07,
+      "num_tokens": 204633.0,
+      "completions/mean_length": 89.875,
+      "completions/min_length": 55.9,
+      "completions/max_length": 128.2,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 89.875,
+      "completions/min_terminated_length": 55.9,
+      "completions/max_terminated_length": 128.2,
+      "rewards/strict_correctness_reward/mean": 0.6125,
+      "rewards/strict_correctness_reward/std": 0.4915471881628036,
+      "reward": 0.6125,
+      "reward_std": 0.16160253882408143,
+      "frac_reward_zero_std": 0.7,
+      "kl": 0.0011194469945621677,
+      "entropy": 0.3183728620409966,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.3,
+      "step": 150
+    },
+    {
+      "loss": -0.0024,
+      "grad_norm": 0.30925801396369934,
+      "learning_rate": 6.82e-07,
+      "num_tokens": 219830.0,
+      "completions/mean_length": 102.5625,
+      "completions/min_length": 62.8,
+      "completions/max_length": 160.0,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 102.5625,
+      "completions/min_terminated_length": 62.8,
+      "completions/max_terminated_length": 160.0,
+      "rewards/strict_correctness_reward/mean": 0.6375,
+      "rewards/strict_correctness_reward/std": 0.39557052552700045,
+      "reward": 0.6375,
+      "reward_std": 0.31933756470680236,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.0009979540860513224,
+      "entropy": 0.2947342976927757,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.32,
+      "step": 160
+    },
+    {
+      "loss": -0.0332,
+      "grad_norm": 0.10572966933250427,
+      "learning_rate": 6.62e-07,
+      "num_tokens": 234234.0,
+      "completions/mean_length": 103.3,
+      "completions/min_length": 59.4,
+      "completions/max_length": 164.5,
+      "completions/clipped_ratio": 0.025,
+      "completions/mean_terminated_length": 100.4428581237793,
+      "completions/min_terminated_length": 59.4,
+      "completions/max_terminated_length": 158.6,
+      "rewards/strict_correctness_reward/mean": 0.5375,
+      "rewards/strict_correctness_reward/std": 0.4591199606657028,
+      "reward": 0.5375,
+      "reward_std": 0.2904700517654419,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.0010148965840926394,
+      "entropy": 0.3271386854350567,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.34,
+      "step": 170
+    },
+    {
+      "loss": -0.0038,
+      "grad_norm": 0.36060646176338196,
+      "learning_rate": 6.42e-07,
+      "num_tokens": 247529.0,
+      "completions/mean_length": 84.9875,
+      "completions/min_length": 52.7,
+      "completions/max_length": 123.9,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 84.9875,
+      "completions/min_terminated_length": 52.7,
+      "completions/max_terminated_length": 123.9,
+      "rewards/strict_correctness_reward/mean": 0.6375,
+      "rewards/strict_correctness_reward/std": 0.38124804198741913,
+      "reward": 0.6375,
+      "reward_std": 0.2404700517654419,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.0011271319177467375,
+      "entropy": 0.2818879850208759,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.36,
+      "step": 180
+    },
+    {
+      "loss": -0.0004,
+      "grad_norm": 0.0012157789897173643,
+      "learning_rate": 6.219999999999999e-07,
+      "num_tokens": 260913.0,
+      "completions/mean_length": 90.05,
+      "completions/min_length": 58.2,
+      "completions/max_length": 142.5,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 90.05,
+      "completions/min_terminated_length": 58.2,
+      "completions/max_terminated_length": 142.5,
+      "rewards/strict_correctness_reward/mean": 0.7125,
+      "rewards/strict_correctness_reward/std": 0.3610818684101105,
+      "reward": 0.7125,
+      "reward_std": 0.21160253882408142,
+      "frac_reward_zero_std": 0.6,
+      "kl": 0.0008660633509862236,
+      "entropy": 0.27439878806471824,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.38,
+      "step": 190
+    },
+    {
+      "loss": -0.0405,
+      "grad_norm": 0.27778297662734985,
+      "learning_rate": 6.019999999999999e-07,
+      "num_tokens": 274650.0,
+      "completions/mean_length": 90.5125,
+      "completions/min_length": 56.7,
+      "completions/max_length": 133.0,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 88.69285736083984,
+      "completions/min_terminated_length": 56.7,
+      "completions/max_terminated_length": 124.3,
+      "rewards/strict_correctness_reward/mean": 0.5875,
+      "rewards/strict_correctness_reward/std": 0.4679863631725311,
+      "reward": 0.5875,
+      "reward_std": 0.2904700517654419,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.0011969254584982992,
+      "entropy": 0.29602389708161353,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.4,
+      "step": 200
+    },
+    {
+      "loss": 0.001,
+      "grad_norm": 0.002976636867970228,
+      "learning_rate": 5.819999999999999e-07,
+      "num_tokens": 288193.0,
+      "completions/mean_length": 95.0875,
+      "completions/min_length": 62.3,
+      "completions/max_length": 139.3,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 95.0875,
+      "completions/min_terminated_length": 62.3,
+      "completions/max_terminated_length": 139.3,
+      "rewards/strict_correctness_reward/mean": 0.725,
+      "rewards/strict_correctness_reward/std": 0.4406511127948761,
+      "reward": 0.725,
+      "reward_std": 0.24433756470680237,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.0009549417343805544,
+      "entropy": 0.30338856130838393,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.42,
+      "step": 210
+    },
+    {
+      "loss": -0.0051,
+      "grad_norm": 0.3564756214618683,
+      "learning_rate": 5.620000000000001e-07,
+      "num_tokens": 302191.0,
+      "completions/mean_length": 103.525,
+      "completions/min_length": 63.2,
+      "completions/max_length": 148.6,
+      "completions/clipped_ratio": 0.025,
+      "completions/mean_terminated_length": 100.27916717529297,
+      "completions/min_terminated_length": 63.2,
+      "completions/max_terminated_length": 141.6,
+      "rewards/strict_correctness_reward/mean": 0.65,
+      "rewards/strict_correctness_reward/std": 0.3808682680130005,
+      "reward": 0.65,
+      "reward_std": 0.2154700517654419,
+      "frac_reward_zero_std": 0.6,
+      "kl": 0.000834545872930903,
+      "entropy": 0.30145789459347727,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.44,
+      "step": 220
+    },
+    {
+      "loss": 0.0218,
+      "grad_norm": 0.24842119216918945,
+      "learning_rate": 5.420000000000001e-07,
+      "num_tokens": 314050.0,
+      "completions/mean_length": 77.7375,
+      "completions/min_length": 46.5,
+      "completions/max_length": 116.7,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 77.7375,
+      "completions/min_terminated_length": 46.5,
+      "completions/max_terminated_length": 116.7,
+      "rewards/strict_correctness_reward/mean": 0.65,
+      "rewards/strict_correctness_reward/std": 0.43263102471828463,
+      "reward": 0.65,
+      "reward_std": 0.2654700517654419,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.000971144535287749,
+      "entropy": 0.2743057541549206,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.46,
+      "step": 230
+    },
+    {
+      "loss": -0.0557,
+      "grad_norm": 0.4655357003211975,
+      "learning_rate": 5.22e-07,
+      "num_tokens": 326585.0,
+      "completions/mean_length": 78.7875,
+      "completions/min_length": 53.1,
+      "completions/max_length": 124.1,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 78.7875,
+      "completions/min_terminated_length": 53.1,
+      "completions/max_terminated_length": 124.1,
+      "rewards/strict_correctness_reward/mean": 0.775,
+      "rewards/strict_correctness_reward/std": 0.30385519564151764,
+      "reward": 0.775,
+      "reward_std": 0.25773502588272096,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0008495031564962119,
+      "entropy": 0.2945983976125717,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.48,
+      "step": 240
+    },
+    {
+      "loss": 0.0174,
+      "grad_norm": 0.6422732472419739,
+      "learning_rate": 5.02e-07,
+      "num_tokens": 339479.0,
+      "completions/mean_length": 82.425,
+      "completions/min_length": 48.2,
+      "completions/max_length": 129.5,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 82.425,
+      "completions/min_terminated_length": 48.2,
+      "completions/max_terminated_length": 129.5,
+      "rewards/strict_correctness_reward/mean": 0.6625,
+      "rewards/strict_correctness_reward/std": 0.39557052552700045,
+      "reward": 0.6625,
+      "reward_std": 0.2404700517654419,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.001049666693143081,
+      "entropy": 0.2950035661458969,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.5,
+      "step": 250
+    },
+    {
+      "loss": 0.0402,
+      "grad_norm": 0.5411835312843323,
+      "learning_rate": 4.82e-07,
+      "num_tokens": 352861.0,
+      "completions/mean_length": 89.925,
+      "completions/min_length": 53.5,
+      "completions/max_length": 139.6,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 89.925,
+      "completions/min_terminated_length": 53.5,
+      "completions/max_terminated_length": 139.6,
+      "rewards/strict_correctness_reward/mean": 0.6,
+      "rewards/strict_correctness_reward/std": 0.3901066094636917,
+      "reward": 0.6,
+      "reward_std": 0.3154700517654419,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.0010468880165717565,
+      "entropy": 0.30304688662290574,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.52,
+      "step": 260
+    },
+    {
+      "loss": -0.0156,
+      "grad_norm": 0.35387319326400757,
+      "learning_rate": 4.62e-07,
+      "num_tokens": 365596.0,
+      "completions/mean_length": 81.1375,
+      "completions/min_length": 45.7,
+      "completions/max_length": 128.6,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 81.1375,
+      "completions/min_terminated_length": 45.7,
+      "completions/max_terminated_length": 128.6,
+      "rewards/strict_correctness_reward/mean": 0.75,
+      "rewards/strict_correctness_reward/std": 0.35014620125293733,
+      "reward": 0.75,
+      "reward_std": 0.23660253882408142,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.0009038537835294846,
+      "entropy": 0.2482639081776142,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.54,
+      "step": 270
+    },
+    {
+      "loss": 0.008,
+      "grad_norm": 0.45041197538375854,
+      "learning_rate": 4.4199999999999996e-07,
+      "num_tokens": 378736.0,
+      "completions/mean_length": 82.75,
+      "completions/min_length": 51.1,
+      "completions/max_length": 129.5,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 82.75,
+      "completions/min_terminated_length": 51.1,
+      "completions/max_terminated_length": 129.5,
+      "rewards/strict_correctness_reward/mean": 0.675,
+      "rewards/strict_correctness_reward/std": 0.43092586398124694,
+      "reward": 0.675,
+      "reward_std": 0.25773502588272096,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0010800856165587903,
+      "entropy": 0.3097472734749317,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.56,
+      "step": 280
+    },
+    {
+      "loss": -0.0463,
+      "grad_norm": 0.4825068414211273,
+      "learning_rate": 4.2199999999999994e-07,
+      "num_tokens": 392752.0,
+      "completions/mean_length": 93.7,
+      "completions/min_length": 56.5,
+      "completions/max_length": 148.8,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 93.7,
+      "completions/min_terminated_length": 56.5,
+      "completions/max_terminated_length": 148.8,
+      "rewards/strict_correctness_reward/mean": 0.6875,
+      "rewards/strict_correctness_reward/std": 0.3774814516305923,
+      "reward": 0.6875,
+      "reward_std": 0.26933756470680237,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0010957302525639533,
+      "entropy": 0.34033061787486074,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.58,
+      "step": 290
+    },
+    {
+      "loss": 0.0198,
+      "grad_norm": 0.0018196539022028446,
+      "learning_rate": 4.02e-07,
+      "num_tokens": 406049.0,
+      "completions/mean_length": 90.6625,
+      "completions/min_length": 58.4,
+      "completions/max_length": 138.9,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 90.6625,
+      "completions/min_terminated_length": 58.4,
+      "completions/max_terminated_length": 138.9,
+      "rewards/strict_correctness_reward/mean": 0.7875,
+      "rewards/strict_correctness_reward/std": 0.23144719302654265,
+      "reward": 0.7875,
+      "reward_std": 0.20386751294136046,
+      "frac_reward_zero_std": 0.6,
+      "kl": 0.0008920988795580343,
+      "entropy": 0.2574467774480581,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.6,
+      "step": 300
+    },
+    {
+      "loss": -0.0256,
+      "grad_norm": 0.004155067726969719,
+      "learning_rate": 3.82e-07,
+      "num_tokens": 417525.0,
+      "completions/mean_length": 76.4,
+      "completions/min_length": 44.3,
+      "completions/max_length": 124.4,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 74.32500076293945,
+      "completions/min_terminated_length": 44.3,
+      "completions/max_terminated_length": 116.5,
+      "rewards/strict_correctness_reward/mean": 0.8375,
+      "rewards/strict_correctness_reward/std": 0.3021578699350357,
+      "reward": 0.8375,
+      "reward_std": 0.18273502588272095,
+      "frac_reward_zero_std": 0.65,
+      "kl": 0.0009926242841174827,
+      "entropy": 0.29241747260093687,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.62,
+      "step": 310
+    },
+    {
+      "loss": -0.0317,
+      "grad_norm": 0.5629070401191711,
+      "learning_rate": 3.62e-07,
+      "num_tokens": 432133.0,
+      "completions/mean_length": 97.2,
+      "completions/min_length": 60.3,
+      "completions/max_length": 132.3,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 96.49285736083985,
+      "completions/min_terminated_length": 60.3,
+      "completions/max_terminated_length": 132.2,
+      "rewards/strict_correctness_reward/mean": 0.7,
+      "rewards/strict_correctness_reward/std": 0.43348987102508546,
+      "reward": 0.7,
+      "reward_std": 0.30773502588272095,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.0010785266451421194,
+      "entropy": 0.2942775242030621,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.64,
+      "step": 320
+    },
+    {
+      "loss": -0.0046,
+      "grad_norm": 0.2648106813430786,
+      "learning_rate": 3.42e-07,
+      "num_tokens": 445011.0,
+      "completions/mean_length": 81.725,
+      "completions/min_length": 49.0,
+      "completions/max_length": 131.7,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 81.725,
+      "completions/min_terminated_length": 49.0,
+      "completions/max_terminated_length": 131.7,
+      "rewards/strict_correctness_reward/mean": 0.65,
+      "rewards/strict_correctness_reward/std": 0.3602151870727539,
+      "reward": 0.65,
+      "reward_std": 0.17886751294136047,
+      "frac_reward_zero_std": 0.65,
+      "kl": 0.0010904618560743985,
+      "entropy": 0.30843768566846846,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.66,
+      "step": 330
+    },
+    {
+      "loss": 0.0195,
+      "grad_norm": 0.24406658113002777,
+      "learning_rate": 3.22e-07,
+      "num_tokens": 457988.0,
+      "completions/mean_length": 85.5125,
+      "completions/min_length": 56.7,
+      "completions/max_length": 132.6,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 85.5125,
+      "completions/min_terminated_length": 56.7,
+      "completions/max_terminated_length": 132.6,
+      "rewards/strict_correctness_reward/mean": 0.6875,
+      "rewards/strict_correctness_reward/std": 0.22220885157585143,
+      "reward": 0.6875,
+      "reward_std": 0.1904700517654419,
+      "frac_reward_zero_std": 0.65,
+      "kl": 0.0009560824153595604,
+      "entropy": 0.28480576202273367,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.68,
+      "step": 340
+    },
+    {
+      "loss": 0.0032,
+      "grad_norm": 0.33621343970298767,
+      "learning_rate": 3.02e-07,
+      "num_tokens": 470988.0,
+      "completions/mean_length": 88.9,
+      "completions/min_length": 51.4,
+      "completions/max_length": 146.5,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 88.9,
+      "completions/min_terminated_length": 51.4,
+      "completions/max_terminated_length": 146.5,
+      "rewards/strict_correctness_reward/mean": 0.6875,
+      "rewards/strict_correctness_reward/std": 0.3627713590860367,
+      "reward": 0.6875,
+      "reward_std": 0.23273502588272094,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.0008902018395019695,
+      "entropy": 0.2734700098633766,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.7,
+      "step": 350
+    },
+    {
+      "loss": 0.0194,
+      "grad_norm": 0.31567007303237915,
+      "learning_rate": 2.8199999999999996e-07,
+      "num_tokens": 483592.0,
+      "completions/mean_length": 82.1,
+      "completions/min_length": 49.7,
+      "completions/max_length": 132.9,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 82.1,
+      "completions/min_terminated_length": 49.7,
+      "completions/max_terminated_length": 132.9,
+      "rewards/strict_correctness_reward/mean": 0.7,
+      "rewards/strict_correctness_reward/std": 0.41660338044166567,
+      "reward": 0.7,
+      "reward_std": 0.28660253882408143,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.0009220733903930522,
+      "entropy": 0.2819118894636631,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.72,
+      "step": 360
+    },
+    {
+      "loss": -0.0135,
+      "grad_norm": 0.2656393051147461,
+      "learning_rate": 2.62e-07,
+      "num_tokens": 498148.0,
+      "completions/mean_length": 94.05,
+      "completions/min_length": 55.5,
+      "completions/max_length": 150.7,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 94.05,
+      "completions/min_terminated_length": 55.5,
+      "completions/max_terminated_length": 150.7,
+      "rewards/strict_correctness_reward/mean": 0.65,
+      "rewards/strict_correctness_reward/std": 0.4536560446023941,
+      "reward": 0.65,
+      "reward_std": 0.3443375647068024,
+      "frac_reward_zero_std": 0.35,
+      "kl": 0.0009336208720924332,
+      "entropy": 0.2933078438043594,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.74,
+      "step": 370
+    },
+    {
+      "loss": -0.0266,
+      "grad_norm": 0.3789014518260956,
+      "learning_rate": 2.4199999999999997e-07,
+      "num_tokens": 511588.0,
+      "completions/mean_length": 90.75,
+      "completions/min_length": 57.8,
+      "completions/max_length": 145.4,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 90.75,
+      "completions/min_terminated_length": 57.8,
+      "completions/max_terminated_length": 145.4,
+      "rewards/strict_correctness_reward/mean": 0.6,
+      "rewards/strict_correctness_reward/std": 0.4536560446023941,
+      "reward": 0.6,
+      "reward_std": 0.3154700517654419,
+      "frac_reward_zero_std": 0.4,
+      "kl": 0.0009573164352332242,
+      "entropy": 0.29326181709766386,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.76,
+      "step": 380
+    },
+    {
+      "loss": -0.0046,
+      "grad_norm": 0.44959908723831177,
+      "learning_rate": 2.22e-07,
+      "num_tokens": 524173.0,
+      "completions/mean_length": 82.5625,
+      "completions/min_length": 51.0,
+      "completions/max_length": 122.5,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 82.5625,
+      "completions/min_terminated_length": 51.0,
+      "completions/max_terminated_length": 122.5,
+      "rewards/strict_correctness_reward/mean": 0.7125,
+      "rewards/strict_correctness_reward/std": 0.3392105340957642,
+      "reward": 0.7125,
+      "reward_std": 0.23273502588272094,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.0009645026148064062,
+      "entropy": 0.2966646023094654,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.78,
+      "step": 390
+    },
+    {
+      "loss": -0.0243,
+      "grad_norm": 0.34275612235069275,
+      "learning_rate": 2.02e-07,
+      "num_tokens": 537668.0,
+      "completions/mean_length": 88.5875,
+      "completions/min_length": 54.9,
+      "completions/max_length": 133.9,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 88.5875,
+      "completions/min_terminated_length": 54.9,
+      "completions/max_terminated_length": 133.9,
+      "rewards/strict_correctness_reward/mean": 0.7,
+      "rewards/strict_correctness_reward/std": 0.3838042140007019,
+      "reward": 0.7,
+      "reward_std": 0.25773502588272096,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0010125601242179983,
+      "entropy": 0.31380862817168237,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.8,
+      "step": 400
+    },
+    {
+      "loss": 0.0233,
+      "grad_norm": 0.40091878175735474,
+      "learning_rate": 1.82e-07,
+      "num_tokens": 551491.0,
+      "completions/mean_length": 92.1375,
+      "completions/min_length": 56.1,
+      "completions/max_length": 134.3,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 92.1375,
+      "completions/min_terminated_length": 56.1,
+      "completions/max_terminated_length": 134.3,
+      "rewards/strict_correctness_reward/mean": 0.7375,
+      "rewards/strict_correctness_reward/std": 0.39097329080104826,
+      "reward": 0.7375,
+      "reward_std": 0.2616025388240814,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0009275848024117295,
+      "entropy": 0.2939250484108925,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.82,
+      "step": 410
+    },
+    {
+      "loss": -0.021,
+      "grad_norm": 0.49753499031066895,
+      "learning_rate": 1.62e-07,
+      "num_tokens": 565042.0,
+      "completions/mean_length": 93.7375,
+      "completions/min_length": 56.4,
+      "completions/max_length": 143.4,
+      "completions/clipped_ratio": 0.025,
+      "completions/mean_terminated_length": 90.07916717529297,
+      "completions/min_terminated_length": 56.4,
+      "completions/max_terminated_length": 139.4,
+      "rewards/strict_correctness_reward/mean": 0.75,
+      "rewards/strict_correctness_reward/std": 0.37370702624320984,
+      "reward": 0.75,
+      "reward_std": 0.2654700517654419,
+      "frac_reward_zero_std": 0.5,
+      "kl": 0.0008704499312443658,
+      "entropy": 0.2760875590145588,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.84,
+      "step": 420
+    },
+    {
+      "loss": -0.0145,
+      "grad_norm": 0.2932981252670288,
+      "learning_rate": 1.4199999999999997e-07,
+      "num_tokens": 577854.0,
+      "completions/mean_length": 84.85,
+      "completions/min_length": 50.0,
+      "completions/max_length": 129.8,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 82.97321472167968,
+      "completions/min_terminated_length": 50.0,
+      "completions/max_terminated_length": 118.3,
+      "rewards/strict_correctness_reward/mean": 0.7125,
+      "rewards/strict_correctness_reward/std": 0.27566109895706176,
+      "reward": 0.7125,
+      "reward_std": 0.21160253882408142,
+      "frac_reward_zero_std": 0.6,
+      "kl": 0.0011010371817974374,
+      "entropy": 0.3273081719875336,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.86,
+      "step": 430
+    },
+    {
+      "loss": -0.0158,
+      "grad_norm": 0.3089543282985687,
+      "learning_rate": 1.2199999999999998e-07,
+      "num_tokens": 592230.0,
+      "completions/mean_length": 95.6,
+      "completions/min_length": 61.6,
+      "completions/max_length": 131.3,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 95.6,
+      "completions/min_terminated_length": 61.6,
+      "completions/max_terminated_length": 131.3,
+      "rewards/strict_correctness_reward/mean": 0.75,
+      "rewards/strict_correctness_reward/std": 0.37456587255001067,
+      "reward": 0.75,
+      "reward_std": 0.28660253882408143,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.0008993446448585018,
+      "entropy": 0.28501764982938765,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.88,
+      "step": 440
+    },
+    {
+      "loss": -0.0331,
+      "grad_norm": 0.26636770367622375,
+      "learning_rate": 1.0199999999999999e-07,
+      "num_tokens": 605869.0,
+      "completions/mean_length": 95.5875,
+      "completions/min_length": 55.3,
+      "completions/max_length": 148.0,
+      "completions/clipped_ratio": 0.025,
+      "completions/mean_terminated_length": 92.26666717529297,
+      "completions/min_terminated_length": 55.3,
+      "completions/max_terminated_length": 145.6,
+      "rewards/strict_correctness_reward/mean": 0.625,
+      "rewards/strict_correctness_reward/std": 0.4363976150751114,
+      "reward": 0.625,
+      "reward_std": 0.2788675129413605,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.001062759489286691,
+      "entropy": 0.32568966820836065,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.9,
+      "step": 450
+    },
+    {
+      "loss": -0.0102,
+      "grad_norm": 0.25260382890701294,
+      "learning_rate": 8.2e-08,
+      "num_tokens": 620436.0,
+      "completions/mean_length": 98.5875,
+      "completions/min_length": 61.8,
+      "completions/max_length": 153.3,
+      "completions/clipped_ratio": 0.0125,
+      "completions/mean_terminated_length": 96.68571472167969,
+      "completions/min_terminated_length": 61.8,
+      "completions/max_terminated_length": 141.4,
+      "rewards/strict_correctness_reward/mean": 0.625,
+      "rewards/strict_correctness_reward/std": 0.3644686847925186,
+      "reward": 0.625,
+      "reward_std": 0.2,
+      "frac_reward_zero_std": 0.6,
+      "kl": 0.0009718186978716403,
+      "entropy": 0.3420204810798168,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.92,
+      "step": 460
+    },
+    {
+      "loss": 0.0131,
+      "grad_norm": 0.17014196515083313,
+      "learning_rate": 6.2e-08,
+      "num_tokens": 633979.0,
+      "completions/mean_length": 91.9875,
+      "completions/min_length": 59.8,
+      "completions/max_length": 139.1,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 91.9875,
+      "completions/min_terminated_length": 59.8,
+      "completions/max_terminated_length": 139.1,
+      "rewards/strict_correctness_reward/mean": 0.6875,
+      "rewards/strict_correctness_reward/std": 0.42922853827476504,
+      "reward": 0.6875,
+      "reward_std": 0.2827350258827209,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.0010361825334257446,
+      "entropy": 0.28841504976153376,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.94,
+      "step": 470
+    },
+    {
+      "loss": -0.0158,
+      "grad_norm": 0.6024389863014221,
+      "learning_rate": 4.2e-08,
+      "num_tokens": 646447.0,
+      "completions/mean_length": 82.5,
+      "completions/min_length": 54.1,
+      "completions/max_length": 119.3,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 82.5,
+      "completions/min_terminated_length": 54.1,
+      "completions/max_terminated_length": 119.3,
+      "rewards/strict_correctness_reward/mean": 0.6,
+      "rewards/strict_correctness_reward/std": 0.44355885684490204,
+      "reward": 0.6,
+      "reward_std": 0.2943375647068024,
+      "frac_reward_zero_std": 0.45,
+      "kl": 0.0009964768803911283,
+      "entropy": 0.288664898276329,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.96,
+      "step": 480
+    },
+    {
+      "loss": 0.0023,
+      "grad_norm": 0.0032669908832758665,
+      "learning_rate": 2.2e-08,
+      "num_tokens": 660367.0,
+      "completions/mean_length": 92.5,
+      "completions/min_length": 55.2,
+      "completions/max_length": 141.3,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 92.5,
+      "completions/min_terminated_length": 55.2,
+      "completions/max_terminated_length": 141.3,
+      "rewards/strict_correctness_reward/mean": 0.7,
+      "rewards/strict_correctness_reward/std": 0.35682053565979005,
+      "reward": 0.7,
+      "reward_std": 0.23660253882408142,
+      "frac_reward_zero_std": 0.55,
+      "kl": 0.0008849841047776863,
+      "entropy": 0.2832383267581463,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 0.98,
+      "step": 490
+    },
+    {
+      "loss": -0.0118,
+      "grad_norm": 0.002431717235594988,
+      "learning_rate": 2e-09,
+      "num_tokens": 672766.0,
+      "completions/mean_length": 81.4875,
+      "completions/min_length": 55.6,
+      "completions/max_length": 113.5,
+      "completions/clipped_ratio": 0.0,
+      "completions/mean_terminated_length": 81.4875,
+      "completions/min_terminated_length": 55.6,
+      "completions/max_terminated_length": 113.5,
+      "rewards/strict_correctness_reward/mean": 0.7875,
+      "rewards/strict_correctness_reward/std": 0.2975324332714081,
+      "reward": 0.7875,
+      "reward_std": 0.16160253882408143,
+      "frac_reward_zero_std": 0.7,
+      "kl": 0.0008878396794898436,
+      "entropy": 0.2686321407556534,
+      "clip_ratio/low_mean": 0.0,
+      "clip_ratio/low_min": 0.0,
+      "clip_ratio/high_mean": 0.0,
+      "clip_ratio/high_max": 0.0,
+      "clip_ratio/region_mean": 0.0,
+      "epoch": 1.0,
+      "step": 500
+    },
+    {
+      "train_runtime": 3350.7089,
+      "train_samples_per_second": 1.194,
+      "train_steps_per_second": 0.149,
+      "total_flos": 0.0,
+      "train_loss": -0.006688862173818052,
+      "epoch": 1.0,
+      "step": 500
+    }
+  ]
+}

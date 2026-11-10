@@ -1,5 +1,13 @@
 # Qwen3 Math Post-Training
 
+## 2026-11 reward-ablation restart (code prepared; not trained)
+
+新一轮复用现有 SFT Adapter，比较 strict correctness 与 correctness + 0.1 format reward。
+提供固定版本训练代码、SwanLab、AutoDL 单卡/三卡启动、资产/数据指纹和逐题评测。
+**新训练未执行，未声称奖励修改带来提升。** 历史冻结报告及结果保持原样；本轮开发探索不将已曝光的官方 test 再称为未见测试。
+
+**[中文完整 README、安装及启动命令 → restart/README.md](restart/README.md)**
+
 Mathematical reasoning post-training with `Qwen/Qwen3-1.7B-Base`: LoRA SFT, online binary-correctness-reward GRPO, development ablations, an Extra-SFT control, and two-seed evaluation on GSM8K.
 
 ## Final sealed official-test results

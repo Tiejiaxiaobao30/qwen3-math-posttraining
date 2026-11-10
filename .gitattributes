@@ -12,3 +12,5 @@ configs/v2*.json -text whitespace=cr-at-eol
 # Preserve original terminal progress whitespace in imported evidence.
 reports/v2/source_logs/** -text whitespace=-blank-at-eol,cr-at-eol
 reports/v2/environment_snapshot.txt -text whitespace=-blank-at-eol,cr-at-eol
+# Portable AutoDL scripts and restart sources.
+restart/** text eol=lf

@@ -1,0 +1,10 @@
+# Target: Linux x86_64 / Python 3.11. Torch installed separately by setup.sh.
+trl==0.24.0
+transformers==4.57.1
+peft==0.17.1
+accelerate==1.10.1
+datasets==4.3.0
+swanlab==0.6.12
+modelscope==1.30.0
+sentencepiece==0.2.1
+protobuf==6.32.1

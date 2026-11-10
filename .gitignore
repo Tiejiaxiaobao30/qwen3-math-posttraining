@@ -39,6 +39,9 @@ results/base_dev_metrics_recomputed.json
 
 # Local training artifacts
 outputs/
+data/restart/
+swanlog/
+restart-environment.local.txt
 
 # Local backup archives and checkpoint variants
 *.zip

@@ -1,0 +1,19 @@
+{
+  "max_steps": 200,
+  "learning_rate": 0.000001,
+  "global_completion_batch": 12,
+  "num_generations": 4,
+  "max_prompt_length": 512,
+  "max_completion_length": 256,
+  "temperature": 0.8,
+  "top_p": 0.95,
+  "beta": 0.04,
+  "loss_type": "bnpo",
+  "scale_rewards": "group",
+  "mask_truncated_completions": true,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+  "arms": {"strict": [1.0, 0.0], "format_aux": [1.0, 0.1]}
+}

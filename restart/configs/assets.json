@@ -1,0 +1,15 @@
+{
+  "sft_files": {
+    "adapter_config.json": "87964443a30c0d79d3decbae2047cb1f5bc814b930a8df901a08a0e81a63ef39",
+    "adapter_model.safetensors": "63420f32629bbf452b30b4e5d27060c924f01b37dea013a073bb2956cea2437f"
+  },
+  "data_canonical_sha256": {
+    "rl": "fa2e053aefdcad5b4b2bafb3555ec1d9dee405c0a7a02cae2097d2e3726125b9",
+    "dev": "86029ac5ba93da8e8f5f8e695550d5ebc02aefb1b9d655f326ee994038141b4d"
+  },
+  "base_model": {
+    "source": "ModelScope",
+    "id": "Qwen/Qwen3-1.7B-Base",
+    "revision": "43ab5b53bd7f37e7e8b2214adcc9178ee11fb0b3"
+  }
+}

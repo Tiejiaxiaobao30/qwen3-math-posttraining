@@ -31,8 +31,25 @@ def main():
     p.add_argument('--data')
     p.add_argument('--before')
     p.add_argument('--after')
-    p.add_argument('--output', required=True, help='NEW prediction JSONL path')
+    p.add_argument('--output', help='NEW prediction JSONL path')
+    p.add_argument('--audit-history', action='store_true', help='Verify original frozen runs from Git history')
     a = p.parse_args()
+    if a.audit_history:
+        import io, subprocess, sys, tarfile, tempfile
+        from common import ROOT
+        revision = (ROOT/'历史结果/source_revision.txt').read_text(encoding='utf-8').strip()
+        archive = subprocess.check_output(['git', '-C', str(ROOT), 'archive', '--format=tar', revision])
+        with tempfile.TemporaryDirectory(prefix='qwen-frozen-audit-') as directory:
+            with tarfile.open(fileobj=io.BytesIO(archive)) as tar:
+                for item in tar.getmembers():
+                    if item.name.startswith('/') or '..' in Path(item.name).parts or item.issym() or item.islnk():
+                        raise ValueError('Unsafe historical archive path')
+                tar.extractall(directory)
+            for module in ('scripts.audit_final_evaluation', 'scripts.audit_v2_evidence'):
+                subprocess.run([sys.executable, '-m', module], cwd=directory, check=True)
+        return
+    if not a.output:
+        p.error('--output is required for generation or paired comparison')
     out = Path(a.output)
     if a.before or a.after:
         if not (a.before and a.after):

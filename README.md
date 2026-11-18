@@ -1,108 +1,138 @@
-# Qwen GSM8K：只使用这一个项目
+# Qwen GSM8K 数学后训练
 
-本地位置：`E:/qwen gsm8k`。所有运行代码和配置就在根目录，不再经过projects/restart/teaching嵌套。
+基于 **Qwen3-1.7B-Base** 的数学后训练教学项目：使用 LoRA SFT 学习解题与输出格式，再运行 GRPO；提供按 SFT 部分正确率筛选 RL 题目的实验入口。所有日常逻辑集中在五个根目录文件，不再保留多套平台和阶段入口。
+
+**已有结论：SFT 是本实验中主要有效的阶段，两种子 GRPO 的官方测试成绩都低于对应 SFT。** 部分正确题筛选的代码已准备和验证，但尚无真实新训练结果，不能宣称它带来收益。
+
+## 文件结构
+
+本地完整项目位于 `E:/qwen gsm8k`；GitHub 保存源码和轻量评测证据，数据、权重、环境与大型恢复包仅保留本地。
 
 ```text
 qwen gsm8k/
-  data.py             处理GSM8K，固定SFT2000/RL1000/dev500
-  train.py            SFT或GRPO训练
-  sample.py           SFT每题G4筛题，输出同数量随机对照
-  evaluate.py         同条件dev评测、逐题改善/退化对比
-  common.py           IO、模型合并、生成、严格评分器
-  prompt.txt          唯一提示词
-  split_manifest.json 固定样本划分
-  requirements.txt
-  test_core.py
-  data/               已处理数据（本地已生成）
-  models/             完整Base模型（尚未下载）
-  outputs/            训练checkpoint、最终adapter、筛题与评测输出
-  logs/               原始训练日志
-  历史备份/            必要历史评测证据与恢复备份，日常不用进入
+├── README.md                 项目说明、架构与实验结论
+├── 运行命令.md               安装、SFT、筛题、GRPO、评测与续训命令
+├── 代码取舍说明.md           旧实现哪些复用、哪些删除及原因
+├── data.py                   原始train → SFT/RL/dev
+├── train.py                  SFT或GRPO，统一LoRA和Trainer入口
+├── sample.py                 每题采样4次，筛出答对1–3次的题
+├── evaluate.py               统一dev评测、逐题对照、历史结果核验
+├── common.py                 IO、模型合并、生成、严格答案评分
+├── prompt.txt                唯一提示词
+├── split_manifest.json       固定历史样本ID划分
+├── requirements.txt          固定直接依赖版本
+├── test_core.py              评分器、数据隔离、筛题与配对测试
+├── data/                     本地：SFT2000、RL1000、dev500
+├── models/                   本地：完整Base模型（尚未下载）
+├── outputs/                  本地：checkpoint、最终adapter、筛题和评测产出
+├── logs/                     本地：原始训练日志
+├── 历史结果/                 V1/V2预测、报告、冻结清单与来源说明
+└── 历史备份/                 本地：迁移回退包、Git bundle、完整checkpoint备份
 ```
 
-旧代码不是整套搬过来继续使用。数据清洗、SFT/GRPO、严格评分、G4筛题和配对评测已合进上面五个文件；平台专用入口、重复评测、一次性制表、旧4090/TRL0.21封装从正常代码中删除。逐文件取舍见`代码取舍说明.md`。历史冻结核验仍需的少数源码属于证据，不是第二套训练入口。
+旧 `scripts`、`restart`、`final_grpo` 和 `teaching` 不再作为并列工程。必要逻辑已复用到五个文件；重复评测、平台硬编码、打包解包和一次性制表入口已移除。历史源码通过 Git 的原版本查阅和核验，不在日常目录展开。
 
-## 模型与数据
+## 项目架构
 
-已有SFT42：`outputs/sft_full/final_adapter`；对应GRPO42：`outputs/grpo_full/final_adapter`。seed123最终adapter在`outputs/sft_seed123/final_adapter`、`outputs/grpo_seed123/final_adapter`。这些是LoRA，不能当完整Base。
-
-`data/sft.jsonl`是prompt/completion/gold；`data/rl.jsonl`、`data/dev.jsonl`只有prompt/gold/id。数据已从公开train缓存重建，与原RL逐条核对。Gold只传给loss/reward，不拼进模型prompt。新环境第一次准备：
-
-```bash
-# 在项目根目录执行；已有data/时不要覆盖
-python data.py
-# 或提供保持原始顺序的GSM8K train JSONL
-python data.py --raw-jsonl /path/gsm8k-train.jsonl
+```mermaid
+flowchart TD
+    A["GSM8K train
+固定样本ID与来源"] --> D["data.py
+清洗答案、检查集合隔离"]
+    D --> S["SFT 2000题
+prompt + completion"]
+    D --> R["RL 1000题
+prompt + gold"]
+    D --> V["dev 500题
+只用于开发评测"]
+    B["Qwen3-1.7B-Base"] --> T["train.py · SFT
+LoRA + completion-only loss"]
+    S --> T
+    T --> P["同一份SFT adapter"]
+    P --> C["sample.py
+每题G=4，保留答对1–3次"]
+    R --> C
+    C --> I["informative子集"]
+    R --> N["同数量随机子集"]
+    C -->|样本数N| N
+    I --> G["train.py · GRPO
+合并SFT，再创建新LoRA"]
+    N --> G
+    P --> G
+    P --> E["evaluate.py
+greedy · 512 tokens · 严格评分"]
+    G --> E
+    V --> E
+    E --> O["原始预测、正确率、格式失败、截断
+改善/退化ID与净变化"]
 ```
 
-固定HF train revision及历史ID，不下载official test。此处dev500曾用于历史开发，不能当新封存测试集。
+`common.py`统一加载模型、合并 SFT、生成和评分。Gold只用于SFT监督或reward，不能放进生成prompt。评测GRPO时也要先合并**同一份SFT**再加载GRPO adapter，不能直接将它挂到Base。
 
-## 云端环境
+随机与筛题两组从同一SFT起步，保持样本数、随机种子、更新步数、卡数和超参一致。1/2/3卡的全局completion batch为12，G=4，每update三题。固定步数仍不等于完全匹配题目覆盖和token计算量。
 
-以下为同一台Linux三卡BF16 GPU、Python3.11命令。先将当前项目源码上传/从仓库获取，并将本地data/、需要的SFT adapter上传到同样相对目录。大型产出、权重、私有恢复ZIP不提交Git。
+## 如何运行
 
-```bash
-conda create -n qwen-gsm8k python=3.11 -y
-conda activate qwen-gsm8k
-pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
-pip install -r requirements.txt
-pip freeze > environment-cloud.txt
-nvidia-smi
-export MODEL=/root/autodl-tmp/models/Qwen3-1.7B-Base
-export SFT=outputs/sft_full/final_adapter
-```
-
-本地没有完整Base权重；已有相同Base可指定路径。没有时，下载到空目录并保存来源日志：
-
-```bash
-pip install modelscope==1.30.0
-python -c "from modelscope import snapshot_download; snapshot_download('Qwen/Qwen3-1.7B-Base', revision='43ab5b53bd7f37e7e8b2214adcc9178ee11fb0b3', local_dir='/root/autodl-tmp/models/Qwen3-1.7B-Base')"
-```
-
-这是历史声明的ModelScope revision；实际资产指纹记录到run，revision文本本身不证明权重来源。新云端Python/Torch组合、三卡CUDA和完整1.7B训练尚未验证，先inspect再20步检查。
-
-## SFT → 筛题 → GRPO → 评测
-
-```bash
-# 如复用已有SFT，跳过此段；从头训练时先20步，再另开正式目录
-torchrun --standalone --nproc_per_node=3 train.py sft --model "$MODEL" --data data/sft.jsonl --output outputs/sft-inspect --inspect-only
-torchrun --standalone --nproc_per_node=3 train.py sft --model "$MODEL" --data data/sft.jsonl --output outputs/sft-smoke --steps 20
-torchrun --standalone --nproc_per_node=3 train.py sft --model "$MODEL" --data data/sft.jsonl --output outputs/sft42 --steps 1000 --seed 42
-export SFT=outputs/sft42/final_adapter
-
-# 筛题：每题采4次，答对1–3次的原RL题构成informative；random取同数量
-CUDA_VISIBLE_DEVICES=0 python sample.py --model "$MODEL" --sft "$SFT" --data data/rl.jsonl --output outputs/screen42 --seed 42
-
-# GRPO先构建、20步试跑，再独立启动同条件对照
-torchrun --standalone --nproc_per_node=3 train.py grpo --model "$MODEL" --sft "$SFT" --data outputs/screen42/random.jsonl --output outputs/grpo-inspect --inspect-only
-torchrun --standalone --nproc_per_node=3 train.py grpo --model "$MODEL" --sft "$SFT" --data outputs/screen42/random.jsonl --output outputs/grpo-smoke --steps 20
-torchrun --standalone --nproc_per_node=3 train.py grpo --model "$MODEL" --sft "$SFT" --data outputs/screen42/random.jsonl --output outputs/random42 --steps 200 --seed 42
-torchrun --standalone --nproc_per_node=3 train.py grpo --model "$MODEL" --sft "$SFT" --data outputs/screen42/informative.jsonl --output outputs/informative42 --steps 200 --seed 42
-
-CUDA_VISIBLE_DEVICES=0 python evaluate.py --model "$MODEL" --sft "$SFT" --data data/dev.jsonl --output outputs/eval/sft.jsonl
-CUDA_VISIBLE_DEVICES=0 python evaluate.py --model "$MODEL" --sft "$SFT" --grpo outputs/random42/final_adapter --data data/dev.jsonl --output outputs/eval/random.jsonl
-CUDA_VISIBLE_DEVICES=0 python evaluate.py --model "$MODEL" --sft "$SFT" --grpo outputs/informative42/final_adapter --data data/dev.jsonl --output outputs/eval/informative.jsonl
-python evaluate.py --before outputs/eval/random.jsonl --after outputs/eval/informative.jsonl --output outputs/eval/paired.json
-```
-
-GRPO先合并同一SFT，再创建全新LoRA；评测也先合并该SFT再载入GRPO adapter。不要把GRPO adapter直接挂到Base上。
-
-1/2/3卡的全局completion batch均为12，G4，每次update三题；新SFT全局batch12与历史batch2不同，这是新探索协议，不能称原实验精确复现。两组需同SFT、样本数、seed、步数、卡数与超参。SFT模型和GRPO随机种子含义分开解释。筛题固定256 tokens，评测greedy512；不能用训练reward代替dev正确率。
-
-训练每50步保存完整checkpoint，不自动删除。续训在相同命令后加`--resume outputs/random42/checkpoint-100`，保持steps/seed/数据/代码/资产相同。final_adapter只用于推理，不能当optimizer恢复点。标准Trainer续训不承诺跨中断逐token完全相同的rollout轨迹。筛题逐题保存原文，但本版不支持断点采样；中断后用新目录重跑，不输出不完整训练子集。
-
-所有新输出拒绝覆盖。评测记录原文、correct/wrong/format_fail、截断、长度与指纹；配对比较报告改善/退化ID和净变化。仅报告探索性dev结论，无新holdout承诺。
-
-## 验证与历史边界
+先阅读[完整运行命令](运行命令.md)。从项目根目录直接运行，不需要进入多层包目录：
 
 ```bash
 python -m pytest test_core.py -q
-# 核验历史冻结记录时才需要进入这里
-cd 历史备份/旧实验记录
-python -m scripts.audit_final_evaluation
-python -m scripts.audit_v2_evidence
+python train.py --help
+python sample.py --help
+python evaluate.py --help
+
+# 对已有两组逐题预测做配对比较
+python evaluate.py --before outputs/eval/random.jsonl --after outputs/eval/informative.jsonl --output outputs/eval/paired.json
+
+# 临时读取原Git版本，核验V1/V2冻结证据；不会恢复一套旧工程到工作目录
+python evaluate.py --audit-history
 ```
 
-历史V1两个seed的GRPO低于相应SFT；V2属于official test曝光后的探索，单次G8相对G4的变化不证明稳定增益。原结果、报告、冻结parser/prompt与验证需要的源码保留原字节；只有存放位置变化。移除旧平台入口不代表删除历史负结果。
+本地已有SFT adapter在`outputs/sft_full/final_adapter`，其余已保留模型见`outputs/`。完整Base权重需要单独准备。正式环境计划为Linux、Python3.11、Torch2.6.0/cu124、TRL0.24.0，先构建Trainer和20步短跑，再开始正式训练。
 
-迁移前恢复ZIP、完整Git历史bundle、旧checkpoint完整TAR留在历史备份，防止整理误丢成果；不作为日常代码，不上传远端。代码取舍是本轮逐项审核后的结果，不是把全部旧版本保留成并列工程。
+## 已完成的实验结论
+
+### V1：SFT有效，GRPO未泛化
+
+下表为已有GSM8K官方test的1319题结果。统一greedy、512 new tokens和严格`Final answer: <number>`协议；格式失败计为错误，截断另行统计。
+
+|模型|正确数 / 1319|严格正确率|错误|格式失败|截断|
+|---|---:|---:|---:|---:|---:|
+|Base|665|50.42%|264|390|9|
+|SFT seed42|902|68.39%|408|9|8|
+|GRPO seed42|893|67.70%|413|13|11|
+|Extra-SFT对照|898|68.08%|413|8|6|
+|SFT seed123|897|68.01%|412|10|6|
+|GRPO seed123|882|66.87%|422|15|10|
+
+- SFT seed42相对Base提高17.97个百分点，是本实验主要有效阶段。
+- GRPO在dev500的两个seed都提高0.40个百分点，但官方test分别减少9题和15题，下降约0.68和1.14个百分点。
+- 两seed平均为SFT 68.20%、GRPO 67.29%，下降约0.91个百分点。两个seed使用同一测试集，不是两份独立测试数据。
+- Extra-SFT为68.08%，低于SFT42；其训练计算量与GRPO未严格匹配，不能据此泛化判断方法优劣。
+
+这些是该模型、数据、奖励与训练条件下的描述性结果，不能证明GRPO普遍无效，也不能将小差异直接称为统计显著。
+
+证据：[最终报告](历史结果/reports/final/official_test_report.md)、[逐题转变与核验](历史结果/reports/final/verification.json)、[原始逐题预测](历史结果/results/official_test/)。
+
+### V2：G8相对G4的变化不能称为稳定增益
+
+|配置|dev500|已曝光的official test1319|训练耗时|更新步数|
+|---|---:|---:|---:|---:|
+|G4 seed42|384/500，76.80%|889/1319，67.40%|3350.71秒|500|
+|G8 seed42|378/500，75.60%|898/1319，68.08%|2731.23秒|500|
+
+G8相对G4在test净多9题，但dev净少6题，两者都低于SFT42的902题。每组仅一次运行；改变G会改变题目覆盖，token工作量、平台负载和耗时未严格控制，不能据此宣布稳定提升或加速。V2发生在test曝光后，属于探索，不是新的封存验证。
+
+证据：[V2报告与限制](历史结果/reports/v2/research_report.md)、[压缩逐题结果](历史结果/results/v2/)、[来源清单](历史结果/reports/v2/provenance.json)。
+
+### 已有推理服务测量
+
+历史上在单张T4、FP16、合并SFT模型上做过vLLM合成请求测试：并发1的总输出吞吐约50.12 tokens/s，并发8约273.31 tokens/s。这是服务器聚合吞吐，不是单用户速度；不同随机请求、单次运行，不能作为数学正确率或一般性加速结论。[环境、原始指标与限制](历史结果/reports/final/vllm_benchmark.md)。
+
+## 当前验证范围
+
+- 21项CPU测试通过；数据重建后SFT2000/RL1000/dev500逐条一致，五个冻结最终adapter指纹一致。
+- 随机微型Qwen3的SFT单步、prompt loss mask、LoRA变化、SFT合并、新GRPO LoRA、GRPO单步、保存重载与生成通过。微型GRPO全零reward，只验证接口执行，不能证明学习收益。
+- 原V1/V2冻结审计通过；必要源码从原Git revision临时读取，原预测、报告和负结果保留。
+- 完整1.7B真实采样、新SFT/GRPO、三卡CUDA/DDP及云端版本组合尚未验证，筛题数量和收益未知。
+- 历史dev已用于开发，official test已经曝光；新训练先报告探索性dev结论。不能把本次代码整理或smoke测试写成新的模型结果。

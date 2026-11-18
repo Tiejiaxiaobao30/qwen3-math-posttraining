@@ -1,51 +1,18 @@
-# Python cache
 __pycache__/
+.pytest_cache/
+.venv/
 *.pyc
-*.pyo
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Secrets / local environment
 .env
 .env.*
 *.key
-
-# Model weights
-*.safetensors
-*.pth
-*.pt
-*.bin
-models/
-checkpoints/
-
-# Training / experiment cache
-wandb/
-logs/
-cache/
-datasets_cache/
-
-# OS / editor
-.DS_Store
-.vscode/
-*~
-
-# Generated processed datasets
-data/processed/
-
-# Day 05 temporary evaluation artifacts
-results/base_dev_20.jsonl
-results/base_dev_metrics_recomputed.json
-
-# Local training artifacts
-outputs/
-
-# Local backup archives and checkpoint variants
-*.zip
-*.tar
-*.tar.*
-*.ckpt
-checkpoint*/
-# Small frozen official logs are reviewable evidence
-!reports/final/logs/
-!reports/final/logs/*.log
+/data/
+/models/
+/outputs/
+/logs/
+历史备份/*.zip
+历史备份/*.tar
+历史备份/*.bundle
+历史备份/旧数据/
+历史备份/迁移清单.json
+/历史备份/迁移验证.json
+/*.code-workspace

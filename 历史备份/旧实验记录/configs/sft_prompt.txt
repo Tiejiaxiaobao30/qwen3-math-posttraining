@@ -1,0 +1,4 @@
+Solve the following math problem step by step.
+End with exactly: Final answer: <number>
+
+{question}

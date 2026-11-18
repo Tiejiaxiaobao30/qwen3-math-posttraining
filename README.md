@@ -36,35 +36,25 @@ qwen gsm8k/
 
 ```mermaid
 flowchart TD
-    A["GSM8K train
-固定样本ID与来源"] --> D["data.py
-清洗答案、检查集合隔离"]
-    D --> S["SFT 2000题
-prompt + completion"]
-    D --> R["RL 1000题
-prompt + gold"]
-    D --> V["dev 500题
-只用于开发评测"]
-    B["Qwen3-1.7B-Base"] --> T["train.py · SFT
-LoRA + completion-only loss"]
+    A["GSM8K train<br/>固定样本ID与来源"] --> D["data.py<br/>清洗答案、检查集合隔离"]
+    D --> S["SFT 2000题<br/>prompt + completion"]
+    D --> R["RL 1000题<br/>prompt + gold"]
+    D --> V["dev 500题<br/>只用于开发评测"]
+    B["Qwen3-1.7B-Base"] --> T["train.py · SFT<br/>LoRA + completion-only loss"]
     S --> T
     T --> P["同一份SFT adapter"]
-    P --> C["sample.py
-每题G=4，保留答对1–3次"]
+    P --> C["sample.py<br/>每题G=4，保留答对1–3次"]
     R --> C
     C --> I["informative子集"]
     R --> N["同数量随机子集"]
     C -->|样本数N| N
-    I --> G["train.py · GRPO
-合并SFT，再创建新LoRA"]
+    I --> G["train.py · GRPO<br/>合并SFT，再创建新LoRA"]
     N --> G
     P --> G
-    P --> E["evaluate.py
-greedy · 512 tokens · 严格评分"]
+    P --> E["evaluate.py<br/>greedy · 512 tokens · 严格评分"]
     G --> E
     V --> E
-    E --> O["原始预测、正确率、格式失败、截断
-改善/退化ID与净变化"]
+    E --> O["原始预测、正确率、格式失败、截断<br/>改善/退化ID与净变化"]
 ```
 
 `common.py`统一加载模型、合并 SFT、生成和评分。Gold只用于SFT监督或reward，不能放进生成prompt。评测GRPO时也要先合并**同一份SFT**再加载GRPO adapter，不能直接将它挂到Base。

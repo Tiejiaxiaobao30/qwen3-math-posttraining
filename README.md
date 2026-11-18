@@ -1,95 +1,138 @@
-# Qwen3 Math Post-Training
+# Qwen GSM8K 数学后训练
 
-Mathematical reasoning post-training with `Qwen/Qwen3-1.7B-Base`: LoRA SFT, online binary-correctness-reward GRPO, development ablations, an Extra-SFT control, and two-seed evaluation on GSM8K.
+基于 **Qwen3-1.7B-Base** 的数学后训练教学项目：使用 LoRA SFT 学习解题与输出格式，再运行 GRPO；提供按 SFT 部分正确率筛选 RL 题目的实验入口。所有日常逻辑集中在五个根目录文件，不再保留多套平台和阶段入口。
 
-## Final sealed official-test results
+**已有结论：SFT 是本实验中主要有效的阶段，两种子 GRPO 的官方测试成绩都低于对应 SFT。** 部分正确题筛选的代码已准备和验证，但尚无真实新训练结果，不能宣称它带来收益。
 
-| Model | Correct / 1319 | Strict accuracy | Wrong | Format fail | Truncated |
-|---|---:|---:|---:|---:|---:|
-| Base | 665 / 1319 | 50.42% | 264 | 390 | 9 |
-| SFT seed42 | 902 / 1319 | 68.39% | 408 | 9 | 8 |
-| GRPO seed42 | 893 / 1319 | 67.70% | 413 | 13 | 11 |
-| Extra-SFT control | 898 / 1319 | 68.08% | 413 | 8 | 6 |
-| SFT seed123 | 897 / 1319 | 68.01% | 412 | 10 | 6 |
-| GRPO seed123 | 882 / 1319 | 66.87% | 422 | 15 | 10 |
+## 文件结构
 
-**The +0.40 percentage-point GRPO gain on fixed dev500 did not generalize to the sealed official test.** Both GRPO policies scored below their corresponding SFT baseline. Exact count-based test changes are −0.68pp (seed42, −9 answers) and −1.14pp (seed123, −15 answers). The two-seed mean is SFT **68.20%**, GRPO **67.29%** (−0.91pp); these seeds share the same 1319 questions.
+本地完整项目位于 `E:/qwen gsm8k`；GitHub 保存源码和轻量评测证据，数据、权重、环境与大型恢复包仅保留本地。
 
-| Seed | Dev500 SFT | Dev500 GRPO | Dev change | Official-test change |
-|---|---:|---:|---:|---:|
-| 42 | 78.00% (390/500) | 78.40% (392/500) | +0.40pp | −0.68pp |
-| 123 | 76.00% (380/500) | 76.40% (382/500) | +0.40pp | −1.14pp |
-
-SFT is the main effective stage in this experiment: seed42 improves from Base 50.42% to 68.39% (+17.97pp). Extra-SFT reaches 68.08% (−0.30pp versus SFT seed42) under its tested configuration. The control uses the same RL1000 question pool but is **not compute-matched** to GRPO. These are descriptive results for this setup, not evidence that GRPO is universally ineffective or that the small differences are statistically significant.
-
-## Experimental discipline
-
-- Development: fixed dev500 from GSM8K train; SFT2000 and RL1000 preparation are recorded in `split_manifest.json` and the data-pipeline scripts.
-- Final prompt, strict parser, dev data, five adapter fingerprints, decoding, and six evaluated models were recorded in the [pre-test freeze manifest](results/frozen_eval_manifest.json).
-- Official test was opened after freeze according to the experiment record; **no post-test tuning**, further training, hyperparameter search, or third seed. Both seeds and the control are reported.
-- Greedy generation (`do_sample=False`), 512 new-token cap, BF16, exactly one final `Final answer: <number>`; format failures count as incorrect. Truncation is an independent flag.
-- Manifest `SEALED` is the preserved pre-test snapshot. Its timestamp has no timezone, and the local audit cannot independently establish the original execution chronology or absence of earlier test access.
-
-## Reviewable evidence
-
-- [Final report and limitations](reports/final/official_test_report.md)
-- [Paired SFT→GRPO analysis and failure counts](reports/final/verification.json)
-- [Artifact hashes and archive provenance](reports/final/artifact_provenance.json)
-- [Six predictions and summaries, with separately named one-example smoke files](results/official_test/)
-- [Original official logs](reports/final/logs/)
-- [Kaggle environment and portability notes](docs/kaggle_environment.md)
-- [Evaluation protocol](eval_protocol.md), [model revision](model_revision.txt), and historical [development reports](reports/)
-
-Historical day/ablation reports describe the state when written (including "test sealed" and planned next steps); the final report above supersedes their current-status conclusions. No reward-ablation result is claimed without corresponding evidence.
-
-## Recheck the stored results (CPU, Python standard library)
-
-From the repository root:
-
-```bash
-python -m scripts.audit_final_evaluation
-python -m tests.test_reward
-# Optional with pytest installed: python -m pytest tests/test_evaluator.py -q
+```text
+qwen gsm8k/
+├── README.md                 项目说明、架构与实验结论
+├── 运行命令.md               安装、SFT、筛题、GRPO、评测与续训命令
+├── 代码取舍说明.md           旧实现哪些复用、哪些删除及原因
+├── data.py                   原始train → SFT/RL/dev
+├── train.py                  SFT或GRPO，统一LoRA和Trainer入口
+├── sample.py                 每题采样4次，筛出答对1–3次的题
+├── evaluate.py               统一dev评测、逐题对照、历史结果核验
+├── common.py                 IO、模型合并、生成、严格答案评分
+├── prompt.txt                唯一提示词
+├── split_manifest.json       固定历史样本ID划分
+├── requirements.txt          固定直接依赖版本
+├── test_core.py              评分器、数据隔离、筛题与配对测试
+├── data/                     本地：SFT2000、RL1000、dev500
+├── models/                   本地：完整Base模型（尚未下载）
+├── outputs/                  本地：checkpoint、最终adapter、筛题和评测产出
+├── logs/                     本地：原始训练日志
+├── 历史结果/                 V1/V2预测、报告、冻结清单与来源说明
+└── 历史备份/                 本地：迁移回退包、Git bundle、完整checkpoint备份
 ```
 
-The existing reward audit has 9 cases; the evaluator suite has 17 checks.
+旧 `scripts`、`restart`、`final_grpo` 和 `teaching` 不再作为并列工程。必要逻辑已复用到五个文件；重复评测、平台硬编码、打包解包和一次性制表入口已移除。历史源码通过 Git 的原版本查阅和核验，不在日常目录展开。
 
-The audit rescored all 7914 full-test predictions with the frozen parser, checked IDs, references, counts, decoding metadata, source-file hashes, and four stored dev runs. It optionally verifies the dev data hash when the ignored local `data/processed/dev.jsonl` exists. It performs no generation or tuning. `--output NEW_PATH.json` writes a new audit artifact and refuses to overwrite an existing one.
+## 项目架构
 
-The [official evaluator](scripts/eval_official_test.py) is preserved byte-for-byte from the run backup and accepts model, adapter, test, prompt, device, and result-directory arguments. Invoke as `python -m scripts.eval_official_test --help` in an appropriate GPU environment. Original summaries retain historical machine paths as evidence, not installation requirements. Do not rerun into the archived results directory.
+```mermaid
+flowchart TD
+    A["GSM8K train
+固定样本ID与来源"] --> D["data.py
+清洗答案、检查集合隔离"]
+    D --> S["SFT 2000题
+prompt + completion"]
+    D --> R["RL 1000题
+prompt + gold"]
+    D --> V["dev 500题
+只用于开发评测"]
+    B["Qwen3-1.7B-Base"] --> T["train.py · SFT
+LoRA + completion-only loss"]
+    S --> T
+    T --> P["同一份SFT adapter"]
+    P --> C["sample.py
+每题G=4，保留答对1–3次"]
+    R --> C
+    C --> I["informative子集"]
+    R --> N["同数量随机子集"]
+    C -->|样本数N| N
+    I --> G["train.py · GRPO
+合并SFT，再创建新LoRA"]
+    N --> G
+    P --> G
+    P --> E["evaluate.py
+greedy · 512 tokens · 严格评分"]
+    G --> E
+    V --> E
+    E --> O["原始预测、正确率、格式失败、截断
+改善/退化ID与净变化"]
+```
 
-Seed123 configuration files use a relative `models/Qwen3-1.7B-Base` path; set it to your local model directory before any separate reproduction experiment. Dev evaluators expose `--base-model`, `--dev-file`, `--prompt-file`, `--device`, and `--results-dir`; their original sources are preserved in `reports/final/kaggle_sources/`. No post-test training is part of this release.
+`common.py`统一加载模型、合并 SFT、生成和评分。Gold只用于SFT监督或reward，不能放进生成prompt。评测GRPO时也要先合并**同一份SFT**再加载GRPO adapter，不能直接将它挂到Base。
 
-## Serving Benchmark
+随机与筛题两组从同一SFT起步，保持样本数、随机种子、更新步数、卡数和超参一致。1/2/3卡的全局completion batch为12，G=4，每update三题。固定步数仍不等于完全匹配题目覆盖和token计算量。
 
-Completed: merged Base + SFT seed42 served by vLLM on **1×Tesla T4**, FP16, TP=1, `max_model_len=2048`. Each run uses 64 synthetic random requests, 256 input / 128 output tokens, 4 warmups, `ignore_eos`, and `request_rate=inf`.
+## 如何运行
 
-| Configured concurrency | Success | Requests/s | Output tokens/s | Total tokens/s | Mean / P99 TTFT (ms) | Mean / P99 TPOT (ms/token) | Mean / P99 E2E (ms) |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| C1 | 64/64 | 0.391578 | 50.1220 | 150.3661 | 70.372 / 76.015 | 19.551 / 22.795 | 2553.312 / 2969.379 |
-| C8 | 64/64 | 2.14 | 273.31 | 819.93 | 322.78 / 437.44 | 26.94 / 29.12 | 3743.99 / 3809.44 |
+先阅读[完整运行命令](运行命令.md)。从项目根目录直接运行，不需要进入多层包目录：
 
-Throughput is an **aggregate server metric across all measured requests**, not per-user generation speed. Total tokens/s includes input + output; TTFT, TPOT, and E2E describe request latency. C1/C8 use the same token lengths but different random seeds (101/202), so prompts are not identical. These single-run synthetic measurements do not measure GSM8K accuracy or establish a general concurrency optimum.
+```bash
+python -m pytest test_core.py -q
+python train.py --help
+python sample.py --help
+python evaluate.py --help
 
-[Full environment, workload, metrics, commands, and limitations](reports/final/vllm_benchmark.md) · [Raw JSON, hardware, and logs](results/vllm/)
+# 对已有两组逐题预测做配对比较
+python evaluate.py --before outputs/eval/random.jsonl --after outputs/eval/informative.jsonl --output outputs/eval/paired.json
 
-## Artifact policy and remaining work
+# 临时读取原Git版本，核验V1/V2冻结证据；不会恢复一套旧工程到工作目录
+python evaluate.py --audit-history
+```
 
-Model weights, checkpoints, tokenizer bundles, ZIP/TAR backups, and the 8GB full backup remain outside Git. The repository includes the frozen GSM8K main test JSONL copy used by these runs (source: GSM8K main via ModelScope, recorded in `data_inventory.json`) and small evaluation evidence.
+本地已有SFT adapter在`outputs/sft_full/final_adapter`，其余已保留模型见`outputs/`。完整Base权重需要单独准备。正式环境计划为Linux、Python3.11、Torch2.6.0/cu124、TRL0.24.0，先构建Trainer和20步短跑，再开始正式训练。
 
-The **vLLM deployment benchmark is complete**; its small evidence files are linked above. Merged models, `vllm-env`, process PID files, and model weights remain outside Git. Final evidence-based resume bullets/interview notes remain separate follow-up work. The sealed-test conclusions and no-post-test-tuning policy are unchanged.
+## 已完成的实验结论
 
-## V2 exploratory follow-up (2026-10-20)
+### V1：SFT有效，GRPO未泛化
 
-The preceding freeze/no-further-training/no-post-test-tuning statements describe the **historical V1 experiment**. V2 is a separate exploratory follow-up after V1 test access; it is not a new sealed-test confirmation. All V1 files, frozen results and history remain preserved.
+下表为已有GSM8K官方test的1319题结果。统一greedy、512 new tokens和严格`Final answer: <number>`协议；格式失败计为错误，截断另行统计。
 
-| V2 run | Dev500 | Official test1319 | Training runtime | Optimizer steps |
+|模型|正确数 / 1319|严格正确率|错误|格式失败|截断|
+|---|---:|---:|---:|---:|---:|
+|Base|665|50.42%|264|390|9|
+|SFT seed42|902|68.39%|408|9|8|
+|GRPO seed42|893|67.70%|413|13|11|
+|Extra-SFT对照|898|68.08%|413|8|6|
+|SFT seed123|897|68.01%|412|10|6|
+|GRPO seed123|882|66.87%|422|15|10|
+
+- SFT seed42相对Base提高17.97个百分点，是本实验主要有效阶段。
+- GRPO在dev500的两个seed都提高0.40个百分点，但官方test分别减少9题和15题，下降约0.68和1.14个百分点。
+- 两seed平均为SFT 68.20%、GRPO 67.29%，下降约0.91个百分点。两个seed使用同一测试集，不是两份独立测试数据。
+- Extra-SFT为68.08%，低于SFT42；其训练计算量与GRPO未严格匹配，不能据此泛化判断方法优劣。
+
+这些是该模型、数据、奖励与训练条件下的描述性结果，不能证明GRPO普遍无效，也不能将小差异直接称为统计显著。
+
+证据：[最终报告](历史结果/reports/final/official_test_report.md)、[逐题转变与核验](历史结果/reports/final/verification.json)、[原始逐题预测](历史结果/results/official_test/)。
+
+### V2：G8相对G4的变化不能称为稳定增益
+
+|配置|dev500|已曝光的official test1319|训练耗时|更新步数|
 |---|---:|---:|---:|---:|
-| G4 seed42 | 384/500 (76.80%) | 889/1319 (67.40%) | 3350.7089 s | 500 |
-| G8 seed42 | 378/500 (75.60%) | 898/1319 (68.08%) | 2731.2307 s | 500 |
+|G4 seed42|384/500，76.80%|889/1319，67.40%|3350.71秒|500|
+|G8 seed42|378/500，75.60%|898/1319，68.08%|2731.23秒|500|
 
-G8 gains 40 and loses 31 official-test answers versus G4 (net +9), while losing 6 net answers on dev500. Both remain below SFT42 (902/1319, 68.39%); V1 GRPO G4 scored 893/1319 (67.70%). One run per group does not establish a stable gain. Fixed optimizer steps/batch do not fix prompt coverage when G changes; token workload and timing controls are not matched. Runtime differences are descriptive, not a demonstrated speedup.
+G8相对G4在test净多9题，但dev净少6题，两者都低于SFT42的902题。每组仅一次运行；改变G会改变题目覆盖，token工作量、平台负载和耗时未严格控制，不能据此宣布稳定提升或加速。V2发生在test曝光后，属于探索，不是新的封存验证。
 
-[V2 research report, confounders and commands](reports/v2/research_report.md) · [Compact outcomes and original summaries](results/v2/) · [Provenance](reports/v2/provenance.json)
+证据：[V2报告与限制](历史结果/reports/v2/research_report.md)、[压缩逐题结果](历史结果/results/v2/)、[来源清单](历史结果/reports/v2/provenance.json)。
 
-Run `python -m scripts.audit_v2_evidence` for CPU checks. Add `--archive PATH_TO_LOCAL_TAR_GZ` to rescore all 3638 original V2 predictions. The verified 207652808-byte backup, model adapters and full prediction text remain outside Git. Existing training/evaluation scripts match the backup; the only added script audits evidence.
+### 已有推理服务测量
+
+历史上在单张T4、FP16、合并SFT模型上做过vLLM合成请求测试：并发1的总输出吞吐约50.12 tokens/s，并发8约273.31 tokens/s。这是服务器聚合吞吐，不是单用户速度；不同随机请求、单次运行，不能作为数学正确率或一般性加速结论。[环境、原始指标与限制](历史结果/reports/final/vllm_benchmark.md)。
+
+## 当前验证范围
+
+- 21项CPU测试通过；数据重建后SFT2000/RL1000/dev500逐条一致，五个冻结最终adapter指纹一致。
+- 随机微型Qwen3的SFT单步、prompt loss mask、LoRA变化、SFT合并、新GRPO LoRA、GRPO单步、保存重载与生成通过。微型GRPO全零reward，只验证接口执行，不能证明学习收益。
+- 原V1/V2冻结审计通过；必要源码从原Git revision临时读取，原预测、报告和负结果保留。
+- 完整1.7B真实采样、新SFT/GRPO、三卡CUDA/DDP及云端版本组合尚未验证，筛题数量和收益未知。
+- 历史dev已用于开发，official test已经曝光；新训练先报告探索性dev结论。不能把本次代码整理或smoke测试写成新的模型结果。

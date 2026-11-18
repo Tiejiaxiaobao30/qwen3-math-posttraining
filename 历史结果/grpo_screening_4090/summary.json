@@ -1,0 +1,272 @@
+{
+  "screening": {
+    "n": 1000,
+    "histogram": {
+      "4": 421,
+      "1": 100,
+      "3": 236,
+      "2": 140,
+      "0": 103
+    },
+    "selected_n": 476,
+    "overlap_n": 228,
+    "format_fail": 37.0,
+    "truncated": 27
+  },
+  "sampling": {
+    "seed": 42,
+    "per_question_seed": null,
+    "num_generations": 4,
+    "max_completion_length": 256,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 0,
+    "prompt": "raw project prompt",
+    "prompt_batch_size": 12,
+    "seed_rule": "(seed + first question ID in each batch) % 2**32"
+  },
+  "runs": {
+    "random": {
+      "test": {
+        "group": "random",
+        "total": 1319,
+        "correct": 904,
+        "wrong": 402,
+        "format_fail": 13,
+        "truncated": 11,
+        "strict_accuracy": 0.6853677028051555,
+        "batch_size": 16,
+        "do_sample": false,
+        "max_new_tokens": 512,
+        "test_sha256": "d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e",
+        "prompt_sha256": "4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828",
+        "base_sha256": "6df85b39330e5a425ee36253d0f894e4387e4f0a15b9c53cb467d668e6b3a841",
+        "sft_sha256": "63420f32629bbf452b30b4e5d27060c924f01b37dea013a073bb2956cea2437f",
+        "grpo_sha256": "22f59df9858c8759ccd6562ed7f289847724d7669fa9917be429b38f4c51f58e",
+        "predictions_sha256": "6ff5a3ace43f51a8250741466c1ed9df0f1f5fcc16be1227654de152420cc67b"
+      },
+      "training": {
+        "steps": 476,
+        "seed": 42,
+        "layout": {
+          "per_device_train_batch_size": 8,
+          "gradient_accumulation_steps": 1,
+          "steps_per_generation": 1
+        },
+        "config": {
+          "learning_rate": 1e-06,
+          "max_prompt_length": 512,
+          "beta": 0.04,
+          "num_generations": 4,
+          "max_completion_length": 256,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "top_k": 0,
+          "loss_type": "bnpo",
+          "scale_rewards": "group",
+          "num_iterations": 1,
+          "mask_truncated_completions": true,
+          "remove_unused_columns": false,
+          "use_vllm": false
+        },
+        "packages": {
+          "torch": "2.6.0+cu126",
+          "trl": "0.24.0",
+          "transformers": "4.57.1",
+          "peft": "0.17.1",
+          "accelerate": "1.10.1",
+          "datasets": "4.3.0"
+        },
+        "runtime": {
+          "train_runtime": 4106.5896,
+          "train_samples_per_second": 0.927,
+          "train_steps_per_second": 0.116,
+          "total_flos": 0.0,
+          "train_loss": -0.008853929139938961,
+          "peak_allocated_gib": 7.254048824310303,
+          "peak_reserved_gib": 9.41796875
+        },
+        "groups": 952,
+        "group_counts": {
+          "mixed_groups": 459,
+          "all_correct_groups": 416,
+          "all_wrong_groups": 77
+        }
+      }
+    },
+    "informative": {
+      "test": {
+        "group": "informative",
+        "total": 1319,
+        "correct": 896,
+        "wrong": 407,
+        "format_fail": 16,
+        "truncated": 14,
+        "strict_accuracy": 0.6793025018953753,
+        "batch_size": 16,
+        "do_sample": false,
+        "max_new_tokens": 512,
+        "test_sha256": "d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e",
+        "prompt_sha256": "4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828",
+        "base_sha256": "6df85b39330e5a425ee36253d0f894e4387e4f0a15b9c53cb467d668e6b3a841",
+        "sft_sha256": "63420f32629bbf452b30b4e5d27060c924f01b37dea013a073bb2956cea2437f",
+        "grpo_sha256": "da62c8c7551b90d6c9c11602b47b42ce02621496455017b01240bfc20334bd54",
+        "predictions_sha256": "c30394e49232fe9194ad83627098f617c8c1d29bda8423723ac2bf93ec82732d"
+      },
+      "training": {
+        "steps": 476,
+        "seed": 42,
+        "layout": {
+          "per_device_train_batch_size": 8,
+          "gradient_accumulation_steps": 1,
+          "steps_per_generation": 1
+        },
+        "config": {
+          "learning_rate": 1e-06,
+          "max_prompt_length": 512,
+          "beta": 0.04,
+          "num_generations": 4,
+          "max_completion_length": 256,
+          "temperature": 0.8,
+          "top_p": 0.95,
+          "top_k": 0,
+          "loss_type": "bnpo",
+          "scale_rewards": "group",
+          "num_iterations": 1,
+          "mask_truncated_completions": true,
+          "remove_unused_columns": false,
+          "use_vllm": false
+        },
+        "packages": {
+          "torch": "2.6.0+cu126",
+          "trl": "0.24.0",
+          "transformers": "4.57.1",
+          "peft": "0.17.1",
+          "accelerate": "1.10.1",
+          "datasets": "4.3.0"
+        },
+        "runtime": {
+          "train_runtime": 4341.7877,
+          "train_samples_per_second": 0.877,
+          "train_steps_per_second": 0.11,
+          "total_flos": 0.0,
+          "train_loss": -0.012020956199750204,
+          "peak_allocated_gib": 7.277226448059082,
+          "peak_reserved_gib": 13.10546875
+        },
+        "groups": 952,
+        "group_counts": {
+          "mixed_groups": 623,
+          "all_correct_groups": 235,
+          "all_wrong_groups": 94
+        }
+      }
+    }
+  },
+  "paired": {
+    "gained": [
+      "gsm8k_test_0043",
+      "gsm8k_test_0065",
+      "gsm8k_test_0154",
+      "gsm8k_test_0155",
+      "gsm8k_test_0159",
+      "gsm8k_test_0244",
+      "gsm8k_test_0364",
+      "gsm8k_test_0404",
+      "gsm8k_test_0410",
+      "gsm8k_test_0527",
+      "gsm8k_test_0529",
+      "gsm8k_test_0667",
+      "gsm8k_test_0687",
+      "gsm8k_test_0757",
+      "gsm8k_test_0761",
+      "gsm8k_test_0861",
+      "gsm8k_test_0897",
+      "gsm8k_test_0945",
+      "gsm8k_test_0948",
+      "gsm8k_test_0955",
+      "gsm8k_test_0993",
+      "gsm8k_test_1001",
+      "gsm8k_test_1071",
+      "gsm8k_test_1098",
+      "gsm8k_test_1102",
+      "gsm8k_test_1103",
+      "gsm8k_test_1175",
+      "gsm8k_test_1180",
+      "gsm8k_test_1182",
+      "gsm8k_test_1225",
+      "gsm8k_test_1263"
+    ],
+    "lost": [
+      "gsm8k_test_0004",
+      "gsm8k_test_0058",
+      "gsm8k_test_0089",
+      "gsm8k_test_0101",
+      "gsm8k_test_0108",
+      "gsm8k_test_0116",
+      "gsm8k_test_0144",
+      "gsm8k_test_0192",
+      "gsm8k_test_0207",
+      "gsm8k_test_0242",
+      "gsm8k_test_0350",
+      "gsm8k_test_0437",
+      "gsm8k_test_0489",
+      "gsm8k_test_0506",
+      "gsm8k_test_0526",
+      "gsm8k_test_0572",
+      "gsm8k_test_0608",
+      "gsm8k_test_0642",
+      "gsm8k_test_0692",
+      "gsm8k_test_0726",
+      "gsm8k_test_0736",
+      "gsm8k_test_0755",
+      "gsm8k_test_0774",
+      "gsm8k_test_0791",
+      "gsm8k_test_0807",
+      "gsm8k_test_0812",
+      "gsm8k_test_0815",
+      "gsm8k_test_0883",
+      "gsm8k_test_0925",
+      "gsm8k_test_0951",
+      "gsm8k_test_0970",
+      "gsm8k_test_0976",
+      "gsm8k_test_0990",
+      "gsm8k_test_1016",
+      "gsm8k_test_1031",
+      "gsm8k_test_1135",
+      "gsm8k_test_1164",
+      "gsm8k_test_1171",
+      "gsm8k_test_1258"
+    ],
+    "net": -8,
+    "transitions": {
+      "correct->correct": 865,
+      "wrong->wrong": 366,
+      "correct->wrong": 37,
+      "format_fail->format_fail": 9,
+      "wrong->correct": 31,
+      "format_fail->wrong": 4,
+      "correct->format_fail": 2,
+      "wrong->format_fail": 5
+    }
+  },
+  "archive_sha256": "0e82eccb3616749506259882b2c48f5b00dd63a0cdd8fe4808c6d82eae0649fb",
+  "sources": {
+    "train_grpo_experiment.py": "6fa19ed938d87576f8797f8672d299d5886466e81253ada25d30fbbdc5111485",
+    "screen12.py": "491c96bc32741b72b8e4a0ab1c46eb4f491a21dc48dae5d21a53a93456c6a548",
+    "train_b8.py": "617334d8ea3a19719b8b2963cddbf69ef09670fb7b4cd67d7e52d2b864c6bfe2",
+    "eval_test_b8.py": "7c4ca4b7124e3f458706f901d7ffb598134d890d0490cca28098e117a5305d01",
+    "common.py": "e5f2c66784adf18449023b70ad653589fead427cf45af290186057f80b377175",
+    "train.py": "37533a365603e04aae40a5618f55bf69acda9f3b24401d16de8b16c7325cab27",
+    "sample.py": "9bc193735b00adce6ea3eb195634b78bfde9485b93a73d557e08d207bd8179bf",
+    "evaluate.py": "b8f770a4e07c2d9980e7ba50a75a21622f8236798acaec4f994dffd75bb2d817",
+    "requirements.txt": "3042a3dc294731f2005e64154dec7d01f03dfc7dd2a0c770cb7486c620ece348",
+    "scripts/evaluator.py": "db06aa96983e2ae183b93bea4f1841039d8ae4e6fb29712a5fd1120cb8c22198",
+    "configs/sft_prompt.txt": "4343a37c9e2e5603f5c63ac0fa9d5767d0f02e102b058f5554cc92edd736f828",
+    "data/official/gsm8k_test_1319.jsonl": "d9a6a8c13b99ac41d22bfdb5912550fe202f92dca88e3565190bd9ca044ada0e",
+    "data/rl.jsonl": "78dfbf71e23961a0a17f5a5ed40bc84a2ca70948994fe9fe8ab59c415b8c31f1",
+    "data/dev.jsonl": "402e90fdd1870c35a22d461b106193c72158ca8852a8b0e7a9cba8fb65e53587",
+    "data/manifest.json": "5e209f97f4559cd699d885a6a36d90d4a7c0df35b57bb1af6854095cad79b63e",
+    "split_manifest.json": "e5c2717774ba42b72fd6a0387f923202333d0412ed549953acdc1d60ff554567"
+  }
+}

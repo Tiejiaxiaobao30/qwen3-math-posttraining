@@ -230,7 +230,7 @@ def require_active_completions(truncated):
 
 
 def make_trainer(model, tokenizer, rows, arm, output, steps=TRAIN_STEPS, seed=42, world=1,
-                 save_steps=CHECKPOINT_STEPS, runtime_options=None):
+                 save_steps=CHECKPOINT_STEPS, runtime_options=None, batch_options=None):
     """真实训练与CPU微型测试共用此构建函数；优化器与loss仍由TRL实现。"""
     if importlib.metadata.version('trl') != '0.24.0':
         raise RuntimeError('Use the existing requirements.txt: TRL must be 0.24.0')
@@ -240,7 +240,7 @@ def make_trainer(model, tokenizer, rows, arm, output, steps=TRAIN_STEPS, seed=42
     from peft import LoraConfig
     from trl import GRPOConfig, GRPOTrainer
     cfg = dict(output_dir=str(output), max_steps=steps, seed=seed, data_seed=seed,
-        **batch_config(world,arm), **arm_config(arm), bf16=True,
+        **(batch_options or batch_config(world,arm)), **arm_config(arm), bf16=True,
         gradient_checkpointing=True, gradient_checkpointing_kwargs={'use_reentrant':False},
         ddp_find_unused_parameters=False, logging_steps=1, save_steps=save_steps,
         save_total_limit=None, report_to='none', optim='adamw_torch')

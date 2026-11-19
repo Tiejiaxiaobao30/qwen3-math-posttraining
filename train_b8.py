@@ -9,7 +9,6 @@ def batch_config(world, arm):
         steps_per_generation=1,
     )
 
-exp.batch_config = batch_config
-
 if __name__ == "__main__":
+    exp.batch_config = batch_config
     exp.main()

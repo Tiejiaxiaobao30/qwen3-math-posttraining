@@ -1,152 +1,105 @@
-# Qwen GSM8K 数学后训练
+# Qwen3-1.7B · GSM8K 数学后训练
 
-基于 **Qwen3-1.7B-Base** 的数学后训练教学项目。使用 LoRA SFT 学习解题与输出格式，再运行 GRPO。根目录同时提供原训练流程与单卡同题量筛题实验入口。
+从 Qwen3-1.7B-Base 出发，依次做 LoRA SFT、在线 GRPO 和逐题评测。项目比较完整与早期 SFT 起点、额外监督训练、每题生成数，以及等题量的 GRPO 筛题策略。
 
-## 今日结论 · 2026-11-18
+## 实验结果
 
-**筛题提高了训练中的混合组比例。这次官方测试中，筛题组比同题量随机组少答对 8 题。**
+**SFT 带来了最大的提升。** Base 在官方 1,319 题上答对 665 题（50.42%），完整 SFT42 答对 902 题（68.39%），提高 17.97 个百分点。只看过 32 条训练样本的早期 SFT 起点上，两组 GRPO 都有回升，但最终仍低于完整 SFT。两轮等量对照中，筛题都增加了在线混合题组比例，最终正确率都略低于随机组。
 
-单卡 RTX 4090 上，两组分别使用 476 道题，从同一份 SFT42 出发，各训练 476 步（2 epoch）。筛题组保留冻结 SFT 每题采样四次时答对 1～3 次的题。训练期间，组内既有正确回答又有错误回答的题组记为混合组。
+各行直接使用保存的官方测试结果，均为每题一次 greedy 生成、最多 512 个新 token，以严格 `Final answer: <number>` 判分。格式失败计为错误。历史 V1 在冻结后评测，后续探索复用同一已曝光测试集。
 
-|指标|随机组|筛题组|筛题组 − 随机组|
-|---|---:|---:|---:|
-|训练期间的混合组比例|459/952（48.21%）|623/952（65.44%）|+17.23 个百分点|
-|历史官方 test1319 正确率|904/1319（68.54%）|896/1319（67.93%）|−8 题（−0.61 个百分点）|
+| 实验 | 模型或配置 | 答对 / 1,319 | 严格正确率 | 相对自己的 SFT 起点 |
+| --- | --- | ---: | ---: | ---: |
+| V1 | Qwen3-1.7B-Base | 665 | 50.42% | — |
+| V1 | 完整 SFT42 | 902 | 68.39% | — |
+| V1 | SFT42 → 原始 GRPO | 893 | 67.70% | −9 |
+| V1 | SFT42 → Extra-SFT | 898 | 68.08% | −4 |
+| V1 | 完整 SFT123 | 897 | 68.01% | — |
+| V1 | SFT123 → 原始 GRPO | 882 | 66.87% | −15 |
+| V2 | SFT42 → G4 GRPO | 889 | 67.40% | −13 |
+| V2 | SFT42 → G8 GRPO | 898 | 68.08% | −4 |
+| 等量筛题 | 完整 SFT42 → 随机 GRPO | **904** | **68.54%** | +2 |
+| 等量筛题 | 完整 SFT42 → 筛题 GRPO | 896 | 67.93% | −6 |
+| 冷启动 | 早期 SFT，第 2 步（32 条样本） | 855 | 64.82% | — |
+| 冷启动 | 第 2 步 SFT → 随机 GRPO | 872 | 66.11% | +17 |
+| 冷启动 | 第 2 步 SFT → 筛题 GRPO | 870 | 65.96% | +15 |
 
-逐题比较随机组和筛题组，筛题组新增答对 31 题，同时失去 39 道随机组答对的题。其中 37 题变为数值错误、2 题变为格式失败。混合组比例的差距在两个 epoch 都存在，随机组为 47.69% 和 48.74%，筛题组为 62.61% 和 68.28%。[完整配置、逐题对照与在线统计](历史结果/grpo_screening_4090/README.md)
+相对起点的变化按答对题数计算。完整 SFT42 在表中同时是 V1 产物及后续几轮的共同起点。前三轮探索的详细资产、解码记录和原始指标保留在各自报告中。
 
-### 用历史 SFT42 逐题定位分差
+### 原始 GRPO、Extra-SFT 与 G4/G8
 
-将历史 SFT42 的预测与本轮两组的预测按题号、标准答案对齐。历史 SFT42 答对 902 题，答错 417 题。
+原始 GRPO 的两个种子在 dev500 各多答对 2 题（+0.40 个百分点），在官方 test 各少答对 9、15 题。Extra-SFT 把同一批 RL1000 的参考解答转成监督样本，从完整 SFT42 再训一遍，官方 test 少答对 4 题。它与 GRPO 的计算预算不同。V2 从同一 SFT42 出发各更新 500 步，G8 比 G4 在 test 多答对 9 题，在 dev 少答对 6 题，两者的 test 均低于 SFT42。
 
-|相对历史 SFT42|随机组|筛题组|筛题组 − 随机组|
-|---|---:|---:|---:|
-|历史答错、本轮答对|35|38|+3|
-|历史答对、本轮答错|33|44|多丢 11 题|
-|正确题数净变化|+2|−6|−8|
+[原始评测与双种子报告](历史结果/reports/final/official_test_report.md) · [Extra-SFT](历史结果/reports/day14/extra_sft_control.md) · [G4/G8 对照](历史结果/reports/v2/research_report.md)
 
-**筛题组多改对了 3 道历史错题，也多丢了 11 道历史对题。** 两组共享 228 道训练题。随机组独有的 248 题在冻结 SFT 筛题时是 206 题全对、42 题全错。筛题组用 248 道混合题替换了这些题，改变了训练覆盖。这是可检验的解释之一，当前单种子对照无法确认它造成了丢分。[历史 SFT42 逐题预测](历史结果/results/official_test/sft_seed42_test1319.jsonl) · [本轮逐题判定](历史结果/grpo_screening_4090/test_outcomes.csv)
+开发集消融只使用 dev500。原始 GRPO 的 250、500、750、1,000 步 checkpoint 分别为 75.80%、77.20%、77.00%、78.40%；KL 系数 0.02、0.04、0.08 分别为 77.20%、78.40%、76.20%；学习率 5e-7、1e-6、2e-6 分别为 75.40%、78.40%、77.40%。这些配置用于开发比较，官方测试表只列实际执行过 test1319 的模型。[开发集消融报告](历史结果/reports/ablation/grpo_hyperparameter_ablation.md)
 
-核验确认 SFT42 adapter、测试题和提示词哈希一致，两次均使用 greedy 和 512 tokens 上限。历史评测每次处理 1 题，本轮每次处理 16 题。历史 Kaggle 记录只留下 Base 路径，缺少实际加载文件的哈希。因此历史 SFT42 适合定位逐题分差，严格同条件下相对本轮 SFT 起点的净收益仍未测定。两组 A/B 使用本轮同一套资产和设置，结论限于 seed42 和已曝光的官方测试集。[历史评测汇总](历史结果/results/official_test/sft_seed42_test1319_summary.json) · [本轮实验汇总](历史结果/grpo_screening_4090/summary.json)
+### 完整 SFT 与早期 SFT 的筛题对照
 
-## 实验流程
+两轮均从同一题源 RL1000 取样，两组各训练 476 道、各两轮。随机组复用同一份 476 题名单。筛题组从对应冻结 SFT 每题采四条、答对 1–3 条的题中选取。在线训练仍会重新生成回答。
+
+| 指标 | 完整 SFT42 起点 | 第 2 步 SFT 起点 |
+| --- | ---: | ---: |
+| 训前 RL1000 混合题 | 476 | 632 |
+| 在线混合组，随机组 | 459/952（48.21%） | 609/952（63.97%） |
+| 在线混合组，筛题组 | 623/952（65.44%） | 678/952（71.22%） |
+| 筛题组 − 随机组，官方 test | −8 题（−0.61 个百分点） | −2 题（−0.15 个百分点） |
+
+从第 2 步 SFT 出发，随机组比自己的起点多答对 17 题，筛题组多答对 15 题。早期起点的回升幅度大于完整起点那轮的历史变化，但表现更好的早期随机组仍比完整 SFT42 少答对 30 题。筛题的相对劣势从 8 题缩至 2 题，差值变化为 6 题（0.45 个百分点）。第 2 步下，筛题组相对随机组新做对 45 题、丢了 47 题。两轮是单种子探索，结果没有确立弱起点能普遍增强 GRPO，也没有观察到筛题胜过随机。
+
+早期 SFT 第 32、8、2 步分别处理了 512、128、32 条样本。训前采样的混合题从 488 增至 521、632；第 2 步有 593/4,000 条格式失败，完整 SFT42 是 37/4,000。混合题增加与答案格式和数值解答共同变化，不能单独解释为更强的推理训练信号。第 32 步的两组 GRPO 提前停止，第 8 步只完成筛题。只有第 2 步早期起点完成了两组训练和终评。预留的 500 题未执行评测。
+
+[完整 SFT 筛题实验](历史结果/grpo_screening_4090/README.md) · [冷启动实验、逐题证据和归档](历史结果/grpo_coldstart_4090/README.md)
+
+## 训练链路
 
 ```mermaid
 flowchart TD
-    A["GSM8K train<br/>固定样本ID与来源"] --> D["data.py<br/>清洗答案、检查集合隔离"]
-    D --> S["SFT 2000题<br/>prompt + completion"]
-    D --> R["RL 1000题<br/>prompt + gold"]
-    B["Qwen3-1.7B-Base"] --> T["train.py · SFT<br/>LoRA + completion-only loss"]
+    A[GSM8K train 7473题] --> S[SFT2000 · 参考解答]
+    A --> R[RL1000 · 问题与数值奖励]
+    A --> D[dev500 · 开发]
+    B[Qwen3-1.7B-Base] --> T[LoRA SFT]
     S --> T
-    T --> P["冻结 SFT42 adapter"]
-    P --> C["screen12.py<br/>每批12题，每题G=4"]
-    R --> C
-    C --> I["筛题组476题<br/>答对1–3次"]
-    C --> N["随机组476题<br/>从原RL1000抽样"]
-    I --> G["train_b8.py · GRPO<br/>各476步，训练中重新在线采样"]
-    N --> G
-    P -->|合并SFT，分别建新LoRA| G
-    G --> E["eval_test_b8.py<br/>各自最终adapter，greedy512"]
-    O["历史官方 test1319"] --> E
-    E --> X["同题比较正确率与得失"]
+    T --> W[完整 SFT42 或早期 SFT]
+    R --> R1[全部题 · 原始 GRPO]
+    R --> R2[等题量 · 随机与筛题]
+    W --> R2
+    W --> G[合并 SFT 后，新建 GRPO LoRA]
+    R1 --> G
+    R2 --> G
+    G --> E[官方 test1319 · 每题一次 greedy]
+    W --> E
 ```
 
-`common.py`统一加载模型、合并 SFT、生成和评分。Gold只用于SFT监督或reward，不能放进生成prompt。评测GRPO时也要先合并**同一份SFT**再加载GRPO adapter，不能直接将它挂到Base。
+SFT 只对参考解答部分计算损失。GRPO 给当前模型同题多条回答打二值奖励，再利用组内差异更新。筛题时的回答只用于选题。本项目保留题号、提示词和权重指纹，以便按题复核。
 
-图中是这次实际执行的单卡实验。两组训练微批都是 8 条回答、梯度累积 1，每次更新用 2 道题。评测微批是 16 道题，每题生成一条回答。dev500 仍可用于开发，这次两组直接测试了预定第 476 步的最终 adapter。固定步数约束了更新预算，各组实际题目覆盖和生成 token 数可以不同。
+## 阅读代码与复现
 
-## 文件结构
-
-本地完整项目位于 `E:/qwen_gsm8k`。GitHub 保存源码和轻量评测证据，权重、环境与大型恢复包保留在本地。
+| 顺序 | 文件 | 主要用途 |
+| --- | --- | --- |
+| 1 | `data.py`、`split_manifest.json`、`prompt.txt` | 构建互不重叠的 SFT2000、RL1000、dev500，固定题号和输出格式 |
+| 2 | `common.py`、`train.py` | 评分、模型加载与合并、SFT 和原始 GRPO |
+| 3 | `sample.py`、`evaluate.py` | 筛题、开发集评测和历史证据核验 |
+| 4 | `train_grpo_experiment.py`、`screen12.py`、`train_b8.py`、`eval_test_b8.py` | 完整 SFT 起点的单卡对照入口 |
+| 5 | `coldstart.py` | 早期 SFT、批量筛题、两组在线 GRPO、终评和配对比较 |
 
 ```text
 qwen_gsm8k/
-├── README.md                 项目说明、架构与实验结论
-├── 运行命令.md               安装、SFT、筛题、GRPO、评测与续训命令
-├── 代码取舍说明.md           旧实现哪些复用、哪些删除及原因
-├── data.py                   原始train → SFT/RL/dev
-├── train.py                  SFT或GRPO，统一LoRA和Trainer入口
-├── sample.py                 每题采样4次，筛出答对1–3次的题
-├── evaluate.py               统一dev评测、逐题对照、历史结果核验
-├── common.py                 IO、模型合并、生成、严格答案评分
-├── train_grpo_experiment.py   GRPO 对照训练及统计
-├── screen12.py / train_b8.py / eval_test_b8.py  单卡实跑入口
-├── prompt.txt                唯一提示词
-├── split_manifest.json       固定历史样本ID划分
-├── requirements.txt          固定直接依赖版本
-├── test_core.py              评分器、数据隔离、筛题与配对测试
-├── data/                     本地：SFT2000、RL1000、dev500
-├── models/                   本地：完整Base模型（尚未下载）
-├── outputs/                  本地：checkpoint、最终adapter、筛题和评测产出
-├── logs/                     本地：原始训练日志
-├── 历史结果/                 V1/V2 证据、单卡筛题结果与冻结清单
-└── 历史备份/                 本地：迁移回退包、Git bundle、完整checkpoint备份
+├── README.md
+├── 运行命令.md / coldstart.md
+├── data.py / common.py / train.py / sample.py / evaluate.py
+├── train_grpo_experiment.py / screen12.py / train_b8.py / eval_test_b8.py / coldstart.py
+├── 历史结果/
+│   ├── reports/、results/      V1/V2 结果与冻结报告
+│   ├── grpo_screening_4090/   完整 SFT 对照
+│   └── grpo_coldstart_4090/   早期 SFT 对照
+├── data/                    本地生成的数据
+├── outputs/                 本地权重、训练产出和云端归档
+└── 历史备份/                 历史权重与完整版本备份
 ```
 
-旧 `scripts`、`restart`、`final_grpo` 和 `teaching` 不再作为并列工程。必要逻辑已复用到五个文件；重复评测、平台硬编码、打包解包和一次性制表入口已移除。历史源码通过 Git 的原版本查阅和核验，不在日常目录展开。
+- [数据、环境与原始训练命令](运行命令.md) · [冷启动复现与已有权重评测](coldstart.md)
+- [代码整理取舍](代码取舍说明.md) · [早期实验设计与入口](阅读顺序与GRPO实验设计.md)
+- [T4 推理记录](历史结果/reports/final/vllm_benchmark.md)（合成请求，并发 1 和 8 的聚合输出分别为约 50.12 与 273.31 tokens/s）
 
-## 如何运行
-
-复现本次单卡对照，先看[实跑命令和资产要求](历史结果/grpo_screening_4090/README.md#实际配置)。原项目的安装、SFT 和通用训练入口见[完整运行命令](运行命令.md)。从项目根目录执行以下命令可以检查入口与历史证据。
-
-```bash
-python -m pytest test_core.py test_grpo_experiment.py -q
-python train.py --help
-python sample.py --help
-python evaluate.py --help
-
-# 对 evaluate.py 生成且附带运行元数据的开发集预测做配对比较
-python evaluate.py --before outputs/eval/random.jsonl --after outputs/eval/informative.jsonl --output outputs/eval/paired.json
-
-# 临时读取原Git版本，核验V1/V2冻结证据；不会恢复一套旧工程到工作目录
-python evaluate.py --audit-history
-```
-
-已有 SFT42 adapter 在本地 `outputs/sft_full/final_adapter`，完整 Base 权重需单独准备。本次云端实际使用 PyTorch `2.6.0+cu126`、TRL `0.24.0`，完整环境版本见[实验汇总](历史结果/grpo_screening_4090/summary.json)。
-
-## 历史实验结论
-
-### V1：SFT有效，GRPO未泛化
-
-下表为已有GSM8K官方test的1319题结果。统一greedy、512 new tokens和严格`Final answer: <number>`协议；格式失败计为错误，截断另行统计。
-
-|模型|正确数 / 1319|严格正确率|错误|格式失败|截断|
-|---|---:|---:|---:|---:|---:|
-|Base|665|50.42%|264|390|9|
-|SFT seed42|902|68.39%|408|9|8|
-|GRPO seed42|893|67.70%|413|13|11|
-|Extra-SFT对照|898|68.08%|413|8|6|
-|SFT seed123|897|68.01%|412|10|6|
-|GRPO seed123|882|66.87%|422|15|10|
-
-- SFT seed42相对Base提高17.97个百分点，是本实验主要有效阶段。
-- GRPO在dev500的两个seed都提高0.40个百分点，但官方test分别减少9题和15题，下降约0.68和1.14个百分点。
-- 两seed平均为SFT 68.20%、GRPO 67.29%，下降约0.91个百分点。两个seed使用同一测试集，不是两份独立测试数据。
-- Extra-SFT为68.08%，低于SFT42；其训练计算量与GRPO未严格匹配，不能据此泛化判断方法优劣。
-
-这些是该模型、数据、奖励与训练条件下的描述性结果，不能证明GRPO普遍无效，也不能将小差异直接称为统计显著。
-
-证据：[最终报告](历史结果/reports/final/official_test_report.md)、[逐题转变与核验](历史结果/reports/final/verification.json)、[原始逐题预测](历史结果/results/official_test/)。
-
-### V2：G8相对G4的变化不能称为稳定增益
-
-|配置|dev500|已曝光的official test1319|训练耗时|更新步数|
-|---|---:|---:|---:|---:|
-|G4 seed42|384/500，76.80%|889/1319，67.40%|3350.71秒|500|
-|G8 seed42|378/500，75.60%|898/1319，68.08%|2731.23秒|500|
-
-G8相对G4在test净多9题，但dev净少6题，两者都低于SFT42的902题。每组仅一次运行；改变G会改变题目覆盖，token工作量、平台负载和耗时未严格控制，不能据此宣布稳定提升或加速。V2发生在test曝光后，属于探索，不是新的封存验证。
-
-证据：[V2报告与限制](历史结果/reports/v2/research_report.md)、[压缩逐题结果](历史结果/results/v2/)、[来源清单](历史结果/reports/v2/provenance.json)。
-
-### 已有推理服务测量
-
-历史上在单张T4、FP16、合并SFT模型上做过vLLM合成请求测试：并发1的总输出吞吐约50.12 tokens/s，并发8约273.31 tokens/s。这是服务器聚合吞吐，不是单用户速度；不同随机请求、单次运行，不能作为数学正确率或一般性加速结论。[环境、原始指标与限制](历史结果/reports/final/vllm_benchmark.md)。
-
-## 当前验证范围
-
-- 28 项 CPU 测试通过。数据重建后 SFT2000、RL1000、dev500 逐条一致，五个历史冻结最终 adapter 指纹一致。
-- 随机微型Qwen3的SFT单步、prompt loss mask、LoRA变化、SFT合并、新GRPO LoRA、GRPO单步、保存重载与生成通过。微型GRPO全零reward，只验证接口执行，不能证明学习收益。
-- 原V1/V2冻结审计通过；必要源码从原Git revision临时读取，原预测、报告和负结果保留。
-- 2026-11-18 已完成 1.7B 单卡 4090 的筛题和两组 GRPO 训练与评测。三卡 CUDA/DDP 仍未在真实 GPU 上验证。
-- 历史 dev 已用于开发，官方 test 已曝光。本次是预定最终权重在历史题集上的探索性对照。
+GitHub 保存源码、汇总和轻量逐题证据。模型权重、完整生成文本和恢复包保留在本地。旧结果可以用 `python evaluate.py --audit-history` 核验；CPU 测试运行 `python -m pytest test_core.py test_grpo_experiment.py -q`。

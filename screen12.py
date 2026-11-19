@@ -20,7 +20,7 @@ def record(path, **fields):
 
 
 @torch.inference_mode()
-def screening_groups(model, tokenizer, rows, seed, stream):
+def screening_groups(model, tokenizer, rows, seed, stream, batch_size=BATCH_SIZE):
     cfg = exp.SAMPLING
     eos = tokenizer.eos_token_id
     tokenizer.padding_side = "left"
@@ -35,8 +35,8 @@ def screening_groups(model, tokenizer, rows, seed, stream):
         pad_token_id=tokenizer.pad_token_id,
     )
 
-    for start in range(0, len(rows), BATCH_SIZE):
-        batch = rows[start:start + BATCH_SIZE]
+    for start in range(0, len(rows), batch_size):
+        batch = rows[start:start + batch_size]
         set_seed((seed + batch[0]["id"]) % 2**32)
         inputs = tokenizer(
             [row["prompt"] for row in batch], padding=True, return_tensors="pt"
@@ -69,6 +69,7 @@ def screening_groups(model, tokenizer, rows, seed, stream):
         print(f"已筛 {start + len(batch)}/{len(rows)} 道题", flush=True)
 
 
-exp.record = record
-exp.screening_groups = screening_groups
-exp.main()
+if __name__ == '__main__':
+    exp.record = record
+    exp.screening_groups = screening_groups
+    exp.main()
